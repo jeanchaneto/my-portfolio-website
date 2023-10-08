@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Header() {
 
@@ -8,13 +9,13 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <p className="h-8 font-sora text-gray-100">
               {" "}
               <span className=" font-bold">Jean</span>{" "}
               <span className="font-light">Chane-to</span>
             </p>
-          </a>
+          </Link>
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
