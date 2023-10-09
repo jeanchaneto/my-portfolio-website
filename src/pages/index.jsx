@@ -39,10 +39,13 @@ export default function Home() {
           </div>
           <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0  max-w-5xl">
             <img
-              className="aspect-[3/2] w-full object-cover lg:object-center lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+              className="aspect-[3/2] w-full object-cover lg:object-center lg:absolute lg:inset-0 lg:aspect-auto lg:h-full z-20 "
               src="/images/hero-photo.png"
               alt=""
             />
+            <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-gradient-radial from-cyan-500 to-90% to-transparent rounded-full filter blur-xl  opacity-50 animate-blob -z-10 "></div>
+            <div className="absolute top-0 -right-4 w-[600px] h-[600px] bg-gradient-radial from-indigo-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-2000 -z-10 "></div>
+            <div className="absolute -bottom-4 left-20 w-[600px] h-[600px] bg-gradient-radial from-teal-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-4000 -z-10 "></div>
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export default function Header() {
-
   return (
     <header className="">
       <nav
@@ -10,17 +9,31 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <p className="h-8 font-sora text-gray-100">
-              {" "}
-              <span className=" font-bold">Jean</span>{" "}
-              <span className="font-light">Chane-to</span>
-            </p>
+            <img src="/images/logo.svg" alt="Jean Chane-to" className="" />
           </Link>
         </div>
-
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Contact
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
+          <a
+            href="https://github.com/jeanchaneto"
+            target="_blank"
+            className=" self-center "
+          >
+            <img
+              src="/images/github-logo.svg"
+              alt="Github logo"
+              className="h-6"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jean-chane-to/"
+            target="_blank"
+            className=" self-center "
+          >
+            <img
+              src="/images/linkedin-logo.svg"
+              alt="Linkedin logo"
+              className="h-6"
+            />
           </a>
         </div>
       </nav>
