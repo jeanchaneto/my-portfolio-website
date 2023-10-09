@@ -21,7 +21,7 @@ const MobileNav = () => {
             key={i}
           >
             <Link href={item.link}>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center text-gray-100 ">
                 <p>{item.page}</p>
                 {pathname === item.link && (
                   <div className="w-1 h-1 bg-cyan-200 rounded-full " />

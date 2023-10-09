@@ -43,9 +43,9 @@ export default function Home() {
               src="/images/hero-photo.png"
               alt=""
             />
-            <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-gradient-radial from-cyan-500 to-90% to-transparent rounded-full filter blur-xl  opacity-50 animate-blob -z-10 "></div>
-            <div className="absolute top-0 -right-4 w-[600px] h-[600px] bg-gradient-radial from-indigo-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-2000 -z-10 "></div>
-            <div className="absolute -bottom-4 left-20 w-[600px] h-[600px] bg-gradient-radial from-teal-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-4000 -z-10 "></div>
+            <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-gradient-radial from-cyan-500 to-90% to-transparent rounded-full filter blur-xl  opacity-50 animate-blob z-0  "></div>
+            <div className="absolute top-0 -right-4 w-[600px] h-[600px] bg-gradient-radial from-indigo-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-2000 z-0  "></div>
+            <div className="absolute -bottom-4 left-20 w-[600px] h-[600px] bg-gradient-radial from-teal-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-4000 z-0 "></div>
           </div>
         </div>
       </div>

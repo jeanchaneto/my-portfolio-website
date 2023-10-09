@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
       className={`${inter.variable} ${sora.variable} font-sans w-full  overflow-hidden text-white relative bg-gray-950 `}
     >
       <Header />
-      <MobileNav />
+      {/* <MobileNav /> */}
       <NavBar />
       {children}
     </div>
