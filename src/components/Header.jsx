@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="">
+    <header className="absolute inset-x-0 top-0 z-50">
       <nav
-        className="mx-auto flex max-w-[1920px] items-center justify-between p-6 lg:px-24 absolute inset-x-0 top-0 z-50"
+        className="mx-auto flex max-w-[1920px] items-center justify-between p-6 lg:px-24 "
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
