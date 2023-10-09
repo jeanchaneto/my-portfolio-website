@@ -11,14 +11,17 @@ const NavBar = () => {
   let mouseX = useMotionValue(Infinity);
 
   return (
+
+    
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="mx-auto max-w-fit flex h-16 items-end gap-4 rounded-2xl  backdrop-blur border border-white/10 px-4 pb-3 fixed bottom-10 left-1/2 -translate-x-1/2 z-50"
+      className="mx-auto max-w-fit flex h-16 items-end gap-4 rounded-2xl  backdrop-blur border border-white/10 px-4 pb-3 fixed bottom-10 left-1/2 -translate-x-1/2 z-50 "
     >
       {[...Array(5).keys()].map((i) => (
         <NavItem mouseX={mouseX} key={i} />
       ))}
+
     </motion.div>
   );
 };
@@ -41,7 +44,7 @@ function NavItem({ mouseX }) {
     <motion.div
       ref={ref}
       style={{ width }}
-      className="aspect-square w-10 rounded-xl bg-gray-800 flex justify-center items-center"
+      className="aspect-square w-10 rounded-xl bg-gray-800 hover:bg-cyan-300  flex justify-center items-center "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +58,7 @@ function NavItem({ mouseX }) {
           clipRule="evenodd"
         />
       </svg>
+      
     </motion.div>
   );
 }
