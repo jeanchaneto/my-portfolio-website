@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { useRouter } from "next/router";
 
 const NavItem = ({ mouseX, icon, link, alt }) => {
-  const router = useRouter();
   const { pathname } = useRouter();
 
   let ref = useRef();

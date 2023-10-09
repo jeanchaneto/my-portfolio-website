@@ -20,7 +20,7 @@ const NavBar = () => {
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="mx-auto max-w-fit flex h-16 items-end gap-4 rounded-2xl  backdrop-blur border border-white/10 px-4 pb-3 fixed bottom-10 left-1/2 -translate-x-1/2 z-50 "
+      className="mx-auto max-w-fit  h-16 items-end gap-4 rounded-2xl  backdrop-blur border border-white/10 px-4 pb-3 fixed bottom-10 left-1/2 -translate-x-1/2 z-50 hidden lg:flex "
     >
       {navItems.map((navItem, i) => (
         <NavItem

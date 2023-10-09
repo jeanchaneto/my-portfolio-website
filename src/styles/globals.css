@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base { 
-  html {
-    @apply bg-gray-950;
-  }
+.html {
+  background-color: #030712;
 }
 
 @layer utilities {
@@ -15,4 +13,8 @@
   .animation-delay-4000 {
     animation-delay: s;
   }
+}
+
+.screen-less-header {
+  height: calc(100vh - 80px);
 }

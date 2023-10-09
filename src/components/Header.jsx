@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MenuToggle } from "./MenuToggle";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
             <img src="/images/logo.svg" alt="Jean Chane-to" className="" />
           </Link>
         </div>
+        <MenuToggle />
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
           <a
             href="https://github.com/jeanchaneto"
