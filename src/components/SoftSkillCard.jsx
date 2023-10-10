@@ -1,6 +1,6 @@
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
-const SkillCard = ({ title, logo }) => {
+const SoftSkillCard = ({ icon, title }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -21,15 +21,15 @@ const SkillCard = ({ title, logo }) => {
           background: useMotionTemplate`
             radial-gradient(
               325px circle at ${mouseX}px ${mouseY}px,
-              rgba(6, 182, 212, 0.15),
+              rgba(94, 234, 212, 0.15),
               transparent 80%
             )
           `,
         }}
       />
       <div>
-        <div className=" flex items-center gap-4 justify-center">
-          <img src={logo} alt={`${title} logo`} className="h-8" />
+        <div className=" flex flex-col items-center gap-4 justify-center">
+          <img src={icon} alt={`${title}`} className="h-8" />
           <h3 className="text-xl font-bold tracking-tight text-gray-300">
             {title}
           </h3>
@@ -39,4 +39,4 @@ const SkillCard = ({ title, logo }) => {
   );
 };
 
-export default SkillCard;
+export default SoftSkillCard;

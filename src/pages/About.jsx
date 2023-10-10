@@ -1,5 +1,6 @@
 import { Divider } from "@/components/Divider";
 import SkillCard from "@/components/SkillCard";
+import SoftSkillCard from "@/components/SoftSkillCard";
 
 const skills = [
   { logo: "/images/html5.svg", title: "HTML 5" },
@@ -19,13 +20,22 @@ const skills = [
   { logo: "/images/firebase.svg", title: "Firebase" },
   { logo: "/images/seo.svg", title: "Best practices" },
   { logo: "/images/ux-ui.svg", title: "Best practices" },
+  { logo: "/images/open-ai.svg", title: "AI Prompt Engineering" },
   { logo: "/images/figma.svg", title: "Figma" },
   { logo: "/images/wordpress.svg", title: "Wordpress" },
   { logo: "/images/woocommerce.svg", title: "Woo Commerce" },
   { logo: "/images/elementor.svg", title: "Elementor" },
-  { logo: "/images/google-ads.svg", title: "Google Ads" },
   { logo: "/images/google-analytics.svg", title: "Google Analytics" },
-  { logo: "/images/microsoft.svg", title: "Microsoft Ads" },
+  { logo: "/images/google-ads.svg", title: "Google Ads" },
+];
+
+const softSkills = [
+  { icon: "/images/time.png", title: "Fast learner" },
+  { icon: "/images/conceptual.png", title: "Problem Solver" },
+  { icon: "/images/adaptation.png", title: "Adaptable" },
+  { icon: "/images/analysis.png", title: "Attentive to detail" },
+  { icon: "/images/time-management.png", title: "Time Management" },
+  { icon: "/images/challenge.png", title: "Self-motivated" },
 ];
 
 const About = () => {
@@ -64,15 +74,39 @@ const About = () => {
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
               Skills
             </h2>
-            <p className="mt-6 text-lg leading-8" >Through diverse technologies,<br/> I convert ideas into polished digital experiences.</p>
+            <p className="mt-6 text-lg leading-8">
+              Through diverse technologies,
+              <br /> I convert ideas into polished digital experiences.
+            </p>
           </div>
-          <div className=" py-24 sm:py-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+          <div className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
             {skills.map((skill, i) => (
-              <SkillCard logo={skill.logo} title={skill.title} key={i}/>
+              <SkillCard logo={skill.logo} title={skill.title} key={i} />
             ))}
           </div>
         </div>
       </section>
+      <Divider />
+      {/* Soft Skills Section */}
+      <section className=" py-24 sm:pt-32">
+        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+          <div className="mx-auto max-w-xl sm:text-center">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+              Soft Skills
+            </h2>
+            <p className="mt-6 text-lg leading-8 ">
+              Blending technical expertise and soft skills <br /> for seamless
+              digital solutions.
+            </p>
+          </div>
+          <div className=" py-24 sm:py-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {softSkills.map((skill, i) => (
+              <SoftSkillCard icon={skill.icon} title={skill.title} key={i}/>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Divider />
     </main>
   );
 };
