@@ -248,6 +248,35 @@ const About = () => {
         </div>
       </section>
       <Divider />
+      {/* Languages */}
+      <section className=" pt-24 sm:pt-32 pb-60">
+        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+          <div className="mx-auto max-w-xl sm:text-center">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+              Languages
+            </h2>
+            <p className="mt-6 text-lg leading-8 ">
+            Fluent in English and native in French, I confidently communicate at high professional and casual levels in each language.
+            </p>
+          </div>
+          <div className="mt-6 flex gap-16 justify-center">
+            <div className="border border-white/10 rounded-xl shadow-2xl inset-4  ">
+              <img
+                src="/images/english-flag.svg"
+                alt="UK flag"
+                className="w-24 opacity-50 bg-gray-950 "
+              />
+            </div>
+            <div className="border border-white/10 rounded-xl shadow-2xl inset-4  ">
+              <img
+                src="/images/french-flag.svg"
+                alt="French flag"
+                className="w-24 opacity-50 bg-gray-950 "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
