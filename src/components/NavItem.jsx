@@ -21,7 +21,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
     <motion.div
       ref={ref}
       style={{ width }}
-      className="aspect-square w-10 rounded-xl bg-gradient-radial from-cyan-800 to-transparent  backdrop-blur-2xl border-white/10 border relative "
+      className="aspect-square w-10 rounded-xl bg-gradient-radial from-cyan-800 to-transparent  backdrop-blur-2xl border-white/10 border relative group "
     >
       <Link
         href={link}
@@ -36,6 +36,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
       {pathname === link && (
         <div className="w-1 h-1 bg-cyan-200 rounded-full absolute right-1/2 translate-x-1/2 -bottom-3" />
       )}
+      <div className="py-1 px-1.5 bg-gray-900 border border-white/5 rounded-lg text-xs text-center absolute -top-8 right-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " >{alt}</div>
     </motion.div>
   );
 };
