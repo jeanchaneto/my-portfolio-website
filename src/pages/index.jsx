@@ -10,7 +10,7 @@ export default function Home() {
               </h2>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl font-sora whitespace-nowrap">
                 Hi, I'm{" "}
-                <span className=" bg-gradient-to-r from-sky-300 via-cyan-200 to-blue-300 inline-block text-transparent bg-clip-text">
+                <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
                   Jean Chane-to
                 </span>
               </h1>

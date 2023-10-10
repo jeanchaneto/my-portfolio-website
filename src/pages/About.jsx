@@ -158,10 +158,10 @@ const About = () => {
       <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
               Skills
             </h2>
-            <p className="mt-6 text-lg leading-8">
+            <p className="mt-6 text-lg leading-8 text-gray-400">
               Through diverse technologies,
               <br /> I convert ideas into polished digital experiences.
             </p>
@@ -175,18 +175,18 @@ const About = () => {
       </section>
       <Divider />
       {/* Soft Skills Section */}
-      <section className=" py-24 sm:pt-32">
+      <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-blue-400 to-emerald-400 inline-block text-transparent bg-clip-text">
               Soft Skills
             </h2>
-            <p className="mt-6 text-lg leading-8 ">
+            <p className="mt-6 text-lg leading-8 text-gray-400">
               Blending technical expertise and soft skills <br /> for seamless
               digital solutions.
             </p>
           </div>
-          <ul className=" py-24 sm:py-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {softSkills.map((skill, i) => (
               <SoftSkillCard icon={skill.icon} title={skill.title} key={i} />
             ))}
@@ -195,13 +195,13 @@ const About = () => {
       </section>
       <Divider />
       {/* Experience Section */}
-      <section className=" py-24 sm:pt-32">
+      <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text">
               Experience
             </h2>
-            <p className="mt-6 text-lg leading-8 ">
+            <p className="mt-6 text-lg leading-8 text-gray-400">
               Discover my path from science to tech,
               <br /> enriched by creative exploration.
             </p>
@@ -222,13 +222,13 @@ const About = () => {
       </section>
       <Divider />
       {/* Education Section */}
-      <section className=" py-24 sm:pt-32">
+      <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
               Education
             </h2>
-            <p className="mt-6 text-lg leading-8 ">
+            <p className="mt-6 text-lg leading-8 text-gray-400">
               Dive into my educational background, where a foundation in science
               launched a self-driven journey into tech.
             </p>
@@ -249,14 +249,15 @@ const About = () => {
       </section>
       <Divider />
       {/* Languages */}
-      <section className=" pt-24 sm:pt-32 pb-60">
+      <section className=" py-24 sm:py-32 ">
         <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-400 via-gray-300 to-blue-500 inline-block text-transparent bg-clip-text">
               Languages
             </h2>
-            <p className="mt-6 text-lg leading-8 ">
-            Fluent in English and native in French, I confidently communicate at high professional and casual levels in each language.
+            <p className="mt-6 text-lg leading-8 text-gray-400">
+              Fluent in English and native in French, I confidently communicate
+              at high professional and casual levels in each language.
             </p>
           </div>
           <div className="mt-6 flex gap-16 justify-center">
@@ -274,6 +275,22 @@ const About = () => {
                 className="w-24 opacity-50 bg-gray-950 "
               />
             </div>
+          </div>
+        </div>
+      </section>
+      <Divider />
+      {/* Other interests */}
+      <section className=" pt-24 sm:pt-32 pb-60">
+        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+          <div className="mx-auto max-w-xl sm:text-center">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-cyan-200 to-cyan-400 inline-block text-transparent bg-clip-text">
+              Other interests
+            </h2>
+            <p className="mt-6 text-lg text-gray-400">
+              I am passionate about electronic music and produce at professional level
+              utilising <a href="https://www.apple.com/logic-pro/" target="_blank" className="text-cyan-600 hover:opacity-50 transition-opacity duration-300" >Logic Pro</a>  and <a href="https://www.ableton.com/en/" target="_blank" className="text-cyan-600 hover:opacity-50 transition-opacity duration-300" >Ableton Live</a> software. In my free time, I love going fishing or surfing.
+            </p>
+         
           </div>
         </div>
       </section>
