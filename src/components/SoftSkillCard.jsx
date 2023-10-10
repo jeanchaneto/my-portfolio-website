@@ -11,7 +11,7 @@ const SoftSkillCard = ({ icon, title }) => {
     mouseY.set(clientY - top);
   }
   return (
-    <div
+    <li
       className="group relative rounded-xl border border-white/10  px-6 py-12 shadow-2xl"
       onMouseMove={handleMouseMove}
     >
@@ -35,7 +35,7 @@ const SoftSkillCard = ({ icon, title }) => {
           </h3>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
