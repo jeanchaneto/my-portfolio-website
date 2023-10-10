@@ -1,4 +1,5 @@
 import { Divider } from "@/components/Divider";
+import EducationCard from "@/components/EducationCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import SkillCard from "@/components/SkillCard";
 import SoftSkillCard from "@/components/SoftSkillCard";
@@ -41,7 +42,7 @@ const softSkills = [
 
 const experiences = [
   {
-    title: "CEO / Web Developper / Music Producer",
+    title: "CEO / Web Developper / Music Producer at",
     company: "LAP Studios",
     companyLink: "https://lap-studios.com",
     timePeriod: "January 2021 - Present",
@@ -53,7 +54,8 @@ const experiences = [
     ],
   },
   {
-    title: "Senior Water Hygiene consultant, William Martin Compliance, London, UK",
+    title:
+      "Senior Water Hygiene consultant, William Martin Compliance, London, UK at",
     company: "William Martin",
     companyLink: "https://wmcompliance.co.uk/",
     timePeriod: "July 2015 - May 2022",
@@ -62,19 +64,64 @@ const experiences = [
       "Water sampling for analytical purposes",
       "Engaged with clients to identify issues and collaborated on implementing remedial actions, ensuring health and safety compliance and customer satisfaction.",
       "Produced detailed reports using Word and developed schematic diagrams utilising AutoCAD",
-      "Maintained and updated AutoCAD templates, ensuring accurate and current resources for all project requirements."
+      "Maintained and updated AutoCAD templates, ensuring accurate and current resources for all project requirements.",
     ],
   },
   {
-    title: "Legionella risk assessor, HSL Compliance, London, UK",
+    title: "Legionella risk assessor, HSL Compliance, London, UK at",
     company: "HSL Compliance",
-    companyLink: "https://wmcompliance.co.uk/",
+    companyLink: " https://hslcompliance.com/",
     timePeriod: "April 2009 - June 2015",
     content: [
       "Performed Legionella risk assessments and audits on diverse water distribution networks, ensuring safety and compliance with relevant regulations.",
       "Handled water sampling for analysis",
       "Communicated effectively with clients, providing advice to identify issues and coordinating to implement remedial actions that assured regulatory compliance and safe operations.",
     ],
+  },
+  {
+    title: "Various Positions",
+    company: "",
+    companyLink: "",
+    timePeriod: "June 2005 - May 2009",
+    content: [
+      "Lab Technician in Microbiological Analysis: Conducted detailed microbiological analyses on food products, ensuring safety and compliance with regulatory standards.",
+      "Retail Industry: Engaged in customer service, inventory management, and sales operations.",
+      "Catering Industry: Contributed to food preparation, event setup, and client interaction.",
+      "Workshop: Participated in building technical containers for the aeronautical industry.",
+    ],
+  },
+];
+
+const education = [
+  {
+    title:
+      "JavaScript React Developer - Bachelor’s Level Diploma (European Qualification Level 6)",
+    school: "OpenClassrooms",
+    schoolLink: "https://openclassrooms.com/",
+    timePeriod: "September 2022 - February 2023",
+    content: [
+      "Certified at Level 6 in the National Directory of Professional Certifications (France) and within the European Qualifications Framework.",
+      "Demonstrated applied skills and proficiency through a stringent, jury-assessed evaluation.",
+      "Completed a full-time 12-month course in an accelerated 6-month timeframe due to dedicated study and application.",
+      ,
+    ],
+  },
+  {
+    title: "Higher National Diploma in Biological Analysis and Biotechnology",
+    school: "Ecole Supérieure La Raque",
+    schoolLink: "http://www.laraque.com/",
+    timePeriod: "September 2003 - June 2005",
+    content: [
+      'French BTS ("Brevet de Technicien Supérieur") in Analytical Biotechnologies (AnaBioTech)',
+      ,
+    ],
+  },
+  {
+    title: "French Scientific Baccalaureate (High School Diploma)",
+    school: "Lycée de la Borde Basse",
+    schoolLink: "https://borde-basse.mon-ent-occitanie.fr/",
+    timePeriod: "June 2001",
+    content: [],
   },
 ];
 
@@ -168,6 +215,33 @@ const About = () => {
                 companyLink={experience.companyLink}
                 timePeriod={experience.timePeriod}
                 content={experience.content}
+              />
+            ))}
+          </ul>
+        </div>
+      </section>
+      <Divider />
+      {/* Education Section */}
+      <section className=" py-24 sm:pt-32">
+        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+          <div className="mx-auto max-w-xl sm:text-center">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora">
+              Education
+            </h2>
+            <p className="mt-6 text-lg leading-8 ">
+              Dive into my educational background, where a foundation in science
+              launched a self-driven journey into tech.
+            </p>
+          </div>
+          <ul className=" w-full flex flex-col items-start justify-between mt-24 gap-8 lg:mt-32">
+            {education.map((educ, i) => (
+              <EducationCard
+                key={i}
+                title={educ.title}
+                school={educ.school}
+                schoolLink={educ.schoolLink}
+                timePeriod={educ.timePeriod}
+                content={educ.content}
               />
             ))}
           </ul>
