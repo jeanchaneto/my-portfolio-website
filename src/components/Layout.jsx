@@ -1,5 +1,6 @@
 import Header from "./Header";
 import MobileNav from "./MobileNav";
+import Modal from "./Modal";
 import NavBar from "./NavBar";
 
 import { Inter, Sora } from "next/font/google";
@@ -16,6 +17,7 @@ const Layout = ({ children }) => {
       {/* <MobileNav /> */}
       <NavBar />
       {children}
+      
     </div>
   );
 };

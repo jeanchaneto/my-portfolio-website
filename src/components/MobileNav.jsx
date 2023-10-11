@@ -13,7 +13,7 @@ const mobileNavItems = [
 const MobileNav = () => {
   const { pathname } = useRouter();
   return (
-    <nav className="absolute top-[80px] screen-less-header w-full z-50 backdrop-blur-3xl bg-black/50 lg:hidden">
+    <nav className="absolute top-[80px] screen-less-header w-full inset-0 z-50 backdrop-blur-3xl bg-black/50 lg:hidden">
       <ul className=" px-6 ">
         {mobileNavItems.map((item, i) => (
           <li

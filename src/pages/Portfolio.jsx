@@ -1,7 +1,32 @@
 import ProjectCard from "@/components/ProjectCard";
 
 const Portfolio = () => {
-  const projects = [{}, {}, {}, {}, {}];
+  const projects = [
+    {
+      title: "Lap Studios",
+      description:
+        "A Next.js E-commerce website with blog and media player functionalities.",
+      image: "/images/projects/lap-studios.jpg",
+      siteUrl: "https://lap-studios.com/",
+      repo: "https://github.com/jeanchaneto/lp-studios",
+      tech: "React, Next.js, Firebase, Email.js, Wavesurfer.js, Stripe Payments, Framer Motion, TailwindCSS, MDX",
+      work: "Project solely created by myself, from design to deployment through content creation and backend implementation.",
+      challenges:
+        "Advanced React implementation of an audio player with waveform visualisation. Blog using MDX. Advanced Framer Motion animations.",
+    },
+    {
+      title: "Artman Entertainment",
+      description:
+        "Next.js single page website for a high profile music studio",
+      image: "/images/projects/artman-entertainment.jpg",
+      siteUrl: "https://artman-entertainment.com/",
+      repo: "https://github.com/jeanchaneto/artman-ent",
+      tech: "React, Next.js, Framer Motion, TailwindCSS, Email.js",
+      work: "Web site design and implementation from single logo provided by client. Deployment",
+      challenges:
+        "Advanced Framer Motion animations and custom UI components",
+    },
+  ];
 
   return (
     <main>
@@ -18,7 +43,7 @@ const Portfolio = () => {
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
             {projects.map((project, i) => (
-              <ProjectCard key={i} />
+              <ProjectCard key={i} {...project} />
             ))}
           </div>
         </div>
