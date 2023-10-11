@@ -10,7 +10,7 @@ const skills = [
   { logo: "/images/javascript.svg", title: "Javascript" },
   { logo: "/images/react.svg", title: "React" },
   { logo: "/images/nextjs.svg", title: "Next.js" },
-  { logo: "/images/git.svg", title: "" },
+  { logo: "/images/git.svg", title: "Git" },
   { logo: "/images/redux.svg", title: "Redux" },
   { logo: "/images/react-router.svg", title: "React Router" },
   { logo: "/images/jest.svg", title: "Jest" },
@@ -284,7 +284,7 @@ const About = () => {
         <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
           <div className="mx-auto max-w-xl sm:text-center">
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-cyan-200 to-cyan-400 inline-block text-transparent bg-clip-text">
-              Other interests
+              Other Interests
             </h2>
             <p className="mt-6 text-lg text-gray-400">
               I am passionate about electronic music and produce at professional level
