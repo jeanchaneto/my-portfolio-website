@@ -1,21 +1,43 @@
+import { Divider } from "@/components/Divider";
+import Form from "@/components/Form";
+import {
+  BuildingOffice2Icon,
+  EnvelopeIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
+
 const services = [
   {
     name: "SEO-Optimised React Applications with Next.js",
     description:
       "Develop SEO-friendly, performant, and responsive React web applications using Next.js, ensuring your website is not only smoothly operational but also optimised for search engines, enhancing your online visibility and user engagement.",
-    icons: ["/images/nextjs.svg", "/images/react-color.svg", "/images/next-auth.png"],
+    icons: [
+      "/images/nextjs.svg",
+      "/images/react-color.svg",
+      "/images/next-auth.png",
+    ],
   },
   {
     name: "Dynamic React Web Applications.",
     description:
       "Crafting highly interactive, responsive, and user-friendly React web applications, tailored to deliver an optimal user experience and meet your specific business requirements",
-    icons: ["/images/react-color.svg", "/images/vite-color.svg", "/images/cra-color.svg", "/images/react-router-color.svg" ],
+    icons: [
+      "/images/react-color.svg",
+      "/images/vite-color.svg",
+      "/images/cra-color.svg",
+      "/images/react-router-color.svg",
+    ],
   },
   {
     name: "Full Stack Development with React & Firebase",
     description:
       "Offering full-stack solutions by combining the intuitive and powerful front-end development through React with the scalable backend capabilities of Firebase, crafting applications that are both powerful and efficient.",
-    icons: ["/images/react-color.svg", "/images/firebase-color.svg", "/images/firestore-color.svg","/images/cloud-storage-color.svg"],
+    icons: [
+      "/images/react-color.svg",
+      "/images/firebase-color.svg",
+      "/images/firestore-color.svg",
+      "/images/cloud-storage-color.svg",
+    ],
   },
   {
     name: "Enthralling React Animations.",
@@ -27,22 +49,31 @@ const services = [
     name: "Flexible E-commerce Solutions with Stripe or WordPress/WooCommerce.",
     description:
       "Feature-rich platforms with Stripe for robust payment experiences, or opting for quick, cost-effective store setups with WordPress and WooCommerce, each tailored to suit varied business needs and budget scopes.",
-    icons: ["/images/stripe-color.png", "/images/paypal-color.png", "/images/woo-color.svg"],
+    icons: [
+      "/images/stripe-color.png",
+      "/images/paypal-color.png",
+      "/images/woo-color.svg",
+    ],
   },
   {
     name: "WordPress Development & Customisation.",
     description:
       "Customise and develop responsive WordPress sites tailored to your needs, whether it’s a blog, portfolio, or a business site, ensuring both aesthetic appeal and functional efficiency.",
-    icons: ["/images/wordpress.svg", "/images/elementor-color.svg", "/images/php-color.svg"],
+    icons: [
+      "/images/wordpress.svg",
+      "/images/elementor-color.svg",
+      "/images/php-color.svg",
+    ],
   },
 ];
 
 export default function Services() {
   return (
     <main className=" py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      {/* Hero section */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">
             Services
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -51,7 +82,8 @@ export default function Services() {
             responsive and engaging realities.
           </p>
         </div>
-      </div>
+      </section>
+      {/* Hero image */}
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <img
@@ -66,16 +98,17 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-        <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16">
+      {/* Services section */}
+      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8 pb-24 lg:pb-48">
+        <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16">
           {services.map((service, i) => (
             <li
               key={i}
-              className="relative pl-9 border border-white/20 rounded-xl p-6"
+              className="relative pl-9 border border-white/20 rounded-xl p-6 hover:ring-1 ring-white/20 hover:border-white/40 transition-all duration-300 "
             >
               <div className="h-8 flex gap-4">
                 {service.icons.map((icon, i) => (
-                  <img src={icon} alt="" className="h-full" key= {i} />
+                  <img src={icon} alt="" className="h-full" key={i} />
                 ))}
               </div>
               <h2 className="mt-4 font-semibold text-gray-200">
@@ -85,6 +118,43 @@ export default function Services() {
             </li>
           ))}
         </ul>
+      </div>
+      <Divider />
+      {/* Contact Section */}
+      <div className="relative isolate ">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+          <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                Let's talk about your project
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Every great project begins with a conversation. Share your
+                vision, and let’s bring it to life together.
+              </p>
+              <div className="mt-10 space-y-4 text-base leading-7 text-gray-300">
+                <div className="flex gap-x-4">
+                  <div className="flex-none">
+                    <span className="sr-only">Email</span>
+                    <EnvelopeIcon
+                      className="h-7 w-6 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      className="hover:text-white"
+                      href="mailto:jeanchaneto@gmail.com"
+                    >
+                      jeanchaneto@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Form />
+        </div>
       </div>
     </main>
   );

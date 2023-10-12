@@ -9,11 +9,11 @@ const handleOpenModal = () => {
 }
 
   return (
-    <div className=" border border-white/10 hover:border-white/20 transition-all duration-300 rounded-xl shadow backdrop-blur-xl ">
+    <div className=" border border-white/20 hover:border-white/40 hover:ring-1 ring-white/20 transition-all duration-300 rounded-xl shadow backdrop-blur-xl ">
       <div className="p-6">
         <div onClick={handleOpenModal} className="relative cursor-pointer">
           <img
-            className="rounded-xl object-cover w-full border border-white/10 shadow-gray-400/10 transition-all duration-300 shadow hover:shadow-xl hover:shadow-gray-400/10  "
+            className="rounded-xl object-cover w-full border border-white/10 shadow-gray-400/10 transition-all duration-300  shadow hover:shadow-xl hover:shadow-gray-400/10  "
             src={props.image}
             alt={props.title}
           />
