@@ -8,7 +8,7 @@ const navItems = [
   { icon: "/images/house-solid.svg", link: "/", alt: "Home" },
   { icon: "/images/user-solid.svg", link: "/about", alt: "About" },
   { icon: "/images/briefcase-solid.svg", link: "/portfolio", alt: "Portfolio" },
-  { icon: "/images/gear-solid.svg", link: "/services", alt: "Services" },
+  { icon: "/images/screwdriver-wrench-solid.svg", link: "/services", alt: "Services" },
   { icon: "/images/newspaper-solid.svg", link: "/blog", alt: "Blog" },
   { icon: "/images/envelope-solid.svg", link: "/contact", alt: "Contact" },
 ];
