@@ -7,7 +7,7 @@ const mobileNavItems = [
   { page: "About", link: "/about" },
   { page: "Portfolio", link: "/portfolio" },
   { page: "Services", link: "/services" },
-  { page: "Blog", link: "/blog" },
+  // { page: "Blog", link: "/blog" },
   { page: "Download my CV", link: "#" },
 ];
 

@@ -1,9 +1,7 @@
 import { Divider } from "@/components/Divider";
 import Form from "@/components/Form";
 import {
-  BuildingOffice2Icon,
   EnvelopeIcon,
-  PhoneIcon,
 } from "@heroicons/react/24/outline";
 
 const services = [
