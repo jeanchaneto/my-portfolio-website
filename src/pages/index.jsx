@@ -1,14 +1,16 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main>
-      <div className="relative h-screen ">
+      <div className="relative min-h-screen ">
         <div className="mx-auto max-w-[1900px] lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-24 h-full ">
           <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0">
+            <div className="mx-auto max-w-2xl lg:mx-0 z-20">
               <h2 className="text-base mt-24 font-semibold leading-7 text-cyan-500">
                 React.JS Front End Developper
               </h2>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl font-sora whitespace-nowrap">
+              <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl font-sora sm:whitespace-nowrap">
                 Hi, I'm{" "}
                 <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
                   Jean Chane-to
@@ -22,24 +24,25 @@ export default function Home() {
                 together!
               </p>
               <div className="mt-10 flex items-center gap-x-6">
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="rounded-md bg-cyan-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
                 >
                   Hire me
-                </a>
-                <a
-                  href="#"
-                  className="text-sm font-semibold leading-6 text-white"
+                </Link>
+                <Link
+                  href="/services"
+                  className="text-sm font-semibold leading-6 text-white z-20"
                 >
-                  Download my CV <span aria-hidden="true">→</span>
-                </a>
+                  Services <span aria-hidden="true">→</span>
+                </Link>
+                
               </div>
             </div>
           </div>
           <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0  max-w-5xl">
             <img
-              className="aspect-[3/2] w-full object-cover lg:object-center lg:absolute lg:inset-0 lg:aspect-auto lg:h-full z-20 "
+              className="aspect-[3/2] w-full object-cover lg:object-center lg:absolute lg:inset-0 lg:aspect-auto lg:h-full z-40"
               src="/images/hero-photo.png"
               alt=""
             />

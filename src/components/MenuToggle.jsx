@@ -1,18 +1,19 @@
 import { Sling as Hamburger } from "hamburger-react";
 
-export const MenuToggle = ({setOpenMenu}) => {
+export const MenuToggle = ({setIsOpen}) => {
 
   return (
-    <div className="lg:hidden">
+    <div className="">
       <Hamburger
         color="#f3f4f6"
-        size={20}
+        size={28.5}
+        distance=""
         duration={0.8}
         onToggle={(toggled) => {
           if (toggled) {
-            setOpenMenu(true);
+            setIsOpen(true);
           } else {
-            setOpenMenu(false);
+            setIsOpen(false);
           }
         }}
       />
