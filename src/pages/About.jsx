@@ -5,30 +5,30 @@ import SkillCard from "@/components/SkillCard";
 import SoftSkillCard from "@/components/SoftSkillCard";
 
 const skills = [
-  { logo: "/images/html5.svg", title: "HTML 5" },
-  { logo: "/images/css.svg", title: "CSS" },
-  { logo: "/images/javascript.svg", title: "Javascript" },
-  { logo: "/images/react.svg", title: "React" },
-  { logo: "/images/nextjs.svg", title: "Next.js" },
-  { logo: "/images/git.svg", title: "Git" },
+  { logo: "/images/html.png", title: "HTML 5" },
+  { logo: "/images/css.png", title: "CSS" },
+  { logo: "/images/js.png", title: "Javascript" },
+  { logo: "/images/react-color.svg", title: "React" },
+  { logo: "/images/next-color.svg", title: "Next.js" },
+  { logo: "/images/git-color.svg", title: "Git" },
   { logo: "/images/redux.svg", title: "Redux" },
-  { logo: "/images/react-router.svg", title: "React Router" },
-  { logo: "/images/jest.svg", title: "Jest" },
-  { logo: "/images/react-testing-library.svg", title: "React Testing Library" },
-  { logo: "/images/typescript.svg", title: "Typescript" },
+  { logo: "/images/react-router-color.svg", title: "React Router" },
+  { logo: "/images/jest-color.svg", title: "Jest" },
+  { logo: "/images/react-testing-library-color.png", title: "React Testing Library" },
+  { logo: "/images/typescript.png", title: "Typescript" },
   { logo: "/images/tailwind.svg", title: "Tailwind CSS" },
   { logo: "/images/sass.svg", title: "Sass" },
   { logo: "/images/framer-motion.svg", title: "Framer Motion" },
-  { logo: "/images/firebase.svg", title: "Firebase" },
+  { logo: "/images/firebase-color.svg", title: "Firebase" },
   { logo: "/images/seo.svg", title: "Best practices" },
   { logo: "/images/ux-ui.svg", title: "Best practices" },
   { logo: "/images/open-ai.svg", title: "AI Prompt Engineering" },
   { logo: "/images/figma.svg", title: "Figma" },
-  { logo: "/images/wordpress.svg", title: "Wordpress" },
-  { logo: "/images/woocommerce.svg", title: "Woo Commerce" },
-  { logo: "/images/elementor.svg", title: "Elementor" },
-  { logo: "/images/google-analytics.svg", title: "Google Analytics" },
-  { logo: "/images/google-ads.svg", title: "Google Ads" },
+  { logo: "/images/wordpress.png", title: "Wordpress" },
+  { logo: "/images/woo-color.svg", title: "Woo Commerce" },
+  { logo: "/images/elementor-color.svg", title: "Elementor" },
+  { logo: "/images/ga.svg", title: "Google Analytics" },
+  { logo: "/images/google-ads.png", title: "Google Ads" },
 ];
 
 const softSkills = [
@@ -136,7 +136,7 @@ const About = () => {
               <h1 className="text-4xl font-bold tracking-tight text-gray-100 sm:text-4xl font-sora">
                 About me
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
+              <p className="mt-6 mb-6 text-lg leading-8 text-gray-300">
                 My journey into web development was not a linear path, but a
                 fascinating exploration of connecting dots between different
                 spheres of my life: from rigorous scientific analysis to
@@ -148,6 +148,26 @@ const About = () => {
                 my musical artistry. My journey reflects a steadfast commitment
                 to learning and adaptability across varied fields.
               </p>
+              <a
+                href="/services"
+                className="text-sm font-semibold leading-6 text-gray-100 z-20 flex gap-2 items-center border border-white/20 rounded-xl w-fit py-1.5 px-2 "
+              >
+                <p>Download my CV</p>{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m-6 3.75l3 3m0 0l3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75"
+                  />
+                </svg>
+              </a>
             </section>
           </div>
         </div>
@@ -287,10 +307,25 @@ const About = () => {
               Other Interests
             </h2>
             <p className="mt-6 text-lg text-gray-400">
-              I am passionate about electronic music and produce at professional level
-              utilising <a href="https://www.apple.com/logic-pro/" target="_blank" className="text-cyan-600 hover:opacity-50 transition-opacity duration-300" >Logic Pro</a>  and <a href="https://www.ableton.com/en/" target="_blank" className="text-cyan-600 hover:opacity-50 transition-opacity duration-300" >Ableton Live</a> software. In my free time, I love going fishing or surfing.
+              I am passionate about electronic music and produce at professional
+              level utilising{" "}
+              <a
+                href="https://www.apple.com/logic-pro/"
+                target="_blank"
+                className="text-cyan-600 hover:opacity-50 transition-opacity duration-300"
+              >
+                Logic Pro
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.ableton.com/en/"
+                target="_blank"
+                className="text-cyan-600 hover:opacity-50 transition-opacity duration-300"
+              >
+                Ableton Live
+              </a>{" "}
+              software. In my free time, I love going fishing or surfing.
             </p>
-         
           </div>
         </div>
       </section>

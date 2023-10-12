@@ -10,7 +10,7 @@ const services = [
     description:
       "Develop SEO-friendly, performant, and responsive React web applications using Next.js, ensuring your website is not only smoothly operational but also optimised for search engines, enhancing your online visibility and user engagement.",
     icons: [
-      "/images/nextjs.svg",
+      "/images/next-color.svg",
       "/images/react-color.svg",
       "/images/next-auth.png",
     ],
@@ -58,7 +58,7 @@ const services = [
     description:
       "Customise and develop responsive WordPress sites tailored to your needs, whether it’s a blog, portfolio, or a business site, ensuring both aesthetic appeal and functional efficiency.",
     icons: [
-      "/images/wordpress.svg",
+      "/images/wordpress.png",
       "/images/elementor-color.svg",
       "/images/php-color.svg",
     ],
