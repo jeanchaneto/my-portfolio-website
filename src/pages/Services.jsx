@@ -125,7 +125,7 @@ export default function Services() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-white">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-200">
                 Let's talk about your project
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-300">
