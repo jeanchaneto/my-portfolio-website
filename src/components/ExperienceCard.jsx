@@ -37,7 +37,7 @@ const ExperienceCard = ({
       <div>
         <h3 className="font-bold text-lg ">
           {title} {" "}
-          <a href={companyLink} target="_blank" className=" text-cyan-600 hover:opacity-50 transition-opacity duration-300 ">
+          <a href={companyLink} target="_blank" className=" text-sky-500 hover:opacity-50 transition-opacity duration-300 ">
             {company}
           </a>
         </h3>

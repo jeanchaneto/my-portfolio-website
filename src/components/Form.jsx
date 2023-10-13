@@ -43,7 +43,7 @@ const Form = () => {
       ref={form}
       onSubmit={sendEmail}
     >
-      <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg border border-white/20 p-6 rounded-xl bg-gradient-to-tl from-cyan-700/10 to-transparent relative overflow-hidden">
+      <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg border border-white/20 p-6 rounded-xl bg-gradient-to-tl from-sky-700/10 to-transparent relative overflow-hidden">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <label
@@ -58,7 +58,7 @@ const Form = () => {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 bg-gray-900/40 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 focus:ring-cyan-500 sm:text-sm sm:leading-6 focus:outline-none transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-gray-900/40 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 focus:ring-sky-500 sm:text-sm sm:leading-6 focus:outline-none transition-all duration-300"
                 required
               />
             </div>
@@ -77,7 +77,7 @@ const Form = () => {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border-0 bg-gray-900/40 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 focus:ring-cyan-500 sm:text-sm sm:leading-6 focus:outline-none transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-gray-900/40 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 focus:ring-sky-500 sm:text-sm sm:leading-6 focus:outline-none transition-all duration-300"
                 required
               />
             </div>
@@ -94,7 +94,7 @@ const Form = () => {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border-0 bg-gray-900/40 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 focus:ring-cyan-500 sm:text-sm sm:leading-6 focus:outline-none transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-gray-900/40 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 focus:ring-sky-500 sm:text-sm sm:leading-6 focus:outline-none transition-all duration-300"
                 defaultValue={""}
                 required
               />

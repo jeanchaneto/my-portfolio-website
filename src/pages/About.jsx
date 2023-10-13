@@ -131,7 +131,7 @@ const About = () => {
       {/* Hero Sections */}
       <div className=" pt-6 sm:pt-12 ">
         <div className=" py-24 sm:py-32 ">
-          <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <section className="mx-auto max-w-2xl lg:mx-0">
               <h1 className="text-4xl font-bold tracking-tight text-gray-100 sm:text-4xl font-sora">
                 About me
@@ -176,7 +176,7 @@ const About = () => {
 
       {/* Skills Section */}
       <section className=" py-24 sm:py-32">
-        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
               Skills
@@ -196,7 +196,7 @@ const About = () => {
       <Divider />
       {/* Soft Skills Section */}
       <section className=" py-24 sm:py-32">
-        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-blue-400 to-emerald-400 inline-block text-transparent bg-clip-text">
               Soft Skills
@@ -216,7 +216,7 @@ const About = () => {
       <Divider />
       {/* Experience Section */}
       <section className=" py-24 sm:py-32">
-        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text">
               Experience
@@ -243,7 +243,7 @@ const About = () => {
       <Divider />
       {/* Education Section */}
       <section className=" py-24 sm:py-32">
-        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
               Education
@@ -270,7 +270,7 @@ const About = () => {
       <Divider />
       {/* Languages */}
       <section className=" py-24 sm:py-32 ">
-        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-300 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
               Languages
@@ -301,9 +301,9 @@ const About = () => {
       <Divider />
       {/* Other interests */}
       <section className=" pt-24 sm:pt-32 pb-60">
-        <div className="mx-auto max-w-[1920px] px-6 lg:px-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-cyan-200 to-cyan-400 inline-block text-transparent bg-clip-text">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-200 to-sky-400 inline-block text-transparent bg-clip-text">
               Other Interests
             </h2>
             <p className="mt-6 text-lg text-gray-400">
@@ -312,7 +312,7 @@ const About = () => {
               <a
                 href="https://www.apple.com/logic-pro/"
                 target="_blank"
-                className="text-cyan-600 hover:opacity-50 transition-opacity duration-300"
+                className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
               >
                 Logic Pro
               </a>{" "}
@@ -320,7 +320,7 @@ const About = () => {
               <a
                 href="https://www.ableton.com/en/"
                 target="_blank"
-                className="text-cyan-600 hover:opacity-50 transition-opacity duration-300"
+                className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
               >
                 Ableton Live
               </a>{" "}

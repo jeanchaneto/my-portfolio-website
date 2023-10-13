@@ -21,7 +21,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
     <motion.div
       ref={ref}
       style={{ width }}
-      className="aspect-square w-10 rounded-xl bg-gradient-radial from-cyan-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group "
+      className="aspect-square w-10 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group "
     >
       <Link
         href={link}

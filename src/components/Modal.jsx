@@ -86,7 +86,7 @@ export default function Modal() {
                     <a
                       href={modalContent.siteUrl}
                       target="_blank"
-                      className="flex gap-2 align-center transition-opacity duration-300 hover:opacity-50 rounded-xl bg-cyan-950 py-2 px-4 "
+                      className="flex gap-2 align-center transition-opacity duration-300 hover:opacity-50 rounded-xl bg-sky-950 py-2 px-4 "
                     >
                       <p>Visit site</p>
                       <img

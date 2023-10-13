@@ -34,7 +34,7 @@ const EducationCard = ({ title, school, schoolLink, timePeriod, content }) => {
           <a
             href={schoolLink}
             target="_blank"
-            className=" text-cyan-600 hover:opacity-50 transition-opacity duration-300 font-semibold "
+            className=" text-sky-500 hover:opacity-50 transition-opacity duration-300 font-semibold "
           >
             {school}
           </a>{" "}

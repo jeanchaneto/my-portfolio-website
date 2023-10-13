@@ -2,54 +2,56 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <div className="relative min-h-screen ">
-        <div className="mx-auto max-w-[1900px] lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-24 h-full ">
-          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0 z-20">
-              <h2 className="text-base mt-24 font-semibold leading-7 text-cyan-500">
-                React.JS Front End Developper
-              </h2>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl font-sora sm:whitespace-nowrap">
-                Hi, I'm{" "}
-                <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
-                  Jean Chane-to
-                </span>
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Delighted to meet you in my digital domain! As a passionate web
-                developer specializing in React.js, I bring ideas to digital
-                life with meticulous attention to detail and an insatiable
-                appetite for learning. Let's create something exceptional
-                together!
-              </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <Link
-                  href="/contact"
-                  className="rounded-md bg-cyan-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
-                >
-                  Hire me
-                </Link>
-                <Link
-                  href="/services"
-                  className="text-sm font-semibold leading-6 text-white z-20"
-                >
-                  Services <span aria-hidden="true">→</span>
-                </Link>
-                
-              </div>
+    <main className="bg-gray-950 min-h-screen ">
+      <div className="flex items-center h-full md:h-screen py-24 lg:py-32 relative">
+
+        {/* <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-gradient-radial from-cyan-500/20 to-90% to-transparent rounded-full filter blur-xl  opacity-50 animate-blob z-0  "></div>
+        <div className="absolute top-1/3 left-1/3 w-[600px] h-[600px] bg-gradient-radial from-blue-500/20  to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-2000 -z-0 isolate "></div>
+        <div className="absolute top-1/4 left-1/4 0 w-[600px] h-[600px] bg-gradient-radial from-sky-500/20  to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-4000 z-0 "></div> */}
+
+        <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row  items-center relative px-6 lg:px-8 ">
+          {/* Left hero */}
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10">
+            <h2 className="text-base mt-6 leading-7 text-gray-300 font-thin tracking-widest">
+              HI, I'M{" "}
+              <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text font-normal">
+                JEAN CHANE-TO
+              </span>
+            </h2>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl font-sora sm:whitespace-nowrap ">
+              I Craft Seamless
+              <br /> Web Applications
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300 tracking-wide">
+              Transforming visionary ideas into vibrant, interactive digital
+              experiences with React.js expertise. Let's build something great
+              together!
+            </p>
+            <div className="mt-10 flex items-center gap-x-6">
+              <Link
+                href="/contact"
+                className="rounded-xl bg-sky-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+              >
+                Hire me
+              </Link>
+              <Link
+                href="/services"
+                className="text-sm font-semibold leading-6 text-white z-20"
+              >
+                Services <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0  max-w-5xl">
-            <img
-              className="aspect-[3/2] w-full object-cover lg:object-center lg:absolute lg:inset-0 lg:aspect-auto lg:h-full z-40"
-              src="/images/hero-photo.png"
-              alt=""
-            />
-            <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-gradient-radial from-cyan-500 to-90% to-transparent rounded-full filter blur-xl  opacity-50 animate-blob z-0  "></div>
-            <div className="absolute top-0 -right-4 w-[600px] h-[600px] bg-gradient-radial from-indigo-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-2000 z-0  "></div>
-            <div className="absolute -bottom-4 left-20 w-[600px] h-[600px] bg-gradient-radial from-teal-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob animation-delay-4000 z-0 "></div>
-          </div>
+          {/* Image */}
+          <div className=" opacity-0">
+            <div className=" overflow-hidden rounded-xl [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-30px),transparent_100%)] z-20">
+              <img
+                src="/images/hero-photo.png"
+                alt="Jean Chane-to"
+                className=" max-h-96  md:max-h-none min-w-[350px] object-cover"
+              />
+            </div>
+          </div>{" "}
         </div>
       </div>
     </main>
