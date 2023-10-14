@@ -14,7 +14,10 @@ const skills = [
   { logo: "/images/redux.svg", title: "Redux" },
   { logo: "/images/react-router-color.svg", title: "React Router" },
   { logo: "/images/jest-color.svg", title: "Jest" },
-  { logo: "/images/react-testing-library-color.png", title: "React Testing Library" },
+  {
+    logo: "/images/react-testing-library-color.png",
+    title: "React Testing Library",
+  },
   { logo: "/images/typescript.png", title: "Typescript" },
   { logo: "/images/tailwind.svg", title: "Tailwind CSS" },
   { logo: "/images/sass.svg", title: "Sass" },
@@ -136,17 +139,24 @@ const About = () => {
               <h1 className="text-4xl font-bold tracking-tight text-gray-100 sm:text-4xl font-sora">
                 About me
               </h1>
-              <p className="mt-6 mb-6 text-lg leading-8 text-gray-300">
+              <p className="mt-6 text-lg leading-8 text-gray-300">
                 My journey into web development was not a linear path, but a
                 fascinating exploration of connecting dots between different
                 spheres of my life: from rigorous scientific analysis to
-                producing professional electronic music. Transitioning from a
-                career as a water hygiene consultant to a React.js developer
-                sparked by a genuine desire to build meaningful digital spaces,
-                notably exemplified in running my own music e-commerce platform
-                that blends my coding skills and my entrepreneurial spirit with
-                my musical artistry. My journey reflects a steadfast commitment
-                to learning and adaptability across varied fields.
+                producing professional electronic music.
+              </p>
+              <p className="mt-3 text-lg leading-8 text-gray-300">
+                Transitioning from a career as a water hygiene consultant to a
+                React.js developer sparked by a genuine desire to build
+                meaningful digital spaces, notably exemplified in running my own
+                music e-commerce platform that blends my coding skills and my
+                entrepreneurial spirit with my musical artistry. My journey
+                reflects a steadfast commitment to learning and adaptability
+                across varied fields.
+              </p>
+              <p className="mt-3 mb-10 text-lg leading-8 text-gray-300">
+                My journey reflects a steadfast commitment to learning and
+                adaptability across varied fields.
               </p>
               <a
                 href="/services"
