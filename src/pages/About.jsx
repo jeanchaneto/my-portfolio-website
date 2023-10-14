@@ -150,9 +150,7 @@ const About = () => {
                 React.js developer sparked by a genuine desire to build
                 meaningful digital spaces, notably exemplified in running my own
                 music e-commerce platform that blends my coding skills and my
-                entrepreneurial spirit with my musical artistry. My journey
-                reflects a steadfast commitment to learning and adaptability
-                across varied fields.
+                entrepreneurial spirit with my musical artistry.
               </p>
               <p className="mt-3 mb-10 text-lg leading-8 text-gray-300">
                 My journey reflects a steadfast commitment to learning and

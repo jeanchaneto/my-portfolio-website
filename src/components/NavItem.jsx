@@ -21,11 +21,11 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
     <motion.div
       ref={ref}
       style={{ width }}
-      className="aspect-square w-10 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group "
+      className="aspect-square w-10 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent backdrop-blur-2xl border-white/10 border relative group hover:border-white/50  "
     >
       <Link
         href={link}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center hover:bg-gray-950 transition-color   rounded-xl duration-300"
       >
         <img
           src={icon}
