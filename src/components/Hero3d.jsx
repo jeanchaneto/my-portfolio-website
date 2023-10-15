@@ -1,18 +1,42 @@
 import * as THREE from "three";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Trail, Float, Line, Sphere } from "@react-three/drei";
+import { Float, Line, OrbitControls, Sphere} from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import { useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion-3d";
 
 export default function Hero3d() {
+  const mouse = {
+    x: useSpring(useMotionValue(0), {damping: 20}),
+    y: useSpring(useMotionValue(0), {damping: 20}),
+  };
+
+  const handleMouseMove = (e) => {
+    const { innerWidth, innerHeight } = window;
+    const { clientX, clientY } = e;
+    const x = -0.5 + (clientX / innerWidth);
+    const y = -0.5 + (clientY / innerHeight);
+    mouse.x.set(x);
+    mouse.y.set(y);
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mouse", handleMouseMove);
+  }, []);
+
   return (
     <Canvas camera={{ position: [0, 0, 10] }}>
-      <Float speed={4} rotationIntensity={1} floatIntensity={2}>
-        <Atom />
-      </Float>
-      <EffectComposer>
-        <Bloom luminanceThreshold={1} radius={0.7} />
-      </EffectComposer>
+      <OrbitControls enableZoom={false} />
+      <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
+        <Float speed={4} rotationIntensity={1} floatIntensity={2}>
+          <Atom />
+        </Float>
+        <EffectComposer>
+          <Bloom luminanceThreshold={1} radius={0.7} />
+        </EffectComposer>
+      </motion.mesh>
     </Canvas>
   );
 }

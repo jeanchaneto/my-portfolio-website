@@ -28,7 +28,7 @@ export default function Home() {
             <div className="mt-10 flex items-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-xl bg-sky-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+                className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
               >
                 Hire me
               </Link>
@@ -50,7 +50,7 @@ export default function Home() {
                 className=" max-h-[480px]  min-[964px]:max-h-[700px] min-w-[350px] object-cover "
               />
             </div>
-            <div className="absolute bottom-1/3 right-1/2 h-[200px] translate-y-[130px] min-[964px]:h-[300px] translate-x-[150px] min-[964px]:translate-y-[180px] ">
+            <div className="absolute bottom-1/3 translate-x-[150px] right-1/2 h-[200px] translate-y-[130px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[180px] min-[964px]:translate-y-[180px] ">
               <Hero3d />
             </div>
           </div>{" "}
