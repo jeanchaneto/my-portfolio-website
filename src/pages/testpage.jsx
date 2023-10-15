@@ -1,8 +1,9 @@
+import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 
 export default function TestPage() {
   return (
-    <main className="bg-gray-950 min-h-screen lg:h-screen">
+    <main className="bg-gray-950 min-h-[4000px] ">
       <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row  items-center py-24 relative px-6">
         {/* Left hero */}
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10">
@@ -10,12 +11,13 @@ export default function TestPage() {
             Hi, I'm <span className="text-gray-200 font-semibold" >Jean Chane-to</span>
           </h2>
 
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-6xl font-sora ">
-          Crafting Seamless Web Applications
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <AnimatedText el={"h1"} duration="0.5" delay="0" stagger="0.1"
+          text={"Toots"} className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-6xl font-sora ">
+          I Craft Seamless Web Applications
+          </AnimatedText>
+          <AnimatedText duration="0.5" delay="3" stagger="0.01" className="mt-6 text-lg leading-8 text-gray-300">
           Transforming visionary ideas into vibrant, interactive digital experiences with React.js expertise. Let's build spomething great together!"
-          </p>
+          </AnimatedText>
           <div className="mt-10 flex items-center gap-x-6">
             <Link
               href="/contact"

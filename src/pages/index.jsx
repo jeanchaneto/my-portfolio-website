@@ -6,8 +6,8 @@ export default function Home() {
     <main className="bg-gray-950 min-h-screen ">
       <div className="flex items-center  min-[964px]:h-screen py-24 lg:py-32 relative">
         <div className=" max-w-7xl mx-auto flex flex-col-reverse min-[964px]:flex-row  items-center relative px-6 lg:px-8 ">
-           {/* Ligth */}
-        <div className="absolute top-12  -translate-x-1/4 min-[964px]:translate-x-0 min-[964px]:right-[24px] w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[600px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob  z-0 "></div>
+          {/* Ligth */}
+          <div className="absolute top-12  -translate-x-1/4 min-[964px]:translate-x-0 min-[964px]:right-[24px] w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[600px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob  z-0 "></div>
           {/* Left hero */}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10 pt-12 pb-24 min-[964px]:pt-0 min-[964px]:pb-0">
             <h2 className="text-base mt-6 leading-7 text-gray-300 font-thin tracking-widest">
