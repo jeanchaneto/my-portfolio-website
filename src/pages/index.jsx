@@ -10,7 +10,7 @@ export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setTextSlideActive(true), 5000);
+    const timeout = setTimeout(() => setTextSlideActive(true), 4600);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -75,22 +75,26 @@ export default function Home() {
               viewport={{ once: true }}
               className="mt-10 flex items-center gap-x-6"
             >
-              <Link
-                href="/contact"
-                className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 ring-1 ring-transparent hover:ring-sky-300
+              <motion.div whileTap={{ scale: 0.8 }}>
+                <Link
+                  href="/contact"
+                  className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 ring-1 ring-transparent hover:ring-sky-300
                 transition-all duration-300  
                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
-              >
-                Hire me
-              </Link>
-              <Link
-                href="/services"
-                className="text-sm font-semibold rounded-xl bg-transparent hover:bg-sky-950/60 ring-1 ring-transparent hover:ring-sky-400
+                >
+                  Hire me
+                </Link>
+              </motion.div>
+              <motion.div whileTap={{ scale: 0.8 }}>
+                <Link
+                  href="/services"
+                  className="text-sm font-semibold rounded-xl bg-transparent hover:bg-sky-950/60 ring-1 ring-transparent hover:ring-sky-400
                 transition-all duration-300  
                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 px-4 py-3 text-white z-20"
-              >
-                Services <span aria-hidden="true">→</span>
-              </Link>
+                >
+                  Services <span aria-hidden="true">→</span>
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
           {/* Image */}

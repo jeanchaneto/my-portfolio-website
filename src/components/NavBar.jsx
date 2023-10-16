@@ -22,7 +22,7 @@ const navBarVariants = {
     y: 0,
     transition: {
       duration: 1,
-      delay: 4.2,
+      delay: 1,
       x: "-50%",
       type: "spring",
       bounce: "0.5",
