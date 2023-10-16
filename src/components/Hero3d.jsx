@@ -49,7 +49,7 @@ function Atom(props) {
       ),
     []
   );
-  const scaleValue = 2;
+  const scaleValue = 1.95;
   return (
     <group {...props} scale={[scaleValue, scaleValue, scaleValue]}>
       <Line worldUnits points={points} color={[1, 3, 10]} lineWidth={0.2} />

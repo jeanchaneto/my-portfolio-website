@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MenuToggle } from "./MenuToggle";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { motion} from "framer-motion";
 
 const mobileNavItems = [
   { page: "About", link: "/about" },
@@ -11,11 +12,30 @@ const mobileNavItems = [
   { page: "Download my CV", link: "#" },
 ];
 
+const menuVariants = {
+  hidden: { opacity: 0, y: "100%", x: "-50%" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 1,
+      x: "-50%",
+      type: "spring",
+      bounce: "0.5",
+    },
+  },
+};
+
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useRouter();
   return (
-    <div className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2 -translate-x-1/2 z-50 lg:hidden">
+    <motion.div 
+    variants={menuVariants}
+    initial="hidden"
+    animate="visible"
+    className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2  z-50 lg:hidden">
       {/* Opened Menu */}
       {isOpen && <ul className="  w-[87vw] h-[87vh] pt-6 ">
         {mobileNavItems.map((item, i) => (
@@ -78,7 +98,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

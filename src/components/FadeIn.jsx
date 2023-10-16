@@ -10,11 +10,11 @@ const FadeIn = ({  className, children, duration = 0.5, delay, from = 24, view=0
       className={className}
       ref={ref}
       variants={{
-        hidden: { opacity: 0, y: from },
+        hidden: { opacity: 0, y: from},
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: duration, staggerChildren: 0.2, delay:delay },
+          transition: { duration: duration, delay:delay },
         },
       }}
       initial="hidden"

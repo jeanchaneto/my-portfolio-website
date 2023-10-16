@@ -26,7 +26,7 @@ const TextSlideMask = ({ children }) => {
     setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
   };
   useEffect(() => {
-    const timeout = setTimeout(changeText, 3500);
+    const timeout = setTimeout(changeText, 3000);
     return () => clearTimeout(timeout);
   }, [currentTextIndex, setCurrentTextIndex]);
 
