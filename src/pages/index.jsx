@@ -1,7 +1,18 @@
+import AnimatedText from "@/components/AnimatedText";
+import FadeIn from "@/components/FadeIn";
 import Hero3d from "@/components/Hero3d";
+import TextSlideMask from "@/components/TextSlideMask";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [textSlideActive, setTextSlideActive] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setTextSlideActive(true), 5000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <main className="bg-gray-950 min-h-screen ">
       <div className="flex items-center  min-[964px]:h-screen py-24 lg:py-32 relative">
@@ -10,21 +21,32 @@ export default function Home() {
           <div className="absolute top-12  -translate-x-1/4 min-[964px]:translate-x-0 min-[964px]:right-[24px] w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[600px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob  z-0 "></div>
           {/* Left hero */}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10 pt-12 pb-24 min-[964px]:pt-0 min-[964px]:pb-0">
-            <h2 className="text-base mt-6 leading-7 text-gray-300 font-thin tracking-widest">
-              HI, I'M{" "}
-              <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text font-normal">
-                JEAN CHANE-TO
-              </span>
-            </h2>
+            <div className="overflow-hidden">
+              <FadeIn view="0.1">
+                <h2 className="text-base mt-6 leading-7 text-gray-300 font-thin tracking-widest  ">
+                  HI, I'M{" "}
+                  <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text font-normal ">
+                    JEAN CHANE-TO
+                  </span>
+                </h2>
+              </FadeIn>
+            </div>
             <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl font-sora sm:whitespace-nowrap ">
-              I Craft Seamless
-              <br /> Web Applications
+              <AnimatedText el="span">I Craft</AnimatedText>{" "}
+              <span className="overflow-hidden">
+                {textSlideActive && <TextSlideMask>Seamless</TextSlideMask>}
+              </span>
+              <br /> <AnimatedText el="span">Web Applications</AnimatedText>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300 tracking-wide">
+            <AnimatedText
+              delay="2"
+              stagger={0.01}
+              className="mt-6 text-lg leading-8 text-gray-300 tracking-wide"
+            >
               Transforming visionary ideas into vibrant, interactive digital
               experiences with React.js expertise. Let's build something great
               together!
-            </p>
+            </AnimatedText>
             <div className="mt-10 flex items-center gap-x-6">
               <Link
                 href="/contact"

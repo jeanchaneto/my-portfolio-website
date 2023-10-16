@@ -1,9 +1,12 @@
 import AnimatedText from "@/components/AnimatedText";
 import FadeIn from "@/components/FadeIn";
+import TextSlideMask from "@/components/TextSlideMask";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function TestPage() {
+
+
   return (
     <main className="bg-gray-950 min-h-[4000px] ">
       <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row  items-center py-24 relative px-6 md:px-0">
@@ -15,7 +18,7 @@ export default function TestPage() {
               <span className="text-gray-200 font-semibold">Jean Chane-to</span>
             </h2>
           </FadeIn>
-
+<TextSlideMask>TEXTSLIDE</TextSlideMask>
           <AnimatedText
             el={"h1"}
             duration="0.5"
@@ -38,14 +41,7 @@ export default function TestPage() {
           </AnimatedText>
           <div className="mt-10 flex items-center gap-x-6">
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 24 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, staggerChildren: 0.2 },
-                },
-              }}
+            
               initial="hidden"
               animate="visible"
               className="flex gap-4"

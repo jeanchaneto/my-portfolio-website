@@ -6,8 +6,8 @@ const AnimatedText = ({
   className,
   children,
   delay,
-  duration,
-  stagger,
+  duration = 0.5,
+  stagger = 0.1,
 }) => {
   const [startAnimation, setStartAnimation] = useState(false);
   const ref = useRef(null);
