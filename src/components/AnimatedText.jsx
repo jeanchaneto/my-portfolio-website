@@ -1,8 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-
-const AnimatedText = ({ el: Wrapper = "p", className, children, delay, duration, stagger }) => {
+const AnimatedText = ({
+  el: Wrapper = "p",
+  className,
+  children,
+  delay,
+  duration,
+  stagger,
+}) => {
   const [startAnimation, setStartAnimation] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
@@ -12,13 +18,13 @@ const AnimatedText = ({ el: Wrapper = "p", className, children, delay, duration,
       opacity: 0,
       scale: 0.35,
       x: 40,
-      transition: { duration: duration }
+      transition: { duration: duration },
     },
     visible: {
       opacity: 1,
       scale: 1,
       x: 0,
-      transition: { duration: duration }
+      transition: { duration: duration },
     },
   };
 
@@ -26,7 +32,7 @@ const AnimatedText = ({ el: Wrapper = "p", className, children, delay, duration,
     if (isInView) {
       setTimeout(() => {
         setStartAnimation(true);
-      }, delay * 1000); 
+      }, delay * 1000);
     }
   }, [isInView]);
 

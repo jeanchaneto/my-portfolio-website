@@ -1,10 +1,11 @@
 import AnimatedText from "@/components/AnimatedText";
+import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export default function TestPage() {
   return (
     <main className="bg-gray-950 min-h-[4000px] ">
-      <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row  items-center py-24 relative px-6">
+      <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row  items-center py-24 relative px-6 md:px-0">
         {/* Left hero */}
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10">
           <h2 className="text-base mt-6 leading-7 text-gray-400">
@@ -31,6 +32,7 @@ export default function TestPage() {
             >
               Services <span aria-hidden="true">→</span>
             </Link>
+            <FadeIn className="bg-red-500 rounded-xl p-3" duration="2" delay="0.5" ><h2>Cool</h2></FadeIn>
           </div>
         </div>
         {/* Image */}
