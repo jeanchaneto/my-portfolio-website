@@ -23,7 +23,6 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
   let widthSync = useTransform(distance, [-150, 0, 150], [48, 100, 48]);
   let width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
-
   const borderVariants = {
     hover: {
       border: "1px solid rgba(255, 255, 255, 0.7)",
@@ -33,7 +32,6 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
       border: "1px solid rgba(255, 255, 255, 0.2)",
     },
   };
-
 
   return (
     <motion.div
