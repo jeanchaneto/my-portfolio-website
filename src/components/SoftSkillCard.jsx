@@ -1,4 +1,5 @@
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { cardsVariants } from "@/utils/motionVariants";
 
 const SoftSkillCard = ({ icon, title }) => {
   let mouseX = useMotionValue(0);
@@ -11,9 +12,10 @@ const SoftSkillCard = ({ icon, title }) => {
     mouseY.set(clientY - top);
   }
   return (
-    <li
+    <motion.li
       className="group relative rounded-xl border border-white/10  px-6 py-12 shadow-2xl"
       onMouseMove={handleMouseMove}
+      variants={cardsVariants}
     >
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -35,7 +37,7 @@ const SoftSkillCard = ({ icon, title }) => {
           </h3>
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 };
 

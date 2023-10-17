@@ -1,8 +1,13 @@
+import AnimatedText from "@/components/AnimatedText";
 import { Divider } from "@/components/Divider";
 import EducationCard from "@/components/EducationCard";
 import ExperienceCard from "@/components/ExperienceCard";
+import FadeIn from "@/components/FadeIn";
 import SkillCard from "@/components/SkillCard";
 import SoftSkillCard from "@/components/SoftSkillCard";
+import { motion } from "framer-motion";
+import { Fade } from "hamburger-react";
+import Image from "next/image";
 
 const skills = [
   { logo: "/images/html.png", title: "HTML 5" },
@@ -128,6 +133,25 @@ const education = [
   },
 ];
 
+const cardsVariants = {
+  hidden: {
+    y: 24,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
+const staggerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
 const About = () => {
   return (
     <main>
@@ -136,46 +160,79 @@ const About = () => {
         <div className=" py-24 sm:py-32 ">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0">
             <section className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-100 sm:text-4xl font-sora">
-                About me
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                My journey into web development was not a linear path, but a
-                fascinating exploration of connecting dots between different
-                spheres of my life: from rigorous scientific analysis to
-                producing professional electronic music.
-              </p>
-              <p className="mt-3 text-lg leading-8 text-gray-300">
-                Transitioning from a career as a water hygiene consultant to a
-                React.js developer sparked by a genuine desire to build
-                meaningful digital spaces, notably exemplified in running my own
-                music e-commerce platform that blends my coding skills and my
-                entrepreneurial spirit with my musical artistry.
-              </p>
-              <p className="mt-3 mb-10 text-lg leading-8 text-gray-300">
-                My journey reflects a steadfast commitment to learning and
-                adaptability across varied fields.
-              </p>
-              <a
-                href="/services"
-                className="text-sm font-semibold leading-6 text-gray-100 z-20 flex gap-2 items-center border border-white/20 rounded-xl w-fit py-1.5 px-2 "
+              <AnimatedText
+                el="h1"
+                className="text-4xl font-bold tracking-tight text-gray-100 sm:text-4xl font-sora"
               >
-                <p>Download my CV</p>{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-4 h-4"
+                About me
+              </AnimatedText>
+              <FadeIn delay="0.5">
+                <FadeIn className="mt-6 text-lg leading-8 text-gray-300">
+                  <p>
+                    My journey into web development was not a linear path, but a
+                    fascinating exploration of connecting dots between different
+                    spheres of my life: from rigorous scientific analysis to
+                    producing professional electronic music.
+                  </p>
+                </FadeIn>
+                <FadeIn className="mt-3 text-lg leading-8 text-gray-300">
+                  <p>
+                    Transitioning from a career as a water hygiene consultant to
+                    a React.js developer sparked by a genuine desire to build
+                    meaningful digital spaces, notably exemplified in running my
+                    own music e-commerce platform that blends my coding skills
+                    and my entrepreneurial spirit with my musical artistry.
+                  </p>
+                </FadeIn>
+                <FadeIn className="mt-3 mb-10 text-lg leading-8 text-gray-300">
+                  <p>
+                    My journey reflects a steadfast commitment to learning and
+                    adaptability across varied fields.
+                  </p>
+                </FadeIn>
+              </FadeIn>
+              <motion.div
+                whileTap={{ scale: 0.95 }}
+                variants={{
+                  hidden: { opacity: 0, y: 24 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 1,
+                      delay: 0.7,
+                      type: "spring",
+                      bounce: "0.5",
+                    },
+                  },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <a
+                  href="#"
+                  className="text-sm font-semibold leading-6 text-gray-100 z-20 flex gap-2 items-center border border-white/20 rounded-xl w-fit py-2.5 px-3 hover:bg-sky-950/60 ring-1 ring-transparent hover:ring-sky-400
+                transition-all duration-300  
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 "
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m-6 3.75l3 3m0 0l3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75"
-                  />
-                </svg>
-              </a>
+                  <p>Download my CV</p>{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m-6 3.75l3 3m0 0l3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75"
+                    />
+                  </svg>
+                </a>
+              </motion.div>
             </section>
           </div>
         </div>
@@ -186,19 +243,29 @@ const About = () => {
       <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
-              Skills
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Through diverse technologies,
-              <br /> I convert ideas into polished digital experiences.
-            </p>
+            <FadeIn>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
+                Skills
+              </h2>
+            </FadeIn>
+            <FadeIn delay="0.2">
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                Through diverse technologies,
+                <br /> I convert ideas into polished digital experiences.
+              </p>
+            </FadeIn>
           </div>
-          <ul className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+          <motion.ul
+            variants={staggerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "0px 0px -400px" }}
+            className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "
+          >
             {skills.map((skill, i) => (
               <SkillCard logo={skill.logo} title={skill.title} key={i} />
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </section>
       <Divider />
@@ -206,19 +273,29 @@ const About = () => {
       <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-blue-400 to-emerald-400 inline-block text-transparent bg-clip-text">
-              Soft Skills
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Blending technical expertise and soft skills <br /> for seamless
-              digital solutions.
-            </p>
+            <FadeIn>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-blue-400 to-emerald-400 inline-block text-transparent bg-clip-text">
+                Soft Skills
+              </h2>
+            </FadeIn>
+            <FadeIn delay="0.2">
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                Blending technical expertise and soft skills <br /> for seamless
+                digital solutions.
+              </p>
+            </FadeIn>
           </div>
-          <ul className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.ul
+            variants={staggerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "0px 0px -400px" }}
+            className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          >
             {softSkills.map((skill, i) => (
               <SoftSkillCard icon={skill.icon} title={skill.title} key={i} />
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </section>
       <Divider />
@@ -226,13 +303,17 @@ const About = () => {
       <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text">
-              Experience
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Discover my path from science to tech,
-              <br /> enriched by creative exploration.
-            </p>
+            <FadeIn>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text">
+                Experience
+              </h2>
+            </FadeIn>
+            <FadeIn delay="0.2">
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                Discover my path from science to tech,
+                <br /> enriched by creative exploration.
+              </p>
+            </FadeIn>
           </div>
           <ul className=" w-full flex flex-col items-start justify-between mt-24 gap-8 lg:mt-32">
             {experiences.map((experience, i) => (
@@ -253,13 +334,17 @@ const About = () => {
       <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
-              Education
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Dive into my educational background, where a foundation in science
-              launched a self-driven journey into tech.
-            </p>
+            <FadeIn>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
+                Education
+              </h2>
+            </FadeIn>
+            <FadeIn delay="0.2">
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                Dive into my educational background, where a foundation in
+                science launched a self-driven journey into tech.
+              </p>
+            </FadeIn>
           </div>
           <ul className=" w-full flex flex-col items-start justify-between mt-24 gap-8 lg:mt-32">
             {education.map((educ, i) => (
@@ -280,15 +365,20 @@ const About = () => {
       <section className=" py-24 sm:py-32 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-300 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
-              Languages
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Fluent in English and native in French, I confidently communicate
-              at high professional and casual levels in each language.
-            </p>
+            <FadeIn>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-300 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
+                Languages
+              </h2>
+            </FadeIn>
+            <FadeIn delay="0.2">
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                Fluent in English and native in French, I confidently
+                communicate at high professional and casual levels in each
+                language.
+              </p>
+            </FadeIn>
           </div>
-          <div className="mt-6 flex gap-16 justify-center">
+          <FadeIn delay="0.4" className="mt-6 flex gap-16 justify-center">
             <div className="border border-white/10 rounded-xl shadow-2xl inset-4  ">
               <img
                 src="/images/english-flag.svg"
@@ -303,37 +393,55 @@ const About = () => {
                 className="w-24 opacity-50 bg-gray-950 "
               />
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
       <Divider />
-      {/* Other interests */}
       <section className=" pt-24 sm:pt-32 pb-60">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-xl sm:text-center">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-200 to-sky-400 inline-block text-transparent bg-clip-text">
-              Other Interests
-            </h2>
-            <p className="mt-6 text-lg text-gray-400">
-              I am passionate about electronic music and produce at professional
-              level utilising{" "}
-              <a
-                href="https://www.apple.com/logic-pro/"
-                target="_blank"
-                className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
-              >
-                Logic Pro
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://www.ableton.com/en/"
-                target="_blank"
-                className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
-              >
-                Ableton Live
-              </a>{" "}
-              software. In my free time, I love going fishing or surfing.
-            </p>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="lg:pr-4">
+              <FadeIn className="relative overflow-hidden rounded-3xl  px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 border border-white/10">
+                <Image
+                  className="absolute inset-0 h-full w-full object-cover  "
+                  src="/images/producing-music.jpg"
+                  alt="Jean Chane-to producing music"
+                  width={510}
+                  height={280}
+                />
+              </FadeIn>
+            </div>
+            <div>
+              <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
+                <FadeIn>
+                  <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-200 to-sky-400 inline-block text-transparent bg-clip-text">
+                    Other Interests
+                  </h2>
+                </FadeIn>
+                <FadeIn delay="0.2">
+                  <p className="mt-6 text-lg text-gray-400">
+                    I am passionate about electronic music and produce at
+                    professional level utilising{" "}
+                    <a
+                      href="https://www.apple.com/logic-pro/"
+                      target="_blank"
+                      className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
+                    >
+                      Logic Pro
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://www.ableton.com/en/"
+                      target="_blank"
+                      className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
+                    >
+                      Ableton Live
+                    </a>{" "}
+                    software. In my free time, I love going fishing or surfing.
+                  </p>
+                </FadeIn>
+              </div>
+            </div>
           </div>
         </div>
       </section>

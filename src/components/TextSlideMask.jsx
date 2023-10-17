@@ -18,7 +18,7 @@ const slideVariants = {
   },
 };
 
-const texts = ["Seamless", "Dynamic", "Scalable", "Fast", "Engaging"];
+const texts = ["Seamless", "Dynamic", "Scalable", "Fast", "Reactive", "Engaging"];
 
 const TextSlideMask = ({ children }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -40,7 +40,7 @@ const TextSlideMask = ({ children }) => {
           transition={{ staggerChildren: 0.1 }}
           exit="exit"
           key={currentTextIndex}
-          className="overflow-hidden"
+          className="overflow-hidden text-sky-500"
         >
           {texts[currentTextIndex].split("").map((character, j) => (
             <motion.span
