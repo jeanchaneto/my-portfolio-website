@@ -9,7 +9,7 @@ export const MenuToggle = ({isOpen, setIsOpen}) => {
         size={28.5}
         distance=""
         duration={0.8}
-        toggled={isOpen} toggle={()=>setIsOpen(true)}
+        toggled={isOpen} toggle={()=>{ isOpen ? setIsOpen(false) : setIsOpen(true)  }}
       />
     </div>
   );
