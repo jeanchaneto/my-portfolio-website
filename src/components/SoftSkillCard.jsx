@@ -1,4 +1,4 @@
-import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { cardsVariants } from "@/utils/motionVariants";
 
 const SoftSkillCard = ({ icon, title }) => {

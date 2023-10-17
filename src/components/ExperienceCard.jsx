@@ -1,3 +1,4 @@
+import { fadeInVariants } from "@/utils/motionVariants";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 const ExperienceCard = ({
@@ -18,9 +19,13 @@ const ExperienceCard = ({
   }
 
   return (
-    <li
-      className=" group rounded-xl border border-white/10  px-6 py-12 shadow-2xl relative max-w-4xl mx-auto "
+    <motion.li
+      className=" group rounded-xl border border-white/10  px-6 py-12 shadow-2xl relative  "
       onMouseMove={handleMouseMove}
+      variants={fadeInVariants}
+      initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "0px 0px -200px" }}
     >
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -36,21 +41,26 @@ const ExperienceCard = ({
       />
       <div>
         <h3 className="font-bold text-lg ">
-          {title} {" "}
-          <a href={companyLink} target="_blank" className=" text-sky-500 hover:opacity-50 transition-opacity duration-300 ">
+          {title}{" "}
+          <a
+            href={companyLink}
+            target="_blank"
+            className=" text-sky-500 hover:opacity-50 transition-opacity duration-300 "
+          >
             {company}
           </a>
         </h3>
         <p className=" text-gray-500">{timePeriod}</p>
-        <div className="mt-4" >
-        {content.map((paragraph, i) => (
-          <p className="mt-1 text-gray-400" key={i}>
-            {" "}
-            - {paragraph}
-          </p>
-        ))}</div>
+        <div className="mt-4">
+          {content.map((paragraph, i) => (
+            <p className="mt-1 text-gray-400" key={i}>
+              {" "}
+              - {paragraph}
+            </p>
+          ))}
+        </div>
       </div>
-    </li>
+    </motion.li>
   );
 };
 

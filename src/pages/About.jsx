@@ -5,9 +5,10 @@ import ExperienceCard from "@/components/ExperienceCard";
 import FadeIn from "@/components/FadeIn";
 import SkillCard from "@/components/SkillCard";
 import SoftSkillCard from "@/components/SoftSkillCard";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { Fade } from "hamburger-react";
 import Image from "next/image";
+import { useRef } from "react";
 
 const skills = [
   { logo: "/images/html.png", title: "HTML 5" },
@@ -153,6 +154,16 @@ const staggerVariants = {
 };
 
 const About = () => {
+  const experienceRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: experienceRef,
+    offset: ["100px end", "80% start"],
+  });
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 150,
+    damping: 40,
+    restDelta: 0.001,
+  });
   return (
     <main>
       {/* Hero Sections */}
@@ -166,7 +177,7 @@ const About = () => {
               >
                 About me
               </AnimatedText>
-              <FadeIn delay="0.5">
+              <FadeIn duration="0.6" delay="0.5">
                 <FadeIn className="mt-6 text-lg leading-8 text-gray-300">
                   <p>
                     My journey into web development was not a linear path, but a
@@ -251,7 +262,8 @@ const About = () => {
             <FadeIn delay="0.2">
               <p className="mt-6 text-lg leading-8 text-gray-400">
                 Through diverse technologies,
-                <br /> I convert ideas into polished digital experiences.
+                <br className="hidden sm:block" /> I convert ideas into polished
+                digital experiences.
               </p>
             </FadeIn>
           </div>
@@ -260,7 +272,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "0px 0px -400px" }}
-            className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "
+            className=" pt-24 sm:pt-32 mx-auto truncate grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "
           >
             {skills.map((skill, i) => (
               <SkillCard logo={skill.logo} title={skill.title} key={i} />
@@ -280,8 +292,9 @@ const About = () => {
             </FadeIn>
             <FadeIn delay="0.2">
               <p className="mt-6 text-lg leading-8 text-gray-400">
-                Blending technical expertise and soft skills <br /> for seamless
-                digital solutions.
+                Blending technical expertise and soft skills{" "}
+                <br className="hidden sm:block" /> for seamless digital
+                solutions.
               </p>
             </FadeIn>
           </div>
@@ -290,7 +303,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "0px 0px -400px" }}
-            className=" pt-24 sm:pt-32 mx-auto max-w-4x truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            className=" pt-24 sm:pt-32 mx-auto truncate grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             {softSkills.map((skill, i) => (
               <SoftSkillCard icon={skill.icon} title={skill.title} key={i} />
@@ -301,7 +314,7 @@ const About = () => {
       <Divider />
       {/* Experience Section */}
       <section className=" py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
           <div className="mx-auto max-w-xl sm:text-center">
             <FadeIn>
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text">
@@ -311,22 +324,33 @@ const About = () => {
             <FadeIn delay="0.2">
               <p className="mt-6 text-lg leading-8 text-gray-400">
                 Discover my path from science to tech,
-                <br /> enriched by creative exploration.
+                <br className="hidden sm:block" /> enriched by creative
+                exploration.
               </p>
             </FadeIn>
           </div>
-          <ul className=" w-full flex flex-col items-start justify-between mt-24 gap-8 lg:mt-32">
-            {experiences.map((experience, i) => (
-              <ExperienceCard
-                key={i}
-                title={experience.title}
-                company={experience.company}
-                companyLink={experience.companyLink}
-                timePeriod={experience.timePeriod}
-                content={experience.content}
+          <div className=" flex justify-center mt-24 lg:mt-32">
+            {/* Progress bar */}
+            <div className=" w-7  sm:w-28 flex sm:justify-center py-12">
+              <motion.div
+                style={{ scaleY: scaleY }}
+                ref={experienceRef}
+                className="  w-[1px] h-full bg-gradient-to-b from-sky-600 to-cyan-500 origin-top rounded-xl"
               />
-            ))}
-          </ul>
+            </div>
+            <ul className=" w-full flex flex-col items-start justify-between  gap-8  relative max-w-6xl ">
+              {experiences.map((experience, i) => (
+                <ExperienceCard
+                  key={i}
+                  title={experience.title}
+                  company={experience.company}
+                  companyLink={experience.companyLink}
+                  timePeriod={experience.timePeriod}
+                  content={experience.content}
+                />
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
       <Divider />
