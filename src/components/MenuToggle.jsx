@@ -3,7 +3,7 @@ import { Sling as Hamburger } from "hamburger-react";
 export const MenuToggle = ({setIsOpen}) => {
 
   return (
-    <div className="">
+    <div>
       <Hamburger
         color="#f3f4f6"
         size={28.5}

@@ -20,7 +20,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthSync = useTransform(distance, [-150, 0, 150], [40, 100, 40]);
+  let widthSync = useTransform(distance, [-150, 0, 150], [48, 100, 48]);
   let width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
 
@@ -53,7 +53,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
         <img
           src={icon}
           alt={alt}
-          className=" w-9/12 h-9/12 object-scale-down  "
+          className=" w-9/12 h-9/12 object-scale-down "
         />
       </Link>
       <AnimatePresence>
@@ -63,14 +63,16 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
             animate={{
               opacity: 1,
               scale: 1,
+              x: "50%",
               transition: { duration: 1, type: "spring", bounce: "0.5" },
             }}
             exit={{
               opacity: 0,
               scale: 0.5,
+              x: "50%",
               transition: { duration: 0.3, type: "spring" },
             }}
-            className="w-1 h-1 bg-cyan-200 rounded-full absolute right-1/2 translate-x-1/2 -bottom-3"
+            className="w-1 h-1 bg-cyan-200 rounded-full absolute right-1/2  -bottom-2"
           />
         )}
       </AnimatePresence>

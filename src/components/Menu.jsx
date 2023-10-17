@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MenuToggle } from "./MenuToggle";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { motion} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const mobileNavItems = [
   { page: "About", link: "/about" },
@@ -31,35 +31,45 @@ const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useRouter();
   return (
-    <motion.div 
-    variants={menuVariants}
-    initial="hidden"
-    animate="visible"
-    className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2  z-50 lg:hidden">
+    <motion.div
+      variants={menuVariants}
+      initial="hidden"
+      animate="visible"
+      className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2  z-50 lg:hidden"
+    >
       {/* Opened Menu */}
-      {isOpen && <ul className="  w-[87vw] h-[87vh] pt-6 ">
-        {mobileNavItems.map((item, i) => (
-          <li
-            className=" h-12 hover:opacity-50 border-b border-white/10 flex items-center "
-            key={i}
-          >
-            <Link href={item.link}>
-              <div className="flex gap-2 items-center text-gray-100 ">
-                <p>{item.page}</p>
-                {pathname === item.link && (
-                  <div className="w-1 h-1 bg-sky-200 rounded-full " />
-                )}
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>}
+      {isOpen && (
+        <ul className="  w-[87vw] h-[87vh] pt-6 ">
+          {mobileNavItems.map((item, i) => (
+            <li
+              className=" h-12 hover:opacity-50 border-b border-white/10 flex items-center "
+              key={i}
+            >
+              <Link href={item.link}>
+                <div className="flex gap-2 items-center text-gray-100 ">
+                  <p>{item.page}</p>
+                  {pathname === item.link && (
+                    <div className="w-1 h-1 bg-sky-200 rounded-full " />
+                  )}
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
       {/* Persistent bottom nav menu */}
       <div className="  h-16 items-center gap-4  flex justify-center ">
-        <div className="aspect-square w-10 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group ">
+        <motion.div
+          whileTap={{
+            scale: 0.8,
+            backgroundColor: "#030712",
+            border: "1px solid rgba(255, 255, 255, 0.7)",
+          }}
+          className="aspect-square w-12 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group box-content "
+        >
           <Link
             href="/"
-            className="w-full h-full flex justify-center items-center"
+            className="w-full h-full flex justify-center items-center "
           >
             <img
               src="/images/house-solid.svg"
@@ -67,19 +77,40 @@ const Menu = () => {
               className=" w-9/12 h-9/12 object-scale-down  "
             />
           </Link>
-          {pathname === "/" && (
-            <div className="w-1 h-1 bg-sky-200 rounded-full absolute right-1/2 translate-x-1/2 -bottom-2" />
-          )}
-          <div className="py-1 px-1.5 bg-gray-900 border border-white/5 rounded-lg text-xs text-center absolute -top-8 right-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
-            Home
-          </div>
-        </div>
-        <div className="aspect-square w-10 rounded-xl bg-gradient-radial   backdrop-blur-2xl border-white/10 border relative group ">
+          <AnimatePresence>
+            {pathname === "/" && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  x: "50%",
+                  transition: { duration: 1, type: "spring", bounce: "0.5" },
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.5,
+                  x: "50%",
+                  transition: { duration: 0.3, type: "spring" },
+                }}
+                className="w-1 h-1 bg-sky-200 rounded-full absolute right-1/2 translate-x-1/2 -bottom-2"
+              />
+            )}
+          </AnimatePresence>
+        </motion.div>
+        <div className="aspect-square w-12 rounded-xl bg-gradient-radial   backdrop-blur-2xl border-white/10 border relative group ">
           <div className="w-full h-full flex justify-center items-center">
             <MenuToggle setIsOpen={setIsOpen} />
           </div>
         </div>
-        <div className="aspect-square w-10 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group ">
+        <motion.div
+          whileTap={{
+            scale: 0.8,
+            backgroundColor: "#030712",
+            border: "1px solid rgba(255, 255, 255, 0.7)",
+          }}
+          className="aspect-square w-12 rounded-xl bg-gradient-radial from-sky-800/40 to-transparent  backdrop-blur-2xl border-white/10 border relative group box-content"
+        >
           <Link
             href="/contact"
             className="w-full h-full flex justify-center items-center"
@@ -90,13 +121,27 @@ const Menu = () => {
               className=" w-9/12 h-9/12 object-scale-down  "
             />
           </Link>
-          {pathname === "/contact" && (
-            <div className="w-1 h-1 bg-sky-200 rounded-full absolute right-1/2 translate-x-1/2 -bottom-2" />
-          )}
-          <div className="py-1 px-1.5 bg-gray-900 border border-white/5 rounded-lg text-xs text-center absolute -top-8 right-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
-            Contact
-          </div>
-        </div>
+          <AnimatePresence>
+            {pathname === "/contact" && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  x: "50%",
+                  transition: { duration: 1, type: "spring", bounce: "0.5" },
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.5,
+                  x: "50%",
+                  transition: { duration: 0.3, type: "spring" },
+                }}
+                className="w-1 h-1 bg-sky-200 rounded-full absolute right-1/2 translate-x-1/2 -bottom-2"
+              />
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </motion.div>
   );
