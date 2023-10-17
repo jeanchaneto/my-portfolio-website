@@ -1,5 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import { Divider } from "@/components/Divider";
+import Education from "@/components/Education";
 import EducationCard from "@/components/EducationCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import FadeIn from "@/components/FadeIn";
@@ -355,35 +356,7 @@ const About = () => {
       </section>
       <Divider />
       {/* Education Section */}
-      <section className=" py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-xl sm:text-center">
-            <FadeIn>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
-                Education
-              </h2>
-            </FadeIn>
-            <FadeIn delay="0.2">
-              <p className="mt-6 text-lg leading-8 text-gray-400">
-                Dive into my educational background, where a foundation in
-                science launched a self-driven journey into tech.
-              </p>
-            </FadeIn>
-          </div>
-          <ul className=" w-full flex flex-col items-start justify-between mt-24 gap-8 lg:mt-32">
-            {education.map((educ, i) => (
-              <EducationCard
-                key={i}
-                title={educ.title}
-                school={educ.school}
-                schoolLink={educ.schoolLink}
-                timePeriod={educ.timePeriod}
-                content={educ.content}
-              />
-            ))}
-          </ul>
-        </div>
-      </section>
+    <Education />
       <Divider />
       {/* Languages */}
       <section className=" py-24 sm:py-32 ">

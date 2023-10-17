@@ -1,3 +1,4 @@
+import { fadeInVariants } from "@/utils/motionVariants";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 const EducationCard = ({ title, school, schoolLink, timePeriod, content }) => {
@@ -12,9 +13,13 @@ const EducationCard = ({ title, school, schoolLink, timePeriod, content }) => {
   }
 
   return (
-    <li
+    <motion.li
       className=" group rounded-xl border border-white/10  px-6 py-12 shadow-2xl relative max-w-4xl w-full mx-auto "
       onMouseMove={handleMouseMove}
+      variants={fadeInVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "0px 0px -200px" }}
     >
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -30,7 +35,7 @@ const EducationCard = ({ title, school, schoolLink, timePeriod, content }) => {
       />
       <div>
         <h3 className="font-bold text-lg ">{title}</h3>
-        <p  >
+        <p>
           <a
             href={schoolLink}
             target="_blank"
@@ -48,7 +53,7 @@ const EducationCard = ({ title, school, schoolLink, timePeriod, content }) => {
           </p>
         ))}
       </div>
-    </li>
+    </motion.li>
   );
 };
 
