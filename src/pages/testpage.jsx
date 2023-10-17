@@ -1,5 +1,8 @@
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import FadeIn from "@/components/FadeIn";
+import Skills from "@/components/Skills";
+import SoftSkills from "@/components/SoftSkills";
 import TextSlideMask from "@/components/TextSlideMask";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -132,6 +135,9 @@ export default function TestPage() {
           </div>
         </div>
       </div>
+      <Skills />
+      <SoftSkills/>
+      <Experience />
     </main>
   );
 }

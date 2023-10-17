@@ -58,7 +58,7 @@ const Menu = () => {
       if (window.innerWidth < 640) {
         setMenuHeight("87vh");
       } else {
-        setMenuHeight("50vh");
+        setMenuHeight("60vh");
       }
     };
     window.addEventListener("resize", updateMenuHeight);

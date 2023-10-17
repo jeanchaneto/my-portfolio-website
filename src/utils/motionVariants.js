@@ -18,3 +18,10 @@ export const fadeInVariants = {
     transition: { duration: 0.5 },
   },
 };
+
+export const staggerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};

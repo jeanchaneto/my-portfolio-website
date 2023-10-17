@@ -1,7 +1,6 @@
 import { motion, useMotionValue } from "framer-motion";
 import NavItem from "./NavItem";
 
-
 const navItems = [
   { icon: "/images/house-solid.svg", link: "/", alt: "Home" },
   { icon: "/images/user-solid.svg", link: "/about", alt: "About" },
