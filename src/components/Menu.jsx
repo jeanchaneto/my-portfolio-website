@@ -124,7 +124,9 @@ const Menu = () => {
                   whileTap={{ scale: 0.95 }}
                   key={i}
                 >
-                  <Link href={item.link}>
+                  <Link href={item.link}
+                  onClick={() => setIsOpen(false)}
+                  >
                     <div className="flex gap-2 items-center text-gray-100 ">
                       <img src={item.icon} alt="" className="w-9" />
                       <p>{item.page}</p>
@@ -181,7 +183,7 @@ const Menu = () => {
           </motion.div>
           <div className="aspect-square w-12 rounded-xl bg-gradient-radial   backdrop-blur-2xl border-white/10 border relative group ">
             <div className="w-full h-full flex justify-center items-center">
-              <MenuToggle setIsOpen={setIsOpen} />
+              <MenuToggle setIsOpen={setIsOpen} isOpen={isOpen} />
             </div>
           </div>
           <motion.div

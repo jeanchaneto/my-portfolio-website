@@ -1,6 +1,6 @@
 import { Sling as Hamburger } from "hamburger-react";
 
-export const MenuToggle = ({setIsOpen}) => {
+export const MenuToggle = ({isOpen, setIsOpen}) => {
 
   return (
     <div>
@@ -9,13 +9,7 @@ export const MenuToggle = ({setIsOpen}) => {
         size={28.5}
         distance=""
         duration={0.8}
-        onToggle={(toggled) => {
-          if (toggled) {
-            setIsOpen(true);
-          } else {
-            setIsOpen(false);
-          }
-        }}
+        toggled={isOpen} toggle={()=>setIsOpen(true)}
       />
     </div>
   );

@@ -6,7 +6,7 @@ const contact = () => {
   return (
     <div className="relative isolate min-h-screen ">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-          <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+          <div className="relative px-6 sm:pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <h1 className="text-3xl font-bold tracking-tight text-gray-100">
               Contact
