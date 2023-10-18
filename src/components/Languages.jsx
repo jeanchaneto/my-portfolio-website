@@ -21,13 +21,13 @@ const Languages = () => {
           <img
             src="/images/english-flag.svg"
             alt="UK flag"
-            className="rounded-xl w-24"
+            className="rounded-xl w-24 pointer-events-none"
           />
 
           <img
             src="/images/french-flag.svg"
             alt="French flag"
-            className=" rounded-xl w-24"
+            className=" rounded-xl w-24 pointer-events-none"
           />
         </FadeIn>
       </div>

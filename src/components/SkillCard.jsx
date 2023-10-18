@@ -13,7 +13,7 @@ const SkillCard = ({ title, logo }) => {
   }
   return (
     <motion.li
-      className="group relative rounded-xl border border-white/10  px-6 py-12 shadow-2xl"
+      className="group relative rounded-xl border border-white/10  px-6 py-12 shadow-2xl "
       onMouseMove={handleMouseMove}
       variants={cardsVariants}
     >
@@ -30,9 +30,9 @@ const SkillCard = ({ title, logo }) => {
         }}
       />
       <div>
-        <div className=" flex items-center gap-4 justify-center">
+        <div className=" flex items-center gap-4 justify-center pointer-events-none">
           <img src={logo} alt={`${title} logo`} className="h-8" />
-          <h3 className="text-xl font-bold tracking-tight text-gray-300">
+          <h3 className="text-xl font-bold tracking-tight text-gray-300 ">
             {title}
           </h3>
         </div>

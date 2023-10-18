@@ -30,7 +30,7 @@ const SoftSkillCard = ({ icon, title }) => {
         }}
       />
       <div>
-        <div className=" flex flex-col items-center gap-4 justify-center">
+        <div className=" flex flex-col items-center gap-4 justify-center pointer-events-none">
           <img src={icon} alt={`${title}`} className="h-8" />
           <h3 className="text-xl font-bold tracking-tight text-gray-300">
             {title}

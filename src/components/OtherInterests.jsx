@@ -52,7 +52,7 @@ const OtherInterests = () => {
                 className="absolute inset-0 h-full w-full bg-gradient-to-r from-sky-500 to-blue-500 transform  bg-red-500 rounded-full blur-3xl"
               />
               <Image
-                className="absolute inset-0 h-full w-full object-cover rounded-3xl "
+                className="absolute inset-0 h-full w-full object-cover rounded-3xl pointer-events-none"
                 src="/images/producing-music.jpg"
                 alt="Jean Chane-to producing music"
                 width={510}
