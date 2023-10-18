@@ -21,7 +21,7 @@ export default function Home() {
           {/* Ligth */}
           <FadeIn
             duration="6"
-            className="absolute top-12  -translate-x-1/4 min-[964px]:translate-x-0 min-[964px]:right-[24px] w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[600px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob  z-0 "
+            className="absolute top-12  -translate-x-1/4 min-[964px]:translate-x-0 min-[964px]:right-[24px] w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[650px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl opacity-50 animate-blob  z-0 "
           ></FadeIn>
           {/* Left hero */}
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10 pt-12 pb-24 min-[964px]:pt-0 min-[964px]:pb-0">

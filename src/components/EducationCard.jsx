@@ -14,7 +14,7 @@ const EducationCard = ({ title, school, schoolLink, timePeriod, content }) => {
 
   return (
     <motion.li
-      className=" group rounded-xl border border-white/10  px-6 py-12 shadow-2xl relative max-w-4xl w-full mx-auto "
+      className=" group rounded-xl border border-white/10  px-6 py-12 shadow-2xl relative  w-full mx-auto "
       onMouseMove={handleMouseMove}
       variants={fadeInVariants}
       initial="hidden"
