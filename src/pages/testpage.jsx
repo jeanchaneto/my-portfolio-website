@@ -8,8 +8,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function TestPage() {
-
-
   return (
     <main className="bg-gray-950 min-h-[4000px] ">
       <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row  items-center py-24 relative px-6 md:px-0">
@@ -21,7 +19,7 @@ export default function TestPage() {
               <span className="text-gray-200 font-semibold">Jean Chane-to</span>
             </h2>
           </FadeIn>
-<TextSlideMask>TEXTSLIDE</TextSlideMask>
+          <TextSlideMask>TEXTSLIDE</TextSlideMask>
           <AnimatedText
             el={"h1"}
             duration="0.5"
@@ -44,7 +42,6 @@ export default function TestPage() {
           </AnimatedText>
           <div className="mt-10 flex items-center gap-x-6">
             <motion.div
-            
               initial="hidden"
               animate="visible"
               className="flex gap-4"
@@ -93,8 +90,9 @@ export default function TestPage() {
                 }}
               >
                 Test 2
-              </motion.div >
-              <motion.div className=" text-white"
+              </motion.div>
+              <motion.div
+                className=" text-white"
                 variants={{
                   hidden: {
                     y: 40,
@@ -102,8 +100,12 @@ export default function TestPage() {
                   visible: {
                     y: 0,
                   },
-                }}>Test 2</motion.div>
-                   <motion.div className=" text-white"
+                }}
+              >
+                Test 2
+              </motion.div>
+              <motion.div
+                className=" text-white"
                 variants={{
                   hidden: {
                     y: 40,
@@ -111,8 +113,12 @@ export default function TestPage() {
                   visible: {
                     y: 0,
                   },
-                }}>Test 2</motion.div>
-                   <motion.div className=" text-white"
+                }}
+              >
+                Test 2
+              </motion.div>
+              <motion.div
+                className=" text-white"
                 variants={{
                   hidden: {
                     y: 40,
@@ -120,7 +126,10 @@ export default function TestPage() {
                   visible: {
                     y: 0,
                   },
-                }}>Test 2</motion.div>
+                }}
+              >
+                Test 2
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -135,9 +144,81 @@ export default function TestPage() {
           </div>
         </div>
       </div>
-      <Skills />
-      <SoftSkills/>
-      <Experience />
+
+      <section className=" py-24 sm:py-32 ">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-xl sm:text-center">
+            <FadeIn>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-300 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
+                Languages
+              </h2>
+            </FadeIn>
+            <FadeIn delay="0.2">
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                Fluent in English and native in French, I confidently
+                communicate at high professional and casual levels in each
+                language.
+              </p>
+            </FadeIn>
+          </div>
+          <FadeIn delay="0.4" className="mt-6 flex gap-16 justify-center">
+            <div className="border border-white/10 rounded-xl shadow-2xl inset-4  ">
+              <img
+                src="/images/english-flag.svg"
+                alt="UK flag"
+                className="w-24 opacity-50 bg-gray-950 "
+              />
+            </div>
+            <div className="border border-white/10 rounded-xl shadow-2xl inset-4  ">
+              <img
+                src="/images/french-flag.svg"
+                alt="French flag"
+                className="w-24 opacity-50 bg-gray-950 "
+              />
+            </div>
+          </FadeIn>
+
+
+          <div className=" h-[40rem]">
+      <div className=" h-3/4 md:h-1/2 w-3/4  relative max-w-sm">
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-sky-500 to-blue-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+        <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="h-2 w-2 text-gray-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+              />
+            </svg>
+          </div>
+
+          <h1 className="font-bold text-xl text-white mb-0 mt-4 relative z-50">
+            Meteors because they're cool
+          </h1>
+
+          <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
+            I don't know what to write so I'll just paste something cool here.
+            One more sentence because lorem ipsum is just unacceptable.
+          </p>
+
+          <button className="border px-4 py-1 rounded-lg !text-sm  border-gray-500 text-gray-300">
+            Explore &rarr;
+          </button>
+
+        </div>
+      </div>
+    </div>
+         
+        </div>
+      </section>
     </main>
   );
 }

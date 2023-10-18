@@ -7,10 +7,10 @@ import Languages from "@/components/Languages";
 import OtherInterests from "@/components/OtherInterests";
 import Skills from "@/components/Skills";
 import SoftSkills from "@/components/SoftSkills";
+import { fadeInVariants } from "@/utils/motionVariants";
 import { motion } from "framer-motion";
 
 const About = () => {
-
   return (
     <main>
       {/* Hero Sections */}
@@ -24,16 +24,27 @@ const About = () => {
               >
                 About me
               </AnimatedText>
-              <FadeIn duration="0.6" delay="0.5">
-                <FadeIn className="mt-6 text-lg leading-8 text-gray-300">
+              <motion.div
+                // variants={{ hidden: "", visible: "" }}
+                transition={{ staggerChildren: 0.1 }}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.div
+                  variants={fadeInVariants}
+                  className="mt-6 text-lg leading-8 text-gray-300"
+                >
                   <p>
                     My journey into web development was not a linear path, but a
                     fascinating exploration of connecting dots between different
                     spheres of my life: from rigorous scientific analysis to
                     producing professional electronic music.
                   </p>
-                </FadeIn>
-                <FadeIn className="mt-3 text-lg leading-8 text-gray-300">
+                </motion.div>
+                <motion.div
+                  variants={fadeInVariants}
+                  className="mt-3 text-lg leading-8 text-gray-300"
+                >
                   <p>
                     Transitioning from a career as a water hygiene consultant to
                     a React.js developer sparked by a genuine desire to build
@@ -41,14 +52,17 @@ const About = () => {
                     own music e-commerce platform that blends my coding skills
                     and my entrepreneurial spirit with my musical artistry.
                   </p>
-                </FadeIn>
-                <FadeIn className="mt-3 mb-10 text-lg leading-8 text-gray-300">
+                </motion.div>
+                <motion.div
+                  variants={fadeInVariants}
+                  className="mt-3 mb-10 text-lg leading-8 text-gray-300"
+                >
                   <p>
                     My journey reflects a steadfast commitment to learning and
                     adaptability across varied fields.
                   </p>
-                </FadeIn>
-              </FadeIn>
+                </motion.div>
+              </motion.div>
               <motion.div
                 whileTap={{ scale: 0.95 }}
                 variants={{
@@ -105,7 +119,7 @@ const About = () => {
       <Education />
       <Divider />
       {/* Languages */}
-     <Languages />
+      <Languages />
       <Divider />
       <OtherInterests />
     </main>
