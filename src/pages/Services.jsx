@@ -1,10 +1,8 @@
 import AnimatedText from "@/components/AnimatedText";
-import { Divider } from "@/components/Divider";
 import FadeIn from "@/components/FadeIn";
-import Form from "@/components/Form";
 import ServicesHeroImage from "@/components/ServicesHeroImage";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -67,72 +65,121 @@ const services = [
   },
 ];
 
+
+const serviceCardsVariants = {
+  hidden: {
+    y: 48,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition:{ duration: 1.5, ease: "easeInOut"}
+  },
+};
+
 export default function Services() {
   return (
-    <main className=" py-24 sm:py-32">
+    <main className=" py-24 sm:py-32  ">
       {/* Hero section */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <AnimatedText el="h1" className="mt-2 text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">
+          <AnimatedText
+            el="h1"
+            className="mt-2 text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl"
+          >
             Services
           </AnimatedText>
-          <FadeIn  >
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            From SEO-optimised React applications to vibrant user interfaces, I
-            provide diverse solutions to transform your digital concepts into
-            responsive and engaging realities.
-          </p></FadeIn>
+          <FadeIn duration="2.5">
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              From SEO-optimised React applications to vibrant user interfaces,
+              I provide diverse solutions to transform your digital concepts
+              into responsive and engaging realities.
+            </p>
+          </FadeIn>
         </div>
       </section>
       {/* Hero image */}
-      {/* <div className="relative overflow-hidden pt-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <img
-            src="/images/desktop-screenshot.jpg"
-            alt="Desktop screenshot"
-            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
-            width={2432}
-            height={1442}
-          />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-950 pt-[7%]" />
-          </div>
-        </div>
-      </div> */}
       <ServicesHeroImage />
       {/* Services section */}
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 lg:pb-48">
-        <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16">
+        <ul
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16"
+        >
           {services.map((service, i) => (
-            <li
+            <motion.li
+              variants={serviceCardsVariants}
+              initial="hidden"
+              whileInView="visible"
+            viewport={{ once: true, margin: "0px 0px -200px"}}
+              whileHover={{
+                borderColor: "rgba(255, 255, 255, 0.5)",
+                backgroundColor: "rgba(255, 255, 255, 0.01)",
+                duration: 0.3,
+              }}
               key={i}
-              className="relative pl-9 border border-white/20 rounded-xl p-6 hover:ring-1 ring-white/20 hover:border-white/40 transition-all duration-300 "
+              className="relative pl-9 border border-white/20 rounded-xl p-6  
+              
+              bg-[radial-gradient(ellipse_at_center,rgba(14,125,233,0.15),transparent)]
+              "
             >
-              <div className="h-8 flex gap-4">
+              <div className="h-8 flex gap-4 pointer-events-none">
                 {service.icons.map((icon, i) => (
                   <img src={icon} alt="" className="h-full" key={i} />
                 ))}
               </div>
-              <h2 className="mt-4 font-semibold text-gray-200">
+              <h2 className="mt-4 font-semibold text-gray-200 pointer-events-none">
                 {service.name}
               </h2>{" "}
-              <p className="mt-2 text-gray-400">{service.description}</p>
-            </li>
+              <p className="mt-2 text-gray-400 pointer-events-none">
+                {service.description}
+              </p>
+            </motion.li>
           ))}
         </ul>
       </div>
       {/* CTA Section */}
-      <section className="">
+      <section>
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:pb-48 lg:px-8">
-          <div className="relative isolate overflow-hidden  px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16 border border-white/20">
-            <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight  sm:text-4xl text-gray-200">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: "25%" },
+              visible: { opacity: 1, y: 0, transition:{ duration: 1, ease: "easeInOut"} },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "0px 0px -200px"}}
+            className="relative isolate overflow-hidden  px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16 border border-white/20 "
+          >
+            <motion.h2
+             variants={{
+              hidden: { opacity: 0, y: 24 },
+              visible: { opacity: 1, y: 0, transition:{ duration: 1 , ease: "easeInOut"} },
+            }}
+             initial="hidden"
+             animate="visible"
+            className="mx-auto max-w-2xl text-3xl font-bold tracking-tight  sm:text-4xl text-gray-200">
               Let's talk about your project
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            </motion.h2>
+            <motion.p 
+            variants={{
+              hidden: { opacity: 0, y: 24 },
+              visible: { opacity: 1, y: 0, transition:{ duration: 1, delay: 0.2, ease: "easeInOut"} },
+            }}
+             initial="hidden"
+             animate="visible"
+            className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
               Every great project begins with a conversation. Share your vision,
               and let’s bring it to life together.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            </motion.p>
+            <motion.div 
+            variants={{
+              hidden: { opacity: 0, y: 24 },
+              visible: { opacity: 1, y: 0, transition:{ duration: 1, delay: 0.4, ease: "easeInOut"} },
+            }}
+             initial="hidden"
+             animate="visible"
+            className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
                 className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700
@@ -141,8 +188,14 @@ export default function Services() {
               >
                 Get started
               </Link>
-            </div>
-            <svg
+            </motion.div>
+            <motion.svg
+            variants={{
+              hidden: { opacity:0 },
+              visible: { opacity:1, transition:{ duration: 4, delay: 0.2, ease: "easeInOut"} },
+            }}
+             initial="hidden"
+             animate="visible"
               viewBox="0 0 1024 1024"
               className="absolute blur-xl left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
               aria-hidden="true"
@@ -157,11 +210,11 @@ export default function Services() {
               <defs>
                 <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
                   <stop stopColor="#0EA5E9" />
-                  <stop offset={1} stopColor="#7E22CE" />
+                  <stop offset={1} stopColor="#1D4ED8" />
                 </radialGradient>
               </defs>
-            </svg>
-          </div>
+            </motion.svg>
+          </motion.div>
         </div>
       </section>
     </main>

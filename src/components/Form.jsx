@@ -43,7 +43,7 @@ const Form = () => {
       ref={form}
       onSubmit={sendEmail}
     >
-      <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg border border-white/20 p-6 rounded-xl bg-gradient-to-tl from-sky-700/10 to-transparent relative overflow-hidden">
+      <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg border border-white/20 p-6 rounded-xl bg-[radial-gradient(ellipse_at_center,rgba(14,125,233,0.15),transparent)] relative overflow-hidden">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <label

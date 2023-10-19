@@ -12,7 +12,8 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <main>
+    <main className="bg-page-gradient" >
+      <div className=" ">
       {/* Hero Sections */}
       <div className=" pt-6 sm:pt-12 ">
         <div className=" py-24 sm:py-32 ">
@@ -122,6 +123,7 @@ const About = () => {
       <Languages />
       <Divider />
       <OtherInterests />
+      </div>
     </main>
   );
 };

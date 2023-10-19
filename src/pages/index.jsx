@@ -20,7 +20,7 @@ export default function Home() {
   }, [isInView]);
 
   return (
-    <main className="bg-gray-950 min-h-screen ">
+    <main className="bg-gray-950 min-h-screen">
       <div className="flex items-center  min-[964px]:h-screen py-24 lg:py-32 relative">
         <div className=" max-w-7xl mx-auto flex flex-col-reverse min-[964px]:flex-row  items-center relative px-6 lg:px-8 ">
           {/* Ligth */}
