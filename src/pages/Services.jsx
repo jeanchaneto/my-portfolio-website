@@ -1,5 +1,8 @@
+import AnimatedText from "@/components/AnimatedText";
 import { Divider } from "@/components/Divider";
+import FadeIn from "@/components/FadeIn";
 import Form from "@/components/Form";
+import ServicesHeroImage from "@/components/ServicesHeroImage";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -70,18 +73,19 @@ export default function Services() {
       {/* Hero section */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h1 className="mt-2 text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">
+          <AnimatedText el="h1" className="mt-2 text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">
             Services
-          </h1>
+          </AnimatedText>
+          <FadeIn  >
           <p className="mt-6 text-lg leading-8 text-gray-300">
             From SEO-optimised React applications to vibrant user interfaces, I
             provide diverse solutions to transform your digital concepts into
             responsive and engaging realities.
-          </p>
+          </p></FadeIn>
         </div>
       </section>
       {/* Hero image */}
-      <div className="relative overflow-hidden pt-16">
+      {/* <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <img
             src="/images/desktop-screenshot.jpg"
@@ -94,7 +98,8 @@ export default function Services() {
             <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-950 pt-[7%]" />
           </div>
         </div>
-      </div>
+      </div> */}
+      <ServicesHeroImage />
       {/* Services section */}
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 lg:pb-48">
         <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16">
@@ -147,12 +152,12 @@ export default function Services() {
                 cy={512}
                 r={512}
                 fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
-                fillOpacity="0.2"
+                fillOpacity="0.8"
               />
               <defs>
                 <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
                   <stop stopColor="#0EA5E9" />
-                  <stop offset={1} stopColor="#06b6d4" />
+                  <stop offset={1} stopColor="#7E22CE" />
                 </radialGradient>
               </defs>
             </svg>
