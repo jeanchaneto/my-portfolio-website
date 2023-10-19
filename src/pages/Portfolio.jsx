@@ -1,6 +1,8 @@
 import AnimatedText from "@/components/AnimatedText";
 import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
+import { staggerVariants } from "@/utils/motionVariants";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const projects = [
@@ -38,17 +40,24 @@ const Portfolio = () => {
             <AnimatedText el="h1" className="text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">
               Portfolio
             </AnimatedText>
-            <FadeIn>
+            <FadeIn duration="1.5">
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Dive into my portfolio: a collection of projects blending code and
               creativity to build practical digital solutions.
             </p></FadeIn>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
+          <motion.div 
+          variants={{visible: {
+            transition: { staggerChildren: 0.2, delayChildren: 1 },
+          }}}
+         
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
             {projects.map((project, i) => (
               <ProjectCard key={i} {...project} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </main>

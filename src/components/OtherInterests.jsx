@@ -49,7 +49,7 @@ const OtherInterests = () => {
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 2, delay: 0.2, ease: "easeOut" }}
-                className="absolute inset-0 h-full w-full bg-gradient-to-r from-sky-500 to-blue-500 transform  bg-red-500 rounded-full blur-3xl"
+                className="absolute inset-0 h-full w-full bg-gradient-to-r from-sky-500 to-blue-500 transform rounded-full blur-2xl"
               />
               <Image
                 className="absolute inset-0 h-full w-full object-cover rounded-3xl pointer-events-none"

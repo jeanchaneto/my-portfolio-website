@@ -1,4 +1,5 @@
 import { useModal } from "@/store/ModalContext";
+import { cardsVariants } from "@/utils/motionVariants";
 import { motion, useAnimation } from "framer-motion";
 
 const borderVariants = {
@@ -24,6 +25,7 @@ const ProjectCard = ({ ...props }) => {
 
   return (
     <motion.div
+    variants={cardsVariants}
       whileHover={{
         scale: 1.05,
         y: -24,

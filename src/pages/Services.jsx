@@ -65,7 +65,6 @@ const services = [
   },
 ];
 
-
 const serviceCardsVariants = {
   hidden: {
     y: 48,
@@ -74,7 +73,7 @@ const serviceCardsVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition:{ duration: 1.5, ease: "easeInOut"}
+    transition:{ duration: 0.5, ease: "easeInOut"}
   },
 };
 
@@ -102,7 +101,7 @@ export default function Services() {
       {/* Hero image */}
       <ServicesHeroImage />
       {/* Services section */}
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 lg:pb-48">
+      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 ">
         <ul
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16"
         >
@@ -144,7 +143,7 @@ export default function Services() {
           <motion.div
             variants={{
               hidden: { opacity: 0, y: "25%" },
-              visible: { opacity: 1, y: 0, transition:{ duration: 1, ease: "easeInOut"} },
+              visible: { opacity: 1, y: 0, transition:{ duration: 0.7, ease: "easeInOut"} },
             }}
             initial="hidden"
             whileInView="visible"
