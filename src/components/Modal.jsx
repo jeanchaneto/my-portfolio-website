@@ -171,7 +171,7 @@ export default function Modal() {
                     <motion.a
                       href={modalContent.siteUrl}
                       target="_blank"
-                      className="flex gap-2 align-center rounded-xl bg-sky-950 py-2 px-4 "
+                      className="flex gap-2 items-center rounded-xl bg-sky-950 px-4 py-3 "
                       whileTap={{ scale: 0.8 }}
                       whileHover={{ backgroundColor: "#0369a1", duration: 0.3 }}
                     >
@@ -185,9 +185,10 @@ export default function Modal() {
                     <motion.a
                       href={modalContent.repo}
                       target="_blank"
-                      className="flex gap-2 align-center rounded-xl bg-sky-950 py-2 px-4 "
+                      className="flex gap-2 items-center rounded-xl border-2 border-white/20 px-4 py-3 "
                       whileTap={{ scale: 0.8 }}
-                      whileHover={{ backgroundColor: "#0369a1", duration: 0.3 }}
+                      whileHover={{ borderColor: "rgba(255, 255, 255, 0.5)",
+                      backgroundColor: "rgba(255, 255, 255, 0.1)", duration: 0.3 }}
                     >
                       <p>See repo</p>
                       <img

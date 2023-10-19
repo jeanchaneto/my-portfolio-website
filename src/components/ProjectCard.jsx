@@ -83,9 +83,9 @@ const ProjectCard = ({ ...props }) => {
           <motion.a
             href={props.siteUrl}
             target="_blank"
-            className="flex gap-2 align-center rounded-xl px-4 py-3 bg-sky-950"
+            className="flex gap-2 items-center rounded-xl px-4 py-3 bg-sky-950"
             whileTap={{ scale: 0.8 }}
-            whileHover={{ backgroundColor: "#0369a1" }}
+            whileHover={{ backgroundColor: "#0c4a6e" }}
           >
             <p>Visit site</p>
             <img
@@ -97,10 +97,11 @@ const ProjectCard = ({ ...props }) => {
           <motion.a
             href={props.repo}
             target="_blank"
-            className="flex gap-2 align-center rounded-xl px-4 py-3 border-2 border-white/20  "
+            className="flex gap-2  items-center rounded-xl px-3 py-2 border-2 border-white/20  "
             whileTap={{ scale: 0.8 }}
             whileHover={{
               borderColor: "rgba(255, 255, 255, 0.5)",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
               duration: 0.3,
             }}
           >
