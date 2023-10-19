@@ -1,8 +1,6 @@
 import { Divider } from "@/components/Divider";
 import Form from "@/components/Form";
-import {
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const services = [
@@ -118,85 +116,49 @@ export default function Services() {
           ))}
         </ul>
       </div>
-      {/* <Divider /> */}
-      {/* Contact Section */}
-      {/* <div className="relative isolate ">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-          <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-200">
-                Let's talk about your project
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Every great project begins with a conversation. Share your
-                vision, and let’s bring it to life together.
-              </p>
-              <div className="mt-10 space-y-4 text-base leading-7 text-gray-300">
-                <div className="flex gap-x-4">
-                  <div className="flex-none">
-                    <span className="sr-only">Email</span>
-                    <EnvelopeIcon
-                      className="h-7 w-6 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div>
-                    <a
-                      className="hover:text-white"
-                      href="mailto:jeanchaneto@gmail.com"
-                    >
-                      jeanchaneto@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
+      {/* CTA Section */}
+      <section className="">
+        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:pb-48 lg:px-8">
+          <div className="relative isolate overflow-hidden  px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16 border border-white/20">
+            <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight  sm:text-4xl text-gray-200">
+              Let's talk about your project
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+              Every great project begins with a conversation. Share your vision,
+              and let’s bring it to life together.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link
+                href="/contact"
+                className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700
+              transition-all duration-300  
+              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+              >
+                Get started
+              </Link>
             </div>
-          </div>
-          <Form />
-        </div>
-      </div> */}
-
-
-
-<section className="">
-      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:pb-48 lg:px-8">
-        <div className="relative isolate overflow-hidden  px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16 border border-white/20">
-          <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight  sm:text-4xl text-gray-200">
-          Let's talk about your project
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-          Every great project begins with a conversation. Share your vision, and let’s bring it to life together.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link
-              href="/contact"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            <svg
+              viewBox="0 0 1024 1024"
+              className="absolute blur-xl left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+              aria-hidden="true"
             >
-              Get started
-            </Link>
+              <circle
+                cx={512}
+                cy={512}
+                r={512}
+                fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                fillOpacity="0.2"
+              />
+              <defs>
+                <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
+                  <stop stopColor="#0EA5E9" />
+                  <stop offset={1} stopColor="#06b6d4" />
+                </radialGradient>
+              </defs>
+            </svg>
           </div>
-          <svg
-            viewBox="0 0 1024 1024"
-            className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
-            aria-hidden="true"
-          >
-            <circle cx={512} cy={512} r={512} fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fillOpacity="0.7" />
-            <defs>
-              <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                <stop stopColor="#7775D6" />
-                <stop offset={1} stopColor="#E935C1" />
-              </radialGradient>
-            </defs>
-          </svg>
         </div>
-      </div>
-    </section>
-
-
-
-
-
-
+      </section>
     </main>
   );
 }
