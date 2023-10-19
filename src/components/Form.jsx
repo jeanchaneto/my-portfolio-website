@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const formVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -31,16 +31,16 @@ const inputVariants = {
 
 const buttonVariants = {
   hidden: { opacity: 0, y: 24 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 20,
-      },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
     },
-}
+  },
+};
 
 const Form = () => {
   const form = useRef();
@@ -124,7 +124,7 @@ const Form = () => {
             </div>
             <div className="mt-2.5">
               <motion.input
-              variants={inputVariants}
+                variants={inputVariants}
                 type="email"
                 name="email"
                 id="email"
@@ -136,16 +136,17 @@ const Form = () => {
           </div>
           <div className="sm:col-span-2">
             <div className="overflow-hidden">
-            <motion.label
-            variants={labelVariants}
-              htmlFor="message"
-              className="block text-sm leading-6 text-gray-300"
-            >
-              How can I help?
-            </motion.label></div>
+              <motion.label
+                variants={labelVariants}
+                htmlFor="message"
+                className="block text-sm leading-6 text-gray-300"
+              >
+                How can I help?
+              </motion.label>
+            </div>
             <div className="mt-2.5">
               <motion.textarea
-              variants={inputVariants}
+                variants={inputVariants}
                 name="message"
                 id="message"
                 rows={4}
@@ -157,20 +158,31 @@ const Form = () => {
           </div>
         </div>
         {/* Confirmation message */}
-        {submitted && (
-          <div className="absolute inset-0  backdrop-blur-xl rounded-xl">
-            <div className=" w-full h-full rounded-xl flex-col flex justify-center items-center p-6">
-              <p className="">Thank you for your message.</p>
-              <p className="">I'll get back to you as soon as possible!</p>
-              <div
-                onClick={handleClose}
-                className="text-gray-100 font-semibold cursor-pointer w-12 h-12 flex items-center justify-center "
-              >
-                x
+        <AnimatePresence>
+          {submitted && (
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, transition: {duration: 0.5, ease: "easeIn"} },
+                visible: { opacity: 1, transition: {duration: 0.5, ease: "easeInOut"} }
+              }}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="absolute inset-0  backdrop-blur-xl rounded-xl"
+            >
+              <div className=" relative w-full h-full rounded-xl flex-col flex justify-center items-center p-6">
+                <p className="">Thank you for your message.</p>
+                <p className="">I'll get back to you as soon as possible!</p>
+                <div
+                  onClick={handleClose}
+                  className="text-gray-100 font-semibold cursor-pointer w-12 h-12 flex items-center justify-center absolute right-0 top-0 text-xl "
+                >
+                  x
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className="mt-8 flex justify-end">
           {error && (
             <p className=" text-red-400 text-sm mx-auto  self-center pr-6 ">
@@ -185,7 +197,13 @@ const Form = () => {
           )}
           <motion.button
             type="submit"
-            className="rounded-xl min-w-fit border border-white/40 px-3.5 py-2.5 text-center text-sm text-gray-100 shadow-sm  hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+            whileTap={{ scale: 0.8 }}
+            whileHover={{
+              borderColor: "rgba(255, 255, 255, 0.5)",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              duration: 0.3,
+            }}
+            className="rounded-xl min-w-fit border border-white/40 px-3.5 py-2.5 text-center text-sm text-gray-100 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
             variants={buttonVariants}
           >
             {loading ? "Sending..." : "Send message"}
