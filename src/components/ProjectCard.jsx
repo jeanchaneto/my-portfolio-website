@@ -71,21 +71,21 @@ const ProjectCard = ({ ...props }) => {
       <div className="px-6 pb-6">
         <motion.h3
           onClick={handleOpenModal}
-          className="mb-2 text-xl font-bold tracking-tight font-sora text-gray-200 cursor-pointer "
+          className="mb-3 text-xl font-bold tracking-tight font-sora text-gray-200 cursor-pointer "
           whileTap={{ scale: 0.8 }}
           whileHover={{ color: "rgb(14, 165, 233)", duration: 0.3 }}
         >
           {props.title}
         </motion.h3>
 
-        <p className="mb-3  text-gray-400">{props.description}</p>
+        <p className="mb-6 text-gray-400">{props.description}</p>
         <div className="flex gap-6 text-gray-300">
           <motion.a
             href={props.siteUrl}
             target="_blank"
-            className="flex gap-2 align-center transition-opacity duration-300 hover:opacity-50"
+            className="flex gap-2 align-center rounded-xl px-4 py-3 bg-sky-950"
             whileTap={{ scale: 0.8 }}
-            whileHover={{opacity:0.5}}
+            whileHover={{ backgroundColor: "#0369a1" }}
           >
             <p>Visit site</p>
             <img
@@ -97,9 +97,12 @@ const ProjectCard = ({ ...props }) => {
           <motion.a
             href={props.repo}
             target="_blank"
-            className="flex gap-2 align-center transition-opacity duration-300 hover:opacity-50"
+            className="flex gap-2 align-center rounded-xl px-4 py-3 border-2 border-white/20  "
             whileTap={{ scale: 0.8 }}
-            whileHover={{opacity:0.5, duration: 0.3}}
+            whileHover={{
+              borderColor: "rgba(255, 255, 255, 0.5)",
+              duration: 0.3,
+            }}
           >
             <p>See repo</p>
             <img

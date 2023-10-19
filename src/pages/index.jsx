@@ -93,7 +93,7 @@ export default function Home() {
               <motion.div whileTap={{ scale: 0.8 }}>
                 <Link
                   href="/contact"
-                  className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 ring-1 ring-transparent hover:ring-sky-300
+                  className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700
                 transition-all duration-300  
                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
                 >
@@ -103,7 +103,7 @@ export default function Home() {
               <motion.div whileTap={{ scale: 0.8 }}>
                 <Link
                   href="/services"
-                  className="text-sm font-semibold rounded-xl bg-transparent hover:bg-sky-950/60 ring-1 ring-transparent hover:ring-sky-400
+                  className="text-sm font-semibold rounded-xl bg-transparent hover:bg-sky-950/60 
                 transition-all duration-300  
                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 px-4 py-3 text-white z-20"
                 >
