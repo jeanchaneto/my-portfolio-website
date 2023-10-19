@@ -26,7 +26,7 @@ const Portfolio = () => {
       tech: "React, Next.js, Framer Motion, TailwindCSS, Email.js",
       work: "Web site design and implementation from single logo provided by client. Deployment",
       challenges:
-        "Advanced Framer Motion animations and custom UI components",
+        "Advanced Framer Motion animations, custom UI components and multi-languages support",
     },
   ];
 
