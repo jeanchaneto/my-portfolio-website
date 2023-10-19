@@ -31,8 +31,8 @@ const Portfolio = () => {
   ];
 
   return (
-    <main>
-      <div className="pt-6 sm:pt-12 pb-48 ">
+    <main className="min-h-screen min-w-screen" >
+      <div className="pt-6 sm:pt-12 pb-48">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className=" py-24 lg:py-32 mx-auto max-w-2xl text-center">
             <AnimatedText el="h1" className="text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">

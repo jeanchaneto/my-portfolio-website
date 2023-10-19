@@ -99,13 +99,12 @@ const Menu = () => {
     },
   };
 
-
   return (
     <motion.div
       variants={menuVariants}
       initial="hidden"
       animate="visible"
-      className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2  z-50 lg:hidden"
+      className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2  z-30 lg:hidden"
     >
       <motion.div className="">
         {/* Opened Menu */}
@@ -124,9 +123,7 @@ const Menu = () => {
                   whileTap={{ scale: 0.95 }}
                   key={i}
                 >
-                  <Link href={item.link}
-                  onClick={() => setIsOpen(false)}
-                  >
+                  <Link href={item.link} onClick={() => setIsOpen(false)}>
                     <div className="flex gap-2 items-center text-gray-100 ">
                       <img src={item.icon} alt="" className="w-9" />
                       <p>{item.page}</p>

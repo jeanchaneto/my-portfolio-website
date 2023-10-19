@@ -1,92 +1,179 @@
 import { useModal } from "@/store/ModalContext";
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { fadeInVariants } from "@/utils/motionVariants";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Modal() {
   const { isOpen, modalContent, closeModal } = useModal();
+
   if (!modalContent) return null;
+
+  const backdropVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { when: "beforeChildren", duration: 0.1 },
+    },
+    exit: { opacity: 0, transition: { when: "afterChildren", duration: 0.1 } },
+  };
+
+  const contentVariants = {
+    hidden: { y: "100vh", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
+    },
+    exit: {
+      y: "-100vh",
+      opacity: 0,
+      transition: { duration: 0.3, type: "spring",
+      stiffness: 400,
+      damping: 40 },
+      
+    },
+  };
+
+  const modalListVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3,
+        duration: 0.3,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+  const listItemsVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const linksVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        delay: 0.7,
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
+    },
+  };
 
   return (
     <>
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={closeModal}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={backdropVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="fixed inset-0 backdrop-blur-xl z-40 "
+            onClick={closeModal}
           >
-            <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl " />
-          </Transition.Child>
-
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center  text-center">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/20">
+            <motion.div
+              variants={contentVariants}
+              className="fixed top-30 inset-0 overflow-y-auto z-50"
+            >
+              <div className="flex min-h-full items-center justify-center text-center">
+                <motion.div
+                  className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/20"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <div className="relative">
                     <img
                       src={modalContent.image}
                       alt=""
-                      className="rounded-xl mb-12 shadow-md shadow-gray-400/20"
+                      className="rounded-xl mb-12 border border-white/20"
                     />
-                    <img
-                      src="/images/close.svg"
-                      alt="close"
-                      className="absolute w-6 -right-2 -top-2 cursor-pointer transition-opacity duration-300 hover:opacity-50"
+                    <div
+                      className=" w-12 h-12 absolute -right-6 -top-6 flex justify-center items-center cursor-pointer hover:opacity-50 transition-opacity duration-300 "
                       onClick={closeModal}
-                    />
+                    >
+                      <img
+                        src="/images/close.svg"
+                        alt="close"
+                        className=" w-6 "
+                      />
+                    </div>
                   </div>
-                  <Dialog.Title
-                    as="h3"
+                  <motion.h3
+                    variants={fadeInVariants}
                     className="text-lg font-bold leading-6 text-gray-100"
                   >
                     {modalContent.title}
-                  </Dialog.Title>
-                  <div className="mt-2">
+                  </motion.h3>
+                  <motion.div
+                    variants={fadeInVariants}
+                    transition={{ delay: 0.8 }}
+                    className="mt-2"
+                  >
                     <p className=" text-gray-400">{modalContent.description}</p>
-                  </div>
+                  </motion.div>
                   <div className="mt-6 border-t border-white/10">
-                    <ul className="divide-y divide-white/10">
-                      <li className=" py-6 sm:grid sm:grid-cols-3 sm:gap-4 ">
+                    <motion.ul
+                      initial="hidden"
+                      animate="visible"
+                      variants={modalListVariants}
+                      className="divide-y divide-white/10"
+                    >
+                      <motion.li
+                        variants={listItemsVariants}
+                        className=" py-6 sm:grid sm:grid-cols-3 sm:gap-4 "
+                      >
                         <h4 className="  leading-6 text-gray-200">
                           Technologies
                         </h4>
                         <p className="mt-1  leading-6 text-gray-400 sm:col-span-2 sm:mt-0">
                           {modalContent.tech}
                         </p>
-                      </li>
-                      <li className=" py-6 sm:grid sm:grid-cols-3 sm:gap-4 ">
+                      </motion.li>
+                      <motion.li
+                        variants={listItemsVariants}
+                        className=" py-6 sm:grid sm:grid-cols-3 sm:gap-4 "
+                      >
                         <h4 className=" leading-6 text-gray-200">Work</h4>
                         <p className="mt-1  leading-6 text-gray-400 sm:col-span-2 sm:mt-0">
                           {modalContent.work}
                         </p>
-                      </li>
-                      <li className=" py-6 sm:grid sm:grid-cols-3 sm:gap-4 ">
+                      </motion.li>
+                      <motion.li
+                        variants={listItemsVariants}
+                        className=" py-6 sm:grid sm:grid-cols-3 sm:gap-4 "
+                      >
                         <h4 className="  leading-6 text-gray-200">
                           Challenges
                         </h4>
                         <p className="mt-1  leading-6 text-gray-400 sm:col-span-2 sm:mt-0">
                           {modalContent.challenges}
                         </p>
-                      </li>
-                    </ul>
+                      </motion.li>
+                    </motion.ul>
                   </div>
-                  <div className="flex gap-6 text-gray-300  mt-12 ">
-                    <a
+                  <motion.div
+                    variants={linksVariants}
+                    className="flex gap-6 text-gray-300  mt-12 "
+                  >
+                    <motion.a
                       href={modalContent.siteUrl}
                       target="_blank"
-                      className="flex gap-2 align-center transition-opacity duration-300 hover:opacity-50 rounded-xl bg-sky-950 py-2 px-4 "
+                      className="flex gap-2 align-center rounded-xl bg-sky-950 py-2 px-4 "
+                      whileTap={{ scale: 0.8 }}
+                      whileHover={{ backgroundColor: "#0369a1", duration: 0.3 }}
                     >
                       <p>Visit site</p>
                       <img
@@ -94,11 +181,13 @@ export default function Modal() {
                         alt=""
                         className="h-4 self-center"
                       />
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                       href={modalContent.repo}
                       target="_blank"
-                      className="flex gap-2 align-center transition-opacity duration-300 hover:opacity-50 rounded-xl bg-sky-950 py-2 px-4 "
+                      className="flex gap-2 align-center rounded-xl bg-sky-950 py-2 px-4 "
+                      whileTap={{ scale: 0.8 }}
+                      whileHover={{ backgroundColor: "#0369a1", duration: 0.3 }}
                     >
                       <p>See repo</p>
                       <img
@@ -106,14 +195,14 @@ export default function Modal() {
                         alt=""
                         className="h-4 self-center"
                       />
-                    </a>
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
-        </Dialog>
-      </Transition>
+                    </motion.a>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

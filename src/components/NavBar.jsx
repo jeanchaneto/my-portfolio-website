@@ -36,7 +36,7 @@ const NavBar = () => {
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="mx-auto max-w-fit  h-16 items-end gap-4 rounded-2xl  backdrop-blur border border-white/10 bg-white/5 px-4 pb-[6px]  fixed bottom-8 left-1/2 -translate-x-1/2 z-50 hidden lg:flex "
+      className="mx-auto max-w-fit h-16 items-end gap-4 rounded-2xl  backdrop-blur border border-white/10 bg-white/5 px-4 pb-[6px]  fixed bottom-8 left-1/2 -translate-x-1/2 z-30 hidden lg:flex "
       variants={navBarVariants}
       initial="hidden"
       animate="visible"
