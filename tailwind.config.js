@@ -19,6 +19,10 @@ module.exports = {
           "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
         "page-gradient":
           "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(2,132,199,0.2), transparent)",
+          "page-gradient-2":
+          "radial-gradient(ellipse 20% 50% at 50% -10%,rgba(2,132,199,0.2), transparent)",
+          "page-gradient-2-responsive":
+          "radial-gradient(ellipse 50% 30% at 50% -10%,rgba(2,132,199,0.2), transparent)",
       },
       keyframes: {
         blob: {

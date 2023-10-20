@@ -1,12 +1,21 @@
 import FadeIn from "./FadeIn";
+import { motion } from "framer-motion";
 
 const Languages = () => {
   return (
-    <section className=" py-24 sm:py-32 ">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: { duration: 1, delayChildren: 0.5 },
+      }}
+      viewport={{ once: true, margin: "0px 0px -200px" }}
+      className=" pt-24 sm:pt-32 pb-64 bg-page-gradient-2-responsive lg:bg-page-gradient-2"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-xl sm:text-center">
+        <div className="mx-auto max-w-xl text-center">
           <FadeIn>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-300 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-200 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
               Languages
             </h2>
           </FadeIn>
@@ -17,7 +26,7 @@ const Languages = () => {
             </p>
           </FadeIn>
         </div>
-        <FadeIn delay="0.4" className="mt-6 flex gap-16 justify-center">
+        <FadeIn delay="0.4" className="mt-12 flex gap-16 justify-center">
           <img
             src="/images/english-flag.svg"
             alt="UK flag"
@@ -31,7 +40,7 @@ const Languages = () => {
           />
         </FadeIn>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

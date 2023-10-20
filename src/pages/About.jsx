@@ -11,11 +11,11 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <main className="bg-page-gradient" >
+    <main className="" >
       <div className=" ">
       {/* Hero Sections */}
-      <div className=" pt-6 sm:pt-12 ">
-        <div className=" py-24 sm:py-32 ">
+      <div className=" pt-6 sm:pt-12 bg-page-gradient ">
+        <div className=" pt-24 sm:pt-32 pb-64 ">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0">
             <section className="mx-auto max-w-2xl lg:mx-0">
               <AnimatedText
@@ -47,7 +47,7 @@ const About = () => {
                   className="mt-3 text-lg leading-8 text-gray-300"
                 >
                   <p>
-                    Transitioning from a career as a water hygiene consultant to
+                    Transitioning from a career in health & safety to
                     a React.js developer sparked by a genuine desire to build
                     meaningful digital spaces, notably exemplified in running my
                     own music e-commerce platform that blends my coding skills

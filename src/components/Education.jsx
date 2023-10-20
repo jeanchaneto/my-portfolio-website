@@ -48,9 +48,15 @@ const Education = () => {
     restDelta: 0.001,
   });
   return (
-    <section className=" py-24 sm:py-32">
+    <motion.section
+    initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1, delayChildren: 0.5 },
+          }}
+          viewport={{ once: true, margin: "0px 0px -200px" }} className=" pt-24 sm:pt-32 pb-64 bg-page-gradient-2-responsive lg:bg-page-gradient-2">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-xl sm:text-center">
+        <div className="mx-auto max-w-xl text-center">
           <FadeIn>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text">
               Education
@@ -86,7 +92,7 @@ const Education = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
