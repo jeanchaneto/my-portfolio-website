@@ -111,6 +111,7 @@ const Menu = () => {
         <AnimatePresence mode="wait">
           {isOpen && (
             <motion.ul
+            key="opened-menu"
               variants={openedMenuVariants}
               initial="hidden"
               animate={isOpen ? "visible" : "hidden"}
@@ -160,6 +161,7 @@ const Menu = () => {
             <AnimatePresence>
               {pathname === "/" && (
                 <motion.div
+                key="responsive-home"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{
                     opacity: 1,
@@ -204,6 +206,7 @@ const Menu = () => {
             <AnimatePresence>
               {pathname === "/contact" && (
                 <motion.div
+                key="responsive-contact"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{
                     opacity: 1,

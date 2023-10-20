@@ -3,6 +3,7 @@ import FadeIn from "@/components/FadeIn";
 import ServicesHeroImage from "@/components/ServicesHeroImage";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import LogoCloud from "@/components/LogoCloud";
 
 const services = [
   {
@@ -143,6 +144,8 @@ export default function Services() {
           ))}
         </ul>
       </div>
+      {/* Logo Cloud */}
+      {/* <LogoCloud /> */}
       {/* CTA Section */}
       <section>
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:pb-48 lg:px-8">
@@ -209,32 +212,6 @@ export default function Services() {
                 Get started
               </Link>
             </motion.div>
-            {/* <motion.svg
-              variants={{
-                hidden: { opacity: 0 },
-                visible: {
-                  opacity: 1,
-                  transition: { duration: 4, ease: "easeInOut" },
-                },
-              }}
-              viewBox="0 0 1024 1024"
-              className="absolute blur-xl left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
-              aria-hidden="true"
-            >
-              <circle
-                cx={512}
-                cy={512}
-                r={512}
-                fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
-                fillOpacity="0.8"
-              />
-              <defs>
-                <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                  <stop stopColor="#0EA5E9" />
-                  <stop offset={1} stopColor="#1D4ED8" />
-                </radialGradient>
-              </defs>
-            </motion.svg> */}
             <motion.div className=" absolute inset-0 bg-page-gradient rotate-180 z-0" />
           </motion.div>
         </div>

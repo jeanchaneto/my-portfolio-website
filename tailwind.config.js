@@ -60,13 +60,19 @@ module.exports = {
             opacity: 1,
           },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-3136px)" },
+        },
       },
       animation: {
         blob: "blob 10s infinite",
         "image-rotate": "image-rotate 1400ms 1s ease forwards",
         "image-glow": "image-glow 2000ms 1.5s ease-out both",
         "image-fade": "image-fade 1s 1400ms ease-out both",
+        "infinite-scroll": "infinite-scroll 9s linear infinite",
       },
+   
     },
   },
   plugins: [],

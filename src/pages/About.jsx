@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <main className="relative" >
-      <div className=" ">
+    <main className="relative min-h-screen" >
+     
       {/* Hero Sections */}
       <div className=" pt-6 sm:pt-12 bg-page-gradient ">
         <div className=" pt-24 sm:pt-32 pb-64 ">
@@ -25,7 +25,6 @@ const About = () => {
                 About me
               </AnimatedText>
               <motion.div
-                // variants={{ hidden: "", visible: "" }}
                 transition={{ staggerChildren: 0.1, delayChildren: 0.5 }}
                 initial="hidden"
                 animate="visible"
@@ -136,7 +135,7 @@ const About = () => {
       <Languages />
       <Divider />
       <OtherInterests />
-      </div>
+    
     </main>
   );
 };

@@ -57,6 +57,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
       <AnimatePresence>
         {pathname === link && (
           <motion.div
+          key={alt}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{
               opacity: 1,
@@ -77,6 +78,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
       <AnimatePresence>
         {isHovered && (
           <motion.div
+          key={`${alt}-tooltip`}
             initial={{ opacity: 0, scale: 0.5, x: "50%" }}
             animate={{ opacity: 1, scale: 1, x: "50%" }}
             exit={{

@@ -161,9 +161,16 @@ const Form = () => {
         <AnimatePresence>
           {submitted && (
             <motion.div
+              key="confirmation-message"
               variants={{
-                hidden: { opacity: 0, transition: {duration: 0.5, ease: "easeIn"} },
-                visible: { opacity: 1, transition: {duration: 0.5, ease: "easeInOut"} }
+                hidden: {
+                  opacity: 0,
+                  transition: { duration: 0.5, ease: "easeIn" },
+                },
+                visible: {
+                  opacity: 1,
+                  transition: { duration: 0.5, ease: "easeInOut" },
+                },
               }}
               initial="hidden"
               animate="visible"

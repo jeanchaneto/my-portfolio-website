@@ -78,6 +78,7 @@ export default function Modal() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+          key="modal"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"
