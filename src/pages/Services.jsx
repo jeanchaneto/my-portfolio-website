@@ -73,7 +73,17 @@ const serviceCardsVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition:{ duration: 0.5, ease: "easeInOut"}
+    transition: { duration: 0.5, ease: "easeInOut", delayChildren: 0.1 },
+  },
+};
+
+const gradientVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { duration: 1, ease: "easeInOut" },
   },
 };
 
@@ -102,35 +112,31 @@ export default function Services() {
       <ServicesHeroImage />
       {/* Services section */}
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 ">
-        <ul
-          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16"
-        >
+        <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16">
           {services.map((service, i) => (
             <motion.li
               variants={serviceCardsVariants}
               initial="hidden"
               whileInView="visible"
-            viewport={{ once: true, margin: "0px 0px -200px"}}
-              whileHover={{
-                borderColor: "rgba(255, 255, 255, 0.5)",
-                backgroundColor: "rgba(255, 255, 255, 0.01)",
-                duration: 0.3,
-              }}
-              key={i}
-              className="relative pl-9 border border-white/20 rounded-xl p-6  
+              viewport={{ once: true, margin: "0px 0px -200px" }}
               
-              bg-[radial-gradient(ellipse_at_center,rgba(14,125,233,0.15),transparent)]
-              "
+              key={i}
+              className="relative pl-9 border border-white/5 rounded-xl p-6 "
             >
-              <div className="h-8 flex gap-4 pointer-events-none">
+              {/* Background gradient */}
+              <motion.div
+                variants={gradientVariants}
+                className="absolute z-0 inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,125,233,0.15),transparent)]"
+              />
+              <div className="h-8 flex gap-4 pointer-events-none relative">
                 {service.icons.map((icon, i) => (
                   <img src={icon} alt="" className="h-full" key={i} />
                 ))}
               </div>
-              <h2 className="mt-4 font-semibold text-gray-200 pointer-events-none">
+              <h2 className="mt-4 font-semibold text-gray-200 pointer-events-none relative">
                 {service.name}
               </h2>{" "}
-              <p className="mt-2 text-gray-400 pointer-events-none">
+              <p className="mt-2 text-gray-400 pointer-events-none relative">
                 {service.description}
               </p>
             </motion.li>
@@ -143,58 +149,74 @@ export default function Services() {
           <motion.div
             variants={{
               hidden: { opacity: 0, y: "25%" },
-              visible: { opacity: 1, y: 0, transition:{ duration: 0.7, ease: "easeInOut"} },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.7, ease: "easeInOut", delayChildren: 0.5, staggerChildren: 0.2 },
+              },
             }}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "0px 0px -200px"}}
-            className="relative isolate overflow-hidden  px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16 border border-white/20 "
+            viewport={{ once: true, margin: "0px 0px -200px" }}
+            className="relative isolate overflow-hidden  px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16 border border-white/5 "
           >
             <motion.h2
-             variants={{
-              hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition:{ duration: 1 , ease: "easeInOut"} },
-            }}
-             initial="hidden"
-             animate="visible"
-            className="mx-auto max-w-2xl text-3xl font-bold tracking-tight  sm:text-4xl text-gray-200">
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" },
+                },
+              }}
+             
+              className="mx-auto max-w-2xl text-3xl font-bold tracking-tight  sm:text-4xl text-gray-200"
+            >
               Let's talk about your project
             </motion.h2>
-            <motion.p 
-            variants={{
-              hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition:{ duration: 1, delay: 0.2, ease: "easeInOut"} },
-            }}
-             initial="hidden"
-             animate="visible"
-            className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" },
+                },
+              }}
+            
+              className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300"
+            >
               Every great project begins with a conversation. Share your vision,
               and let’s bring it to life together.
             </motion.p>
-            <motion.div 
-            variants={{
-              hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition:{ duration: 1, delay: 0.4, ease: "easeInOut"} },
-            }}
-             initial="hidden"
-             animate="visible"
-            className="mt-10 flex items-center justify-center gap-x-6">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" },
+                },
+              }}
+         
+              className="mt-10 flex items-center justify-center gap-x-6"
+            >
               <Link
                 href="/contact"
-                className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700
-              transition-all duration-300  
-              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+                className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 z-20
+              transition-all duration-300  relative focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
               >
                 Get started
               </Link>
             </motion.div>
-            <motion.svg
-            variants={{
-              hidden: { opacity:0 },
-              visible: { opacity:1, transition:{ duration: 4, delay: 0.2, ease: "easeInOut"} },
-            }}
-             initial="hidden"
-             animate="visible"
+            {/* <motion.svg
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { duration: 4, ease: "easeInOut" },
+                },
+              }}
               viewBox="0 0 1024 1024"
               className="absolute blur-xl left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
               aria-hidden="true"
@@ -212,7 +234,8 @@ export default function Services() {
                   <stop offset={1} stopColor="#1D4ED8" />
                 </radialGradient>
               </defs>
-            </motion.svg>
+            </motion.svg> */}
+            <motion.div className=" absolute inset-0 bg-page-gradient rotate-180 z-0" />
           </motion.div>
         </div>
       </section>
