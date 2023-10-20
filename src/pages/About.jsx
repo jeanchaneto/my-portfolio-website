@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <main className="" >
+    <main className="relative" >
       <div className=" ">
       {/* Hero Sections */}
       <div className=" pt-6 sm:pt-12 bg-page-gradient ">

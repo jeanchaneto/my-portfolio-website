@@ -33,7 +33,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <main className="min-h-screen min-w-screen bg-page-gradient" >
+    <main className=" relative isolate min-h-screen min-w-screen bg-page-gradient" >
       <div className="pt-6 sm:pt-12 pb-48 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className=" py-24 lg:py-32 mx-auto max-w-2xl text-center pointer-events-auto">

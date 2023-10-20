@@ -89,7 +89,7 @@ const gradientVariants = {
 
 export default function Services() {
   return (
-    <main className=" py-24 sm:py-32  ">
+    <main className=" py-24 sm:py-32 relative isolate ">
       {/* Hero section */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 pointer-events-none">
         <div className="mx-auto max-w-2xl sm:text-center">
