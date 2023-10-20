@@ -8,8 +8,15 @@ import Skills from "@/components/Skills";
 import SoftSkills from "@/components/SoftSkills";
 import { fadeInVariants } from "@/utils/motionVariants";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const About = () => {
+
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []); 
+
   return (
     <main className="relative min-h-screen" >
      

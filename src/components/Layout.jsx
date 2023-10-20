@@ -9,7 +9,7 @@ const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 const Layout = ({ children }) => {
   return (
     <div
-      className={`${sora.variable} font-sora w-full  overflow-hidden text-white relative bg-gray-950 `}
+      className={`${sora.variable} font-sora w-full  overflow-hidden text-white relative bg-gray-950 scroll-smooth `}
     >
       <Header />
       <NavBar />

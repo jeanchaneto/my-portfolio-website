@@ -4,6 +4,7 @@ import ServicesHeroImage from "@/components/ServicesHeroImage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import LogoCloud from "@/components/LogoCloud";
+import { useEffect } from "react";
 
 const services = [
   {
@@ -89,6 +90,11 @@ const gradientVariants = {
 };
 
 export default function Services() {
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []); 
+
   return (
     <main className=" py-24 sm:py-32 relative isolate ">
       {/* Hero section */}
