@@ -13,7 +13,7 @@ const Languages = () => {
       className=" pt-24 sm:pt-32 pb-64 bg-page-gradient-2-responsive lg:bg-page-gradient-2"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-xl text-center">
+        <div className="mx-auto max-w-xl text-center pointer-events-none">
           <FadeIn>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-l from-red-200 via-gray-300 to-blue-400 inline-block text-transparent bg-clip-text">
               Languages

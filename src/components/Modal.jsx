@@ -89,16 +89,16 @@ export default function Modal() {
               variants={contentVariants}
               className="fixed top-30 inset-0 overflow-y-auto z-50"
             >
-              <div className="flex min-h-full items-center justify-center text-center">
+              <div className="flex min-h-full items-center justify-center text-center pointer-events-none">
                 <motion.div
-                  className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/20"
+                  className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/10"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="relative">
+                  <div className="relative pointer-events-auto">
                     <img
                       src={modalContent.image}
                       alt=""
-                      className="rounded-xl mb-12 border border-white/20"
+                      className="rounded-xl mb-12 border border-white/10"
                     />
                     <div
                       className=" w-12 h-12 absolute -right-6 -top-6 flex justify-center items-center cursor-pointer hover:opacity-50 transition-opacity duration-300 "
@@ -166,7 +166,7 @@ export default function Modal() {
                   </div>
                   <motion.div
                     variants={linksVariants}
-                    className="flex gap-6 text-gray-300  mt-12 "
+                    className="flex gap-6 text-gray-300  mt-12 pointer-events-auto"
                   >
                     <motion.a
                       href={modalContent.siteUrl}

@@ -40,7 +40,7 @@ const TextSlideMask = ({ children }) => {
           transition={{ staggerChildren: 0.1 }}
           exit="exit"
           key={currentTextIndex}
-          className="overflow-hidden text-sky-500"
+          className="overflow-hidden text-sky-500 pointer-events-none"
         >
           {texts[currentTextIndex].split("").map((character, j) => (
             <motion.span

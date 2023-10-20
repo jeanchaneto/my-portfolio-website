@@ -80,7 +80,7 @@ const ProjectCard = ({ ...props }) => {
           {props.title}
         </motion.h3>
 
-        <p className="mb-6 text-gray-400">{props.description}</p>
+        <p className="mb-6 text-gray-400 pointer-events-none">{props.description}</p>
         <div className="flex gap-6 text-gray-300">
           <motion.a
             href={props.siteUrl}
@@ -99,7 +99,7 @@ const ProjectCard = ({ ...props }) => {
           <motion.a
             href={props.repo}
             target="_blank"
-            className="flex gap-2  items-center rounded-xl px-3 py-2 border-2 border-white/20  "
+            className="flex gap-2  items-center rounded-xl px-3 py-2 border-2 border-white/10  "
             whileTap={{ scale: 0.8 }}
             whileHover={{
               borderColor: "rgba(255, 255, 255, 0.5)",

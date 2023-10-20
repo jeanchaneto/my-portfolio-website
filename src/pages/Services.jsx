@@ -91,7 +91,7 @@ export default function Services() {
   return (
     <main className=" py-24 sm:py-32  ">
       {/* Hero section */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-6 lg:px-8 pointer-events-none">
         <div className="mx-auto max-w-2xl sm:text-center">
           <AnimatedText
             el="h1"
@@ -111,7 +111,7 @@ export default function Services() {
       {/* Hero image */}
       <ServicesHeroImage />
       {/* Services section */}
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 ">
+      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:mt-48 lg:px-8 pb-24 pointer-events-none">
         <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 font-sora sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 lg:gap-y-16">
           {services.map((service, i) => (
             <motion.li

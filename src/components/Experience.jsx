@@ -78,7 +78,7 @@ const Experience = () => {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
       <div className="mx-auto max-w-xl text-center">
         <FadeIn>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text">
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 inline-block text-transparent bg-clip-text pointer-events-none">
             Experience
           </h2>
         </FadeIn>

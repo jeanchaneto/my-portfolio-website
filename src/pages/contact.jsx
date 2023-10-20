@@ -9,14 +9,14 @@ const contact = () => {
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 sm:pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <AnimatedText el="h1" className="text-3xl font-bold tracking-tight text-gray-100">
+              <AnimatedText el="h1" className="text-3xl font-bold tracking-tight text-gray-100 pointer-events-none">
               Contact
               </AnimatedText>
               <motion.p 
               variants={{ hidden: {opacity:0, y:24}, visible: {opacity:1, y:0, transition: { delay: 0.3, duration: 0.5}}}}
               initial="hidden"
               animate="visible"
-              className="mt-6 text-lg leading-8 text-gray-300">
+              className="mt-6 text-lg leading-8 text-gray-300 pointer-events-none">
               Available for hire and eager to bring technical and creative skills to your team or project. Let's discuss how we can build something great together.
               </motion.p>
               <div className="mt-10 space-y-4 text-base leading-7 text-gray-300">
@@ -24,21 +24,23 @@ const contact = () => {
                 variants={{ hidden: {opacity:0, y:24}, visible: {opacity:1, y:0, transition: { delay: 0.5, duration: 0.5}}}}
                 initial="hidden"
                 animate="visible"
+                whileHover={{color: "#0ea5e9", transition: {duration: 0.3}}}
                 className="flex gap-x-4">
                   <div className="flex-none">
                     <span className="sr-only">Email</span>
                     <EnvelopeIcon
-                      className="h-7 w-6 text-gray-400"
+                      className="h-7 w-6"
                       aria-hidden="true"
                     />
                   </div>
                   <div>
-                    <a
-                      className="hover:text-white"
+                    <motion.a
+                      className=""
                       href="mailto:jeanchaneto@gmail.com"
+                      
                     >
                       jeanchaneto@gmail.com
-                    </a>
+                    </motion.a>
                   </div>
                 </motion.div>
               </div>

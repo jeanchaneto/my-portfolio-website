@@ -45,7 +45,7 @@ const AnimatedText = ({
         animate={startAnimation ? "visible" : "hidden"}
         transition={{ staggerChildren: stagger }}
         ref={ref}
-        className=" inline-block"
+        className=" inline-block pointer-events-none"
       >
         {children.split(" ").map((word, i) => (
           <motion.span className=" inline-block " key={i}>

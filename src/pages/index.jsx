@@ -40,7 +40,7 @@ export default function Home() {
             ref={ref}
             className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10 pt-12 pb-24 min-[964px]:pt-0 min-[964px]:pb-0"
           >
-            <div className="">
+            <div className=" pointer-events-none">
               <FadeIn view="0" from="12" duration="0.5">
                 <h2 className="text-base mt-6 leading-7 text-gray-300 font-thin tracking-widest  ">
                   HI, I'M{" "}

@@ -13,20 +13,20 @@ const OtherInterests = () => {
     viewport={{ once: true, margin: "0px 0px -200px" }} className=" pt-24 sm:pt-32 pb-64 bg-page-gradient-2-responsive lg:bg-page-gradient-2">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-xl sm:text-center">
-          <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
+          <div className="text-base leading-7 text-gray-700 lg:max-w-lg pointer-events-none">
             <FadeIn>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-200 to-sky-400 inline-block text-transparent bg-clip-text">
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mx-auto font-sora bg-gradient-to-r from-sky-200 to-sky-400 inline-block text-transparent bg-clip-text ">
                 Other Interests
               </h2>
             </FadeIn>
             <FadeIn delay="0.2">
-              <p className="mt-6 text-lg text-gray-400">
+              <p className="mt-6 text-lg text-gray-400 ">
                 I am passionate about electronic music and produce at
                 professional level utilising{" "}
                 <a
                   href="https://www.apple.com/logic-pro/"
                   target="_blank"
-                  className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
+                  className="text-sky-600 hover:opacity-50 transition-opacity duration-300 pointer-events-auto"
                 >
                   Logic Pro
                 </a>{" "}
@@ -34,7 +34,7 @@ const OtherInterests = () => {
                 <a
                   href="https://www.ableton.com/en/"
                   target="_blank"
-                  className="text-sky-600 hover:opacity-50 transition-opacity duration-300"
+                  className="text-sky-600 hover:opacity-50 transition-opacity duration-300 pointer-events-auto"
                 >
                   Ableton Live
                 </a>{" "}
