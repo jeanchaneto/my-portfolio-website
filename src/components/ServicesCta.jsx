@@ -7,14 +7,14 @@ const ServicesCta = () => {
       <div className="mx-auto max-w-7xl pt-24 pb-24 sm:px-6 sm:pb-32 lg:pb-48 lg:px-8">
         <motion.div
           variants={{
-            hidden: { opacity: 0, y: "25%" },
+            hidden: { opacity: 0, y: 24 },
             visible: {
               opacity: 1,
               y: 0,
               transition: {
                 duration: 0.7,
                 ease: "easeInOut",
-                delayChildren: 0.5,
+                delayChildren: 0.2,
                 staggerChildren: 0.2,
               },
             },
@@ -28,7 +28,7 @@ const ServicesCta = () => {
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
-              transition: { delay: 1, duration: 7 },
+              transition: { delay: 0.7, duration: 7 },
             }}
             viewport={{ once: true, margin: "0px 0px -200px" }}
           >
