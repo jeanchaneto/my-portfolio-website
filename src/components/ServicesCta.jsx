@@ -4,7 +4,7 @@ import Link from "next/link";
 const ServicesCta = () => {
   return (
     <section>
-      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:pb-48 lg:px-8">
+      <div className="mx-auto max-w-7xl pt-24 pb-24 sm:px-6 sm:pb-32 lg:pb-48 lg:px-8">
         <motion.div
           variants={{
             hidden: { opacity: 0, y: "25%" },
@@ -26,7 +26,6 @@ const ServicesCta = () => {
         >
           <motion.div
             initial={{ opacity: 0 }}
-        
             whileInView={{
               opacity: 1,
               transition: { delay: 1, duration: 7 },
@@ -79,7 +78,7 @@ const ServicesCta = () => {
             <Link
               href="/contact"
               className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 z-20
-          transition-all duration-300  relative focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+            transition-all duration-300  relative focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
             >
               Get started
             </Link>

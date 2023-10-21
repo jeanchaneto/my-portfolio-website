@@ -31,22 +31,16 @@ const logos = [
 
 const LogoCloud = () => {
   return (
-    <FadeIn duration="1" >
+    <FadeIn duration="1">
       <section className="relative mx-auto max-w-[1214px] py-12 sm:px-6 sm:py-24 lg:px-8 overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[125px] sm:before:w-[250px] before:bg-[linear-gradient(to_right,#030712,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[125px] sm:after:w-[250px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#030712,rgba(255,255,255,0)_100%)] after:content-[''] pointer-events-none">
-        <div className=" animate-infinite-slider flex w-fit ">
+        <div className="  animate-infinite-slider h-20 flex w-fit ">
           {logos.map((logo, index) => (
-            <div
-              className=" flex w-24 h-8 items-center justify-center mr-24 "
-              key={index}
-            >
+            <div className=" w-28 mr-16  " key={index}>
               <img src={logo.image} alt={logo.alt} className=" h-full  " />
             </div>
           ))}
           {logos.map((logo, index) => (
-            <div
-              className=" flex w-24 h-8 items-center justify-center mr-24"
-              key={index}
-            >
+            <div className=" w-28 mr-16 " key={index}>
               <img src={logo.image} alt={logo.alt} className=" h-full " />
             </div>
           ))}

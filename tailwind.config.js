@@ -63,10 +63,8 @@ module.exports = {
           },
         },
         infiniteSlider: {
-          "0%": { transform: "translateX(0)" },
-          "100%": {
-            transform: "translateX(-4992px)",
-          },
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
         },
       },
       animation: {
@@ -74,7 +72,7 @@ module.exports = {
         "image-rotate": "image-rotate 1400ms 1s ease forwards",
         "image-glow": "image-glow 2000ms 1.5s ease-out both",
         "image-fade": "image-fade 1s 1400ms ease-out both",
-        "infinite-slider": "infiniteSlider 90s linear infinite",
+        "infinite-slider": "infiniteSlider 80s linear infinite",
       },
     },
   },
