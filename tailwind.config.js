@@ -63,7 +63,7 @@ module.exports = {
         infiniteSlider: {
           "0%": { transform: "translateX(0)" },
           "100%": {
-            transform: "translateX(-4800px)",
+            transform: "translateX(-4992px)",
           },
         },
       },
@@ -74,7 +74,6 @@ module.exports = {
         "image-fade": "image-fade 1s 1400ms ease-out both",
         "infinite-slider": "infiniteSlider 90s linear infinite"
       },
-   
     },
   },
   plugins: [],
