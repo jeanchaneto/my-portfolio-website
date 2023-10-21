@@ -2,98 +2,93 @@ import { useModal } from "@/store/ModalContext";
 import { fadeInVariants } from "@/utils/motionVariants";
 import { motion, AnimatePresence } from "framer-motion";
 
+const backdropVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { when: "beforeChildren", duration: 0.1 },
+  },
+  exit: { opacity: 0, transition: { when: "afterChildren", duration: 0.1 } },
+};
+
+const contentVariants = {
+  hidden: { y: "100vh", opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+  exit: {
+    y: "-100vh",
+    opacity: 0,
+    transition: { duration: 0.3, type: "spring", stiffness: 400, damping: 40 },
+  },
+};
+
+const modalListVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3,
+      duration: 0.3,
+      staggerChildren: 0.3,
+    },
+  },
+};
+const listItemsVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+const linksVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      delay: 0.7,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
 export default function Modal() {
   const { isOpen, modalContent, closeModal } = useModal();
 
   if (!modalContent) return null;
-
-  const backdropVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { when: "beforeChildren", duration: 0.1 },
-    },
-    exit: { opacity: 0, transition: { when: "afterChildren", duration: 0.1 } },
-  };
-
-  const contentVariants = {
-    hidden: { y: "100vh", opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
-    },
-    exit: {
-      y: "-100vh",
-      opacity: 0,
-      transition: { duration: 0.3, type: "spring",
-      stiffness: 400,
-      damping: 40 },
-      
-    },
-  };
-
-  const modalListVariants = {
-    hidden: { opacity: 0, y: 24 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.3,
-        duration: 0.3,
-        staggerChildren: 0.3,
-      },
-    },
-  };
-  const listItemsVariants = {
-    hidden: { opacity: 0, y: 24 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
-  const linksVariants = {
-    hidden: { opacity: 0, y: 24 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.3,
-        delay: 0.7,
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
-    },
-  };
 
   return (
     <>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-          key="modal"
+            key="modal"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed inset-0 backdrop-blur-xl z-40 "
-            onClick={closeModal}
+            className="fixed inset-0 backdrop-blur-xl z-50 "
           >
             <motion.div
               variants={contentVariants}
-              className="fixed top-30 inset-0 overflow-y-auto z-50"
+              className="fixed top-30 inset-0 overflow-y-auto z-5 "
             >
               <div className="flex min-h-full items-center justify-center text-center pointer-events-none">
                 <motion.div
                   className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/10"
-                  onClick={(e) => e.stopPropagation()}
                 >
                   <div className="relative pointer-events-auto">
                     <img
@@ -188,8 +183,11 @@ export default function Modal() {
                       target="_blank"
                       className="flex gap-2 items-center rounded-xl border-2 border-white/20 px-4 py-3 "
                       whileTap={{ scale: 0.8 }}
-                      whileHover={{ borderColor: "rgba(255, 255, 255, 0.5)",
-                      backgroundColor: "rgba(255, 255, 255, 0.1)", duration: 0.3 }}
+                      whileHover={{
+                        borderColor: "rgba(255, 255, 255, 0.5)",
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        duration: 0.3,
+                      }}
                     >
                       <p>See repo</p>
                       <img
