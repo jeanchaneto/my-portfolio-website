@@ -151,7 +151,7 @@ export default function Services() {
         </ul>
       </div>
       {/* Logo Cloud */}
-      {/* <LogoCloud /> */}
+      <LogoCloud />
       {/* CTA Section */}
       <section>
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:pb-48 lg:px-8">
