@@ -146,15 +146,15 @@ export default function Home() {
                 animate="visible"
                 transition={{ duration: 4, delay: 1 }}
                 duration="6"
-                className=" absolute w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[650px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
+                className=" absolute right-8 w-[300px] h-[340px]  min-[964px]:w-[500px] min-[964px]:h-[550px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
               ></motion.div>
               <img
                 src="/images/hero-photo.png"
-                alt="Jean Chane-to"
-                className=" max-h-[480px]  min-[964px]:max-h-[700px] min-w-[350px] object-cover relative "
+                alt=""
+                className=" max-h-[480px] min-[964px]:max-h-[750px] min-w-[350px] object-cover relative saturate-0  "
               />
             </div>
-            <div className="absolute bottom-1/3 translate-x-[150px] right-1/2 h-[200px] translate-y-[130px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[180px] min-[964px]:translate-y-[180px] cursor-pointer ">
+            <div className="absolute bottom-1/3 translate-x-[155px] right-1/2 h-[200px] w-[300px] translate-y-[40px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[179px] min-[964px]:translate-y-[46px] cursor-pointer ">
               <Hero3d />
             </div>
           </motion.div>{" "}

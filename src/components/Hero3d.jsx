@@ -28,7 +28,7 @@ export default function Hero3d() {
 
   return (
     <Canvas camera={{ position: [0, 0, 10] }}>
-      <OrbitControls enableZoom={false} />
+      {/* <OrbitControls enableZoom={false} /> */}
       <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
         <Float speed={4} rotationIntensity={1} floatIntensity={2}>
           <Atom />
