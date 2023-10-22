@@ -32,9 +32,10 @@ const TextSlideMask = ({ children }) => {
 
   return (
     <span className=" overflow-hidden  ">
-      <span className="sr-only">{children}</span>
+      {/* <span className="sr-only">{children}</span> */}
       <AnimatePresence mode="wait">
         <motion.span
+        aria-hidden="true"
           initial="hidden"
           animate="visible"
           transition={{ staggerChildren: 0.1 }}

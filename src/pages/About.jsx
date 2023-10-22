@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import SoftSkills from "@/components/SoftSkills";
 import { fadeInVariants } from "@/utils/motionVariants";
 import { motion } from "framer-motion";
+import Head from "next/head";
 import { useEffect } from "react";
 
 const About = () => {
@@ -19,7 +20,21 @@ const About = () => {
 
   return (
     <main className="relative min-h-screen" >
-     
+     <Head>
+        <title>Jean Chane-to | About: Professional Journey & Skills</title>
+        <meta
+          name="description"
+          content="Discover my story and what drives me as a web developer. I'm passionate about creating impactful web solutions and mastering cutting-edge technologies."
+        />
+        <meta
+          property="og:title"
+          content="About Jean Chane-to | Professional Journey & Skills"
+        />
+        <meta
+          property="og:description"
+          content="Discover my story and what drives me as a web developer. I'm passionate about creating impactful web solutions and mastering cutting-edge technologies."
+        />
+      </Head>
       {/* Hero Sections */}
       <div className=" pt-6 sm:pt-12 bg-page-gradient ">
         <div className=" pt-24 sm:pt-32 pb-64 ">

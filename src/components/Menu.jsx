@@ -53,6 +53,10 @@ const Menu = () => {
   const [menuHeight, setMenuHeight] = useState("87vh");
   const { pathname } = useRouter();
 
+  const handleBottomMenuClick = () => {
+    setIsOpen(false)
+  }
+
   useEffect(() => {
     const updateMenuHeight = () => {
       if (window.innerWidth < 640) {
@@ -150,6 +154,7 @@ const Menu = () => {
           >
             <Link
               href="/"
+              onClick={handleBottomMenuClick}
               className="w-full h-full flex justify-center items-center "
             >
               <img
@@ -196,6 +201,7 @@ const Menu = () => {
             <Link
               href="/contact"
               className="w-full h-full flex justify-center items-center"
+              onClick={handleBottomMenuClick}
             >
               <img
                 src="/images/envelope-solid.svg"

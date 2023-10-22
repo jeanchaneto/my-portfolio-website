@@ -5,6 +5,7 @@ import TextSlideMask from "@/components/TextSlideMask";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import Head from "next/head";
 
 export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
@@ -21,20 +22,23 @@ export default function Home() {
 
   return (
     <main className="bg-gray-950 min-h-screen">
+      <Head>
+        <title>Jean Chane-to | React & Web Applications Developer</title>
+        <meta
+          name="description"
+          content="Specializing in the development of seamless, interactive, and responsive web applications using React. Available for collaboration and freelance projects."
+        />
+        <meta
+          property="og:title"
+          content="Jean Chane-to | React & Web Applications Developer"
+        />
+        <meta
+          property="og:description"
+          content="Specializing in the development of seamless, interactive, and responsive web applications using React. Available for collaboration and freelance projects."
+        />
+      </Head>
       <div className="flex items-center  min-[964px]:h-screen py-24 lg:py-32 relative">
         <div className=" max-w-7xl mx-auto flex flex-col-reverse min-[964px]:flex-row  items-center relative px-6 lg:px-8 ">
-          {/* Ligth */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, scale: 0 },
-              visible: { opacity: 0.5, scale: 1 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 4, delay: 1 }}
-            duration="6"
-            className="absolute top-12  -translate-x-1/4 min-[964px]:translate-x-0 min-[964px]:right-[24px] w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[650px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  animate-blob  z-0 "
-          ></motion.div>
           {/* Left hero */}
           <div
             ref={ref}
@@ -55,7 +59,7 @@ export default function Home() {
                 I Craft
               </AnimatedText>{" "}
               <span className="overflow-hidden">
-                {textSlideActive && <TextSlideMask>Seamless</TextSlideMask>}
+                {textSlideActive && <TextSlideMask>Seamless </TextSlideMask>}
               </span>
               <br />{" "}
               <AnimatedText el="span" delay="1.5">
@@ -129,14 +133,25 @@ export default function Home() {
             }}
             initial="hidden"
             animate="visible"
-            className=" shrink-0 relative"
+            className=" shrink-0 relative "
           >
-            {" "}
-            <div className=" pointer-events-none select-none overflow-hidden rounded-xl [mask-image:_linear-gradient(to_top,transparent_0,_black_28px,_black_calc(100%-30px),transparent_100%)] z-20">
+            {/* Ligth */}
+            <div className=" pointer-events-none select-none rounded-xl z-20 ">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, scale: 0 },
+                  visible: { opacity: 0.5, scale: 1 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 4, delay: 1 }}
+                duration="6"
+                className=" absolute w-[300px] h-[400px]  min-[964px]:w-[500px] min-[964px]:h-[650px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
+              ></motion.div>
               <img
                 src="/images/hero-photo.png"
                 alt="Jean Chane-to"
-                className=" max-h-[480px]  min-[964px]:max-h-[700px] min-w-[350px] object-cover "
+                className=" max-h-[480px]  min-[964px]:max-h-[700px] min-w-[350px] object-cover relative "
               />
             </div>
             <div className="absolute bottom-1/3 translate-x-[150px] right-1/2 h-[200px] translate-y-[130px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[180px] min-[964px]:translate-y-[180px] cursor-pointer ">

@@ -1,11 +1,11 @@
 import AnimatedText from "@/components/AnimatedText";
 import FadeIn from "@/components/FadeIn";
 import ServicesHeroImage from "@/components/ServicesHeroImage";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import LogoCloud from "@/components/LogoCloud";
 import { useEffect } from "react";
 import ServicesCta from "@/components/ServicesCta";
+import Head from "next/head";
 
 const services = [
   {
@@ -47,7 +47,7 @@ const services = [
     icons: ["/images/react-color.svg", "/images/framer-motion.svg"],
   },
   {
-    name: "Flexible E-commerce Solutions with Stripe or WordPress/WooCommerce.",
+    name: "Flexible E-commerce Solutions with Stripe or WordPress & WooCommerce.",
     description:
       "Feature-rich platforms with Stripe for robust payment experiences, or opting for quick, cost-effective store setups with WordPress and WooCommerce, each tailored to suit varied business needs and budget scopes.",
     icons: [
@@ -98,6 +98,21 @@ export default function Services() {
 
   return (
     <main className=" py-24 sm:py-32 relative isolate ">
+      <Head>
+        <title>Jean Chane-to | Services: React, Next.js & Web Solutions</title>
+        <meta
+          name="description"
+          content=" From React and Next.js applications to full-stack solutions, I offer comprehensive services to bring your digital vision to life. Let's build greatness."
+        />
+        <meta
+          property="og:title"
+          content="Jean Chane-to | Services: React, Next.js & Web Solutions"
+        />
+        <meta
+          property="og:description"
+          content=" From React and Next.js applications to full-stack solutions, I offer comprehensive services to bring your digital vision to life. Let's build greatness."
+        />
+      </Head>
       {/* Hero section */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 pointer-events-none">
         <div className="mx-auto max-w-2xl sm:text-center">

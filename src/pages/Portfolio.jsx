@@ -1,8 +1,8 @@
 import AnimatedText from "@/components/AnimatedText";
 import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
-import { staggerVariants } from "@/utils/motionVariants";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const Portfolio = () => {
   const projects = [
@@ -34,6 +34,21 @@ const Portfolio = () => {
 
   return (
     <main className=" relative isolate min-h-screen min-w-screen bg-page-gradient" >
+      <Head>
+        <title>Jean Chane-to | Portfolio: React & Web Development Projects</title>
+        <meta
+          name="description"
+          content="Dive into my portfolio to see dynamic React projects that drive user engagement. Each solution showcases my commitment to quality and innovation."
+        />
+        <meta
+          property="og:title"
+          content="Jean Chane-to | Portfolio: React & Web Development Projects"
+        />
+        <meta
+          property="og:description"
+          content="Dive into my portfolio to see dynamic React projects that drive user engagement. Each solution showcases my commitment to quality and innovation."
+        />
+      </Head>
       <div className="pt-6 sm:pt-12 pb-48 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className=" py-24 lg:py-32 mx-auto max-w-2xl text-center pointer-events-auto">

@@ -2,10 +2,26 @@ import AnimatedText from "@/components/AnimatedText";
 import Form from "@/components/Form"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import { motion} from "framer-motion";
+import Head from "next/head";
 
 const contact = () => {
   return (
     <main className="relative isolate min-h-screen bg-page-gradient ">
+      <Head>
+        <title>Jean Chane-to | Contact:  Get Your Project Started</title>
+        <meta
+          name="description"
+          content="Available for hire and eager to bring technical and creative skills to your team or project. Let's discuss how we can build something great together."
+        />
+        <meta
+          property="og:title"
+          content="Jean Chane-to | Contact:  Get Your Project Started"
+        />
+        <meta
+          property="og:description"
+          content="Available for hire and eager to bring technical and creative skills to your team or project. Let's discuss how we can build something great together."
+        />
+      </Head>
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 sm:pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -17,7 +33,7 @@ const contact = () => {
               initial="hidden"
               animate="visible"
               className="mt-6 text-lg leading-8 text-gray-300 pointer-events-none">
-              Available for hire and eager to bring technical and creative skills to your team or project. Let's discuss how we can build something great together.
+              Ready to bring your ideas into the digital realm? Reach out for inquiries, quotes, or to discuss potential collaborations. Let's create something remarkable together.
               </motion.p>
               <div className="mt-10 space-y-4 text-base leading-7 text-gray-300">
                 <motion.div 

@@ -38,9 +38,9 @@ const AnimatedText = ({
 
   return (
     <Wrapper className={className}>
-      <span className="sr-only">{children}</span>
+      {/* <span className="sr-only">{children}</span> */}
       <motion.span
-        aria-hidden
+        aria-hidden="true"
         initial="hidden"
         animate={startAnimation ? "visible" : "hidden"}
         transition={{ staggerChildren: stagger }}
