@@ -9,6 +9,7 @@ import SoftSkills from "@/components/SoftSkills";
 import { fadeInVariants } from "@/utils/motionVariants";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect } from "react";
 
 const About = () => {
@@ -38,8 +39,17 @@ const About = () => {
       {/* Hero Sections */}
       <div className=" pt-6 sm:pt-12 bg-page-gradient ">
         <div className=" pt-24 sm:pt-32 pb-64 ">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0">
-            <section className="mx-auto max-w-2xl lg:mx-0">
+          <section className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0 flex flex-col lg:flex-row items-center justify-center gap-16">
+          
+           <Image  
+           src="/images/profile-photo.jpeg"
+           width={400}
+           height={400}
+           alt="Jean Chane-to"
+           className="object-cover object-top rounded-3xl max-w-[750px] max-h-[600px] shrink  w-full  brightness-75 border border-white/10 pointer-events-none opacity-0 shadow shadow-gray-100/10 "
+           onLoadingComplete={(img) => img.classList.add("animate-image-load")}
+           />
+            <div className="mx-auto max-w-2xl lg:mx-0  shrink">
               <AnimatedText
                 el="h1"
                 className="text-4xl font-bold tracking-tight text-gray-100 sm:text-4xl font-sora pointer-events-none"
@@ -140,8 +150,8 @@ const About = () => {
                   </motion.svg>
                 </motion.a>
               </motion.div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
         <Divider />
       </div>
@@ -153,7 +163,6 @@ const About = () => {
       <Divider />
       <Education />
       <Divider />
-      {/* Languages */}
       <Languages />
       <Divider />
       <OtherInterests />

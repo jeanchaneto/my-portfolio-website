@@ -9,7 +9,10 @@ import Head from "next/head";
 
 export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
-
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []); 
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
 

@@ -3,8 +3,14 @@ import Form from "@/components/Form"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import { motion} from "framer-motion";
 import Head from "next/head";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []); 
+
   return (
     <main className="relative isolate min-h-screen bg-page-gradient ">
       <Head>
