@@ -40,7 +40,7 @@ export default function Home() {
           content="Specializing in the development of seamless, interactive, and responsive web applications using React. Available for collaboration and freelance projects."
         />
       </Head>
-      <div className="flex items-center  min-[964px]:h-screen py-24 lg:py-32 relative">
+      <div className="flex items-center   py-24 lg:py-48 ">
         <div className=" max-w-7xl mx-auto flex flex-col sm:gap-16 min-[964px]:flex-row  items-center relative px-6 lg:px-8 ">
           {/* Left hero */}
           <div

@@ -26,7 +26,7 @@ const ProjectCard = ({ ...props }) => {
 
   return (
     <motion.div
-    variants={cardsVariants}
+      variants={cardsVariants}
       whileHover={{
         scale: 1.05,
         y: -24,
@@ -49,28 +49,28 @@ const ProjectCard = ({ ...props }) => {
       <div className="p-6 ">
         <motion.div
           variants={{
-            initial: { scale: 1, y: 0 },
-            hover: { scale: 1.05, y: -16 },
+            initial: { scale: 1 },
+            hover: { scale: 1.05 },
           }}
           whileHover={{
             scale: 1.05,
             transition: {
-              duration: 0.5,
+              duration: 0.7,
               type: "spring",
               stiffness: 400,
               damping: 20,
             },
           }}
           onClick={handleOpenModal}
-          className="relative cursor-pointer"
+          className="relative cursor-pointer aspect-video rounded-xl"
         >
           <Image
-            className="rounded-xl object-cover w-full border border-white/10 opacity-0   "
+            className=" object-cover w-full border border-white/10 opacity-0 rounded-xl  "
             src={props.image}
             alt={props.title}
-            width={410}
-            height={270}
-            onLoadingComplete={(img) => img.classList.add("animate-image-load")} 
+            fill
+            sizes="50vw"
+            onLoadingComplete={(img) => img.classList.add("animate-image-load")}
           />
         </motion.div>
       </div>
@@ -84,7 +84,9 @@ const ProjectCard = ({ ...props }) => {
           {props.title}
         </motion.h3>
 
-        <p className="mb-6 text-gray-400 pointer-events-none">{props.description}</p>
+        <p className="mb-6 text-gray-400 pointer-events-none">
+          {props.description}
+        </p>
         <div className="flex gap-6 text-gray-300">
           <motion.a
             href={props.siteUrl}
@@ -111,7 +113,7 @@ const ProjectCard = ({ ...props }) => {
               duration: 0.3,
             }}
           >
-            <p>See repo</p>
+            <p>Repo</p>
             <img
               src="/images/github-logo.svg"
               alt=""

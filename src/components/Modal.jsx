@@ -1,6 +1,7 @@
 import { useModal } from "@/store/ModalContext";
 import { fadeInVariants } from "@/utils/motionVariants";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const backdropVariants = {
   hidden: { opacity: 0 },
@@ -87,17 +88,20 @@ export default function Modal() {
               className="fixed top-30 inset-0 overflow-y-auto z-5 "
             >
               <div className="flex min-h-full items-center justify-center text-center pointer-events-none">
-                <motion.div
-                  className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/10"
-                >
-                  <div className="relative pointer-events-auto">
-                    <img
+                <motion.div className="w-full max-w-2xl transform  rounded-xl bg-gray-950 p-6 text-left align-middle shadow-xl transition-all border border-white/10 relative pointer-events-auto ">
+                  <div className=" aspect-video relative mb-12">
+                    <Image
                       src={modalContent.image}
                       alt=""
-                      className="rounded-xl mb-12 border border-white/10"
+                      fill
+                      sizes="100vw"
+                      className="rounded-xl  border border-white/10 w-full object-cover "
+                      onLoadingComplete={(img) =>
+                        img.classList.add("animate-image-load")
+                      }
                     />
                     <div
-                      className=" w-12 h-12 absolute -right-6 -top-6 flex justify-center items-center cursor-pointer hover:opacity-50 transition-opacity duration-300 "
+                      className=" w-12 h-12 absolute -right-0 -top-0 flex justify-center items-center cursor-pointer hover:opacity-50 transition-opacity duration-300 "
                       onClick={closeModal}
                     >
                       <img

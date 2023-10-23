@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
+import profilePhoto from "../../public/images/profile-photo.jpeg"
 
 const About = () => {
 
@@ -42,9 +43,7 @@ const About = () => {
           <section className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0 flex flex-col md:flex-row items-center justify-center gap-16">
           
            <Image  
-           src="/images/profile-photo.jpeg"
-           width={400}
-           height={400}
+           src={profilePhoto}
            alt="Jean Chane-to"
            className="object-cover object-top rounded-3xl max-w-[750px] lg:max-w-[324px] max-h-[600px] shrink  w-full brightness-75 border border-white/10 pointer-events-none opacity-0 shadow"
            onLoadingComplete={(img) => img.classList.add("animate-image-load")}

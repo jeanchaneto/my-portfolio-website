@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FadeIn from "./FadeIn";
 import { motion } from "framer-motion";
+import otherInterestsPhoto from "../../public/images/producing-music.jpg"
 
 const OtherInterests = () => {
   return (
@@ -59,10 +60,8 @@ const OtherInterests = () => {
           />
           <Image
             className="absolute  inset-0 h-full w-full object-cover rounded-3xl pointer-events-none"
-            src="/images/producing-music.jpg"
+            src={otherInterestsPhoto}
             alt="Jean Chane-to producing music"
-            width={510}
-            height={280}
           />
         </FadeIn>
       </div>
