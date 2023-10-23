@@ -19,6 +19,8 @@ const ServicesHeroImage = () => {
              "
             width={2432}
             height={1442}
+            priority={true}
+            pl
           />
         </div>
       </div>

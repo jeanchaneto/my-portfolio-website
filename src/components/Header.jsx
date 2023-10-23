@@ -9,11 +9,14 @@ export default function Header() {
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 "
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
+        <motion.div
+        initial={{opacity:0}}
+        animate={{ opacity: 1, transition: { duration: 1, when:"beforeChildren", delay: 0.5}}}
+        className="flex lg:flex-1">
           <Link href="/" className="">
             <Logo />
           </Link>
-        </div>
+        </motion.div>
         <motion.div
           initial={{ y: -60 }}
           animate={{

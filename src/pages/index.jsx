@@ -6,8 +6,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image";
-import HeroPhoto from "../../public/images/hero-photo.png"
 
 export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
@@ -23,7 +21,7 @@ export default function Home() {
   }, [isInView]);
 
   return (
-    <main className="bg-gray-950 min-h-screen">
+    <main className="bg-gray-950 min-h-screen bg-page-gradient">
       <Head>
         <title>Jean Chane-to | React & Web Applications Developer</title>
         <meta
@@ -40,11 +38,11 @@ export default function Home() {
         />
       </Head>
       <div className="flex items-center  min-[964px]:h-screen py-24 lg:py-32 relative">
-        <div className=" max-w-7xl mx-auto flex flex-col-reverse min-[964px]:flex-row  items-center relative px-6 lg:px-8 ">
+        <div className=" max-w-7xl mx-auto flex flex-col sm:gap-16 min-[964px]:flex-row  items-center relative px-6 lg:px-8 ">
           {/* Left hero */}
           <div
             ref={ref}
-            className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto pr-10 pt-12 pb-24 min-[964px]:pt-0 min-[964px]:pb-0"
+            className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto  pt-12 pb-12 min-[964px]:pt-0 min-[964px]:pb-0 flex-1  "
           >
             <div className=" pointer-events-none">
               <FadeIn view="0" from="12" duration="0.5">
@@ -56,11 +54,11 @@ export default function Home() {
                 </h2>
               </FadeIn>
             </div>
-            <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl font-sora sm:whitespace-nowrap ">
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl font-sora min-[350px]whitespace-nowrap ">
               <AnimatedText el="span" delay="0.75">
                 I Craft
               </AnimatedText>{" "}
-              <span className="overflow-hidden">
+              <span className="overflow-hidden whitespace-nowrap">
                 {textSlideActive && <TextSlideMask>Seamless </TextSlideMask>}
               </span>
               <br />{" "}
@@ -118,7 +116,7 @@ export default function Home() {
               </motion.div>
             </motion.div>
           </div>
-          {/* Image */}
+          {/* Right Section */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: "50px" },
@@ -129,58 +127,27 @@ export default function Home() {
                   duration: 4,
                   delay: 0,
                   type: "spring",
-                  bounce: "0.1",
+                  bounce: "0.2",
                 },
               },
             }}
             initial="hidden"
             animate="visible"
-            className=" shrink-0 relative "
+            className=" shrink-0 relative w-[280px] h-[280px] min-[360px]:w-[320px] min-[360px]:h-[320px]  sm:w-[440px] sm:h-[440px]"
           >
             {/* Ligth */}
-            <div className=" pointer-events-none select-none rounded-xl z-20 ">
-              {/* <motion.div
-                variants={{
-                  hidden: { opacity: 0, scale: 0 },
-                  visible: { opacity: 0.5, scale: 1 },
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 4, delay: 1 }}
-                duration="6"
-                className=" absolute right-8 w-[300px] h-[340px]  min-[964px]:w-[500px] min-[964px]:h-[550px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
-              ></motion.div> */}
-              {/* <Image
-                src={HeroPhoto}
-                alt=""
-                className=" max-h-[480px] min-[964px]:max-h-[750px] min-w-[350px] object-cover relative saturate-0  "
-              /> */}
-            </div>
-            {/* <div className="absolute bottom-1/3 translate-x-[155px] right-1/2 h-[200px] w-[300px] translate-y-[40px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[179px] min-[964px]:translate-y-[46px]  ">
-              <Hero3d />
-            </div> */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, scale: 0 },
+                visible: { opacity: 0.3, scale: 1.1 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 3, delay: 0.5 }}
+              className=" absolute inset-0  w-[100%] h-[100%]  bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
+            ></motion.div>
 
-
-
-<motion.div
-                variants={{
-                  hidden: { opacity: 0, scale: 0 },
-                  visible: { opacity: 0.5, scale: 1 },
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 4, delay: 1 }}
-                duration="6"
-                className=" absolute  w-[300px] h-[340px]  min-[964px]:w-[500px] min-[964px]:h-[550px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
-              ></motion.div>
-
-
-
-            <div className="bottom-1/3  h-[200px] w-[300px] translate-y-[40px] min-[964px]:h-[300px] min-[964px]:w-[350px]   ">
-              <Hero3d />
-            </div>
-
-
+            <Hero3d />
           </motion.div>{" "}
         </div>
       </div>

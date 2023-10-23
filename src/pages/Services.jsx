@@ -97,7 +97,7 @@ export default function Services() {
   }, []); 
 
   return (
-    <main className=" py-24 sm:py-32 relative isolate ">
+    <main className=" py-24 sm:py-32 relative isolate">
       <Head>
         <title>Jean Chane-to | Services: React, Next.js & Web Solutions</title>
         <meta

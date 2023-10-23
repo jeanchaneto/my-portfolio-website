@@ -40,6 +40,7 @@ const TextSlideMask = ({ children }) => {
           animate="visible"
           transition={{ staggerChildren: 0.1 }}
           exit="exit"
+          
           key={currentTextIndex}
           className="overflow-hidden text-sky-500 pointer-events-none"
         >

@@ -60,7 +60,7 @@ const Menu = () => {
   useEffect(() => {
     const updateMenuHeight = () => {
       if (window.innerWidth < 640) {
-        setMenuHeight("87vh");
+        setMenuHeight("80vh");
       } else {
         setMenuHeight("60vh");
       }
