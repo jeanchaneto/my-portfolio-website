@@ -52,7 +52,7 @@ const NavItem = ({ mouseX, icon, link, alt }) => {
         <img
           src={icon}
           alt={alt}
-          className=" w-9/12 h-9/12 object-scale-down "
+          className=" w-9/12 object-scale-down "
         />
       </Link>
       <AnimatePresence>

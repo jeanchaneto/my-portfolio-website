@@ -44,7 +44,7 @@ const experiences = [
     {
       title: "Various Positions",
       company: "",
-      companyLink: "",
+      companyLink: null,
       timePeriod: "June 2005 - May 2009",
       content: [
         "Lab Technician in Microbiological Analysis: Conducted detailed microbiological analyses on food products, ensuring safety and compliance with regulatory standards.",

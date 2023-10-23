@@ -39,14 +39,14 @@ const ProjectCard = ({ ...props }) => {
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="  rounded-xl shadow backdrop-blur-xl box-border"
+      className="  rounded-xl shadow backdrop-blur-xl box-border min-w-[300px] "
     >
       <motion.div
         variants={borderVariants}
         animate={controls}
-        className=" absolute inset-0 border pointer-events-none opacity-20 rounded-xl box-border"
+        className=" absolute inset-0 border pointer-events-none opacity-20 rounded-xl box-border "
       ></motion.div>
-      <div className="p-6">
+      <div className="p-6 ">
         <motion.div
           variants={{
             initial: { scale: 1, y: 0 },

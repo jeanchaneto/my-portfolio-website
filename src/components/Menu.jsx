@@ -108,7 +108,7 @@ const Menu = () => {
       variants={menuVariants}
       initial="hidden"
       animate="visible"
-      className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-2 left-1/2  z-30 lg:hidden"
+      className="mx-auto max-w-fit rounded-2xl  backdrop-blur-2xl border border-white/10 bg-white/5 px-4  fixed bottom-4 left-1/2  z-30 lg:hidden"
     >
       <motion.div className="">
         {/* Opened Menu */}
@@ -161,7 +161,7 @@ const Menu = () => {
               <img
                 src="/images/house-solid.svg"
                 alt="Home"
-                className=" w-9/12 h-9/12 object-scale-down  "
+                className=" w-[36px] object-scale-down  "
               />
             </Link>
             <AnimatePresence>
@@ -208,7 +208,7 @@ const Menu = () => {
               <img
                 src="/images/envelope-solid.svg"
                 alt="Contact"
-                className=" w-9/12 h-9/12 object-scale-down  "
+                className=" w-[36px] object-scale-down  "
               />
             </Link>
             <AnimatePresence>
