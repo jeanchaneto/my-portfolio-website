@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ModalProvider>
       <Layout>
-        {/* {isProduction && (
+        {isProduction && (
           <>
             <Script
               strategy="afterInteractive"
@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
   `}
             </Script>
           </>
-        )} */}
+        )}
         <AnimatePresence mode="wait">
           <motion.div
             key={router.route}
