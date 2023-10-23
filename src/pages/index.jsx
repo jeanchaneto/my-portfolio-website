@@ -1,6 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import FadeIn from "@/components/FadeIn";
-import Hero3d from "@/components/Hero3d";
+// import Hero3d from "@/components/Hero3d";
 import TextSlideMask from "@/components/TextSlideMask";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -138,7 +138,7 @@ export default function Home() {
             className=" shrink-0 relative w-[280px] h-[280px] min-[360px]:w-[320px] min-[360px]:h-[320px]  sm:w-[440px] sm:h-[440px]"
           >
             {/* Ligth */}
-            <motion.div
+            {/* <motion.div
               variants={{
                 hidden: { opacity: 0, scale: 0 },
                 visible: { opacity: 0.3, scale: 1.1 },
@@ -149,7 +149,7 @@ export default function Home() {
               className=" absolute inset-0  w-[100%] h-[100%]  bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
             ></motion.div>
 
-            <Hero3d />
+            <Hero3d /> */}
           </motion.div>
         </div>
       </div>
