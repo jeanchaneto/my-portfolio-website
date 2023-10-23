@@ -47,21 +47,14 @@ const OtherInterests = () => {
       </div>
       <div className="lg:pr-4">
         <FadeIn className="relative mt-24  mx-auto  px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-3xl lg:px-8 lg:pb-8 xl:px-10 xl:pb-10  aspect-video">
-          {/* background light */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, scale: 0 },
-              visible: { opacity: 1, scale: 0.8 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 2, delay: 0.2, ease: "easeOut" }}
-            className="absolute inset-0 h-full w-full bg-hero-glow transform blur-2xl"
-          />
+         
           <Image
             className="absolute  inset-0 h-full w-full object-cover rounded-3xl pointer-events-none"
             src={otherInterestsPhoto}
+            fill
+            sizes="100vw"
             alt="Jean Chane-to producing music"
+            onLoadingComplete={(img) => img.classList.add("animate-image-load")}
           />
         </FadeIn>
       </div>

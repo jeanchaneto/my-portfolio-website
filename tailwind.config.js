@@ -80,7 +80,7 @@ module.exports = {
         "image-rotate": "image-rotate 1400ms 1s ease forwards",
         "image-glow": "image-glow 2000ms 1.5s ease-out both",
         "image-fade": "image-fade 1s 1400ms ease-out both",
-        "image-load": "image-load 0.3s ease-out both",
+        "image-load": "image-load 0.7s ease-out both",
         "infinite-slider": "infiniteSlider 80s linear infinite",
       },
     },

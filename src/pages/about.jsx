@@ -41,9 +41,9 @@ const About = () => {
       <div className=" pt-6 sm:pt-12 bg-page-gradient ">
         <div className=" pt-24 sm:pt-32 pb-64 ">
           <section className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0 flex flex-col md:flex-row items-center justify-center gap-16">
-          
            <Image  
            src={profilePhoto}
+           priority
            alt="Jean Chane-to"
            className="object-cover object-top rounded-3xl max-w-[750px] lg:max-w-[324px] max-h-[600px] shrink  w-full brightness-75 border border-white/10 pointer-events-none opacity-0 shadow"
            onLoadingComplete={(img) => img.classList.add("animate-image-load")}
