@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
+import HeroPhoto from "/images/hero-photo.png"
 
 export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
@@ -137,7 +139,7 @@ export default function Home() {
           >
             {/* Ligth */}
             <div className=" pointer-events-none select-none rounded-xl z-20 ">
-              <motion.div
+              {/* <motion.div
                 variants={{
                   hidden: { opacity: 0, scale: 0 },
                   visible: { opacity: 0.5, scale: 1 },
@@ -147,9 +149,9 @@ export default function Home() {
                 transition={{ duration: 4, delay: 1 }}
                 duration="6"
                 className=" absolute right-8 w-[300px] h-[340px]  min-[964px]:w-[500px] min-[964px]:h-[550px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
-              ></motion.div>
-              <img
-                src="/images/hero-photo.png"
+              ></motion.div> */}
+              <Image
+                src={HeroPhoto}
                 alt=""
                 className=" max-h-[480px] min-[964px]:max-h-[750px] min-w-[350px] object-cover relative saturate-0  "
               />

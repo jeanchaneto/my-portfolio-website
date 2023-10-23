@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Line, OrbitControls, Sphere} from "@react-three/drei";
+import { Float, Line, Sphere} from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
@@ -28,7 +28,6 @@ export default function Hero3d() {
 
   return (
     <Canvas camera={{ position: [0, 0, 10] }}>
-      {/* <OrbitControls enableZoom={false} /> */}
       <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
         <Float speed={4} rotationIntensity={1} floatIntensity={2}>
           <Atom />
