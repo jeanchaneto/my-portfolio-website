@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 import Hero3d from "@/components/Hero3d";
 import TextSlideMask from "@/components/TextSlideMask";
 import Link from "next/link";
-import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Head from "next/head";
 
@@ -75,6 +75,7 @@ export default function Home() {
               experiences with React.js expertise. Let's build something great
               together!
             </AnimatedText>
+            {/* CTA Buttons */}
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: "100%" },
@@ -83,7 +84,7 @@ export default function Home() {
                   y: 0,
                   transition: {
                     duration: 1,
-                    delay: 6,
+                    delay: 3.9,
                     type: "spring",
                     bounce: "0.5",
                   },

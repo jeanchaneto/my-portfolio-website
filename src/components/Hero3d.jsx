@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { useEffect, useMemo, useRef, Suspense } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Line, Sphere } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
@@ -28,7 +28,6 @@ export default function Hero3d() {
 
   return (
     <Canvas camera={{ position: [0, 0, 10] }}>
-      <Suspense fallback={<div></div>}>
         <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
           <Float speed={4} rotationIntensity={1} floatIntensity={2}>
             <Atom />
@@ -37,7 +36,6 @@ export default function Hero3d() {
             <Bloom luminanceThreshold={1} radius={0.7} />
           </EffectComposer>
         </motion.mesh>
-      </Suspense>
     </Canvas>
   );
 }
