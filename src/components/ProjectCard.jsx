@@ -1,6 +1,7 @@
 import { useModal } from "@/store/ModalContext";
 import { cardsVariants } from "@/utils/motionVariants";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 const borderVariants = {
   initial: { opacity: 0.2 },
@@ -63,10 +64,13 @@ const ProjectCard = ({ ...props }) => {
           onClick={handleOpenModal}
           className="relative cursor-pointer"
         >
-          <img
-            className="rounded-xl object-cover w-full border border-white/10   "
+          <Image
+            className="rounded-xl object-cover w-full border border-white/10 opacity-0   "
             src={props.image}
             alt={props.title}
+            width={410}
+            height={270}
+            onLoadingComplete={(img) => img.classList.add("animate-image-load")} 
           />
         </motion.div>
       </div>

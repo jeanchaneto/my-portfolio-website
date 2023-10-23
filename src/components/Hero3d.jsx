@@ -1,22 +1,22 @@
 import * as THREE from "three";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Line, Sphere} from "@react-three/drei";
+import { Float, Line, Sphere } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
 
 export default function Hero3d() {
   const mouse = {
-    x: useSpring(useMotionValue(0), {damping: 20}),
-    y: useSpring(useMotionValue(0), {damping: 20}),
+    x: useSpring(useMotionValue(0), { damping: 20 }),
+    y: useSpring(useMotionValue(0), { damping: 20 }),
   };
 
   const handleMouseMove = (e) => {
     const { innerWidth, innerHeight } = window;
     const { clientX, clientY } = e;
-    const x = -0.5 + (clientX / innerWidth);
-    const y = -0.5 + (clientY / innerHeight);
+    const x = -0.5 + clientX / innerWidth;
+    const y = -0.5 + clientY / innerHeight;
     mouse.x.set(x);
     mouse.y.set(y);
   };
@@ -28,14 +28,16 @@ export default function Hero3d() {
 
   return (
     <Canvas camera={{ position: [0, 0, 10] }}>
-      <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
-        <Float speed={4} rotationIntensity={1} floatIntensity={2}>
-          <Atom />
-        </Float>
-        <EffectComposer>
-          <Bloom luminanceThreshold={1} radius={0.7} />
-        </EffectComposer>
-      </motion.mesh>
+      <Suspense fallback={<div></div>}>
+        <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
+          <Float speed={4} rotationIntensity={1} floatIntensity={2}>
+            <Atom />
+          </Float>
+          <EffectComposer>
+            <Bloom luminanceThreshold={1} radius={0.7} />
+          </EffectComposer>
+        </motion.mesh>
+      </Suspense>
     </Canvas>
   );
 }

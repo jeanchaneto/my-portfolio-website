@@ -128,7 +128,7 @@ const Menu = () => {
                   whileTap={{ scale: 0.95 }}
                   key={i}
                 >
-                  <Link href={item.link} onClick={() => setIsOpen(false)}>
+                  <Link href={item.link} onClick={() => setIsOpen(false)} scroll={false}>
                     <div className="flex gap-2 items-center text-gray-100 ">
                       <img src={item.icon} alt="" className="w-9" />
                       <p>{item.page}</p>
@@ -156,6 +156,7 @@ const Menu = () => {
               href="/"
               onClick={handleBottomMenuClick}
               className="w-full h-full flex justify-center items-center "
+              scroll={false}
             >
               <img
                 src="/images/house-solid.svg"
@@ -202,6 +203,7 @@ const Menu = () => {
               href="/contact"
               className="w-full h-full flex justify-center items-center"
               onClick={handleBottomMenuClick}
+              scroll={false}
             >
               <img
                 src="/images/envelope-solid.svg"

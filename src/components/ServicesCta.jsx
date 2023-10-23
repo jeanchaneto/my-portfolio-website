@@ -28,7 +28,7 @@ const ServicesCta = () => {
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
-              transition: { delay: 0.7, duration: 7 },
+              transition: { delay: 0.7, duration: 5 },
             }}
             viewport={{ once: true, margin: "0px 0px -200px" }}
           >

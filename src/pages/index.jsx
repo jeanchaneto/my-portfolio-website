@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 import Hero3d from "@/components/Hero3d";
 import TextSlideMask from "@/components/TextSlideMask";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Head from "next/head";
 
@@ -55,14 +55,14 @@ export default function Home() {
               </FadeIn>
             </div>
             <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl font-sora min-[350px]whitespace-nowrap ">
-              <AnimatedText el="span" delay="0.75">
+              <AnimatedText el="span" delay="0.2">
                 I Craft
               </AnimatedText>{" "}
               <span className="overflow-hidden whitespace-nowrap">
                 {textSlideActive && <TextSlideMask>Seamless </TextSlideMask>}
               </span>
               <br />{" "}
-              <AnimatedText el="span" delay="1.5">
+              <AnimatedText el="span" delay="1.2">
                 Web Applications
               </AnimatedText>
             </h1>
@@ -83,7 +83,7 @@ export default function Home() {
                   y: 0,
                   transition: {
                     duration: 1,
-                    delay: 4,
+                    delay: 6,
                     type: "spring",
                     bounce: "0.5",
                   },
@@ -117,6 +117,7 @@ export default function Home() {
             </motion.div>
           </div>
           {/* Right Section */}
+
           <motion.div
             variants={{
               hidden: { opacity: 0, y: "50px" },
@@ -124,8 +125,8 @@ export default function Home() {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  duration: 4,
-                  delay: 0,
+                  duration: 6,
+                  delay: 2,
                   type: "spring",
                   bounce: "0.2",
                 },
@@ -148,7 +149,7 @@ export default function Home() {
             ></motion.div>
 
             <Hero3d />
-          </motion.div>{" "}
+          </motion.div>
         </div>
       </div>
     </main>
