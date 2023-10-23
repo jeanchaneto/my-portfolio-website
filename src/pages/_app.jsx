@@ -35,17 +35,17 @@ export default function App({ Component, pageProps }) {
             </Script>
           </>
         )}
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           <motion.div
             key={router.route}
             variants={pageVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-          >
+          > */}
             <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
+          {/* </motion.div> */}
+        {/* </AnimatePresence> */}
         <Modal />
       </Layout>
     </ModalProvider>
