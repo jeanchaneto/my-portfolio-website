@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import HeroPhoto from "/images/hero-photo.png"
+import HeroPhoto from "../../public/images/hero-photo.png"
 
 export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
@@ -150,15 +150,37 @@ export default function Home() {
                 duration="6"
                 className=" absolute right-8 w-[300px] h-[340px]  min-[964px]:w-[500px] min-[964px]:h-[550px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
               ></motion.div> */}
-              <Image
+              {/* <Image
                 src={HeroPhoto}
                 alt=""
                 className=" max-h-[480px] min-[964px]:max-h-[750px] min-w-[350px] object-cover relative saturate-0  "
-              />
+              /> */}
             </div>
-            <div className="absolute bottom-1/3 translate-x-[155px] right-1/2 h-[200px] w-[300px] translate-y-[40px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[179px] min-[964px]:translate-y-[46px] cursor-pointer ">
+            {/* <div className="absolute bottom-1/3 translate-x-[155px] right-1/2 h-[200px] w-[300px] translate-y-[40px] min-[964px]:h-[300px] min-[964px]:w-[350px] min-[964px]:translate-x-[179px] min-[964px]:translate-y-[46px]  ">
+              <Hero3d />
+            </div> */}
+
+
+
+<motion.div
+                variants={{
+                  hidden: { opacity: 0, scale: 0 },
+                  visible: { opacity: 0.5, scale: 1 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 4, delay: 1 }}
+                duration="6"
+                className=" absolute  w-[300px] h-[340px]  min-[964px]:w-[500px] min-[964px]:h-[550px] bg-gradient-radial from-sky-500 to-90% to-transparent rounded-full filter blur-xl  z-0 "
+              ></motion.div>
+
+
+
+            <div className="bottom-1/3  h-[200px] w-[300px] translate-y-[40px] min-[964px]:h-[300px] min-[964px]:w-[350px]   ">
               <Hero3d />
             </div>
+
+
           </motion.div>{" "}
         </div>
       </div>
