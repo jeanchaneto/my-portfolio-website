@@ -9,7 +9,7 @@ const Portfolio = () => {
     {
       title: "Lap Studios",
       description:
-        "A Next.js E-commerce website with blog and media player functionalities.",
+        "Next.js E-commerce website with blog and media player functionalities.",
       image: "/images/projects/lap-studios.jpg",
       siteUrl: "https://lap-studios.com/",
       repo: "https://github.com/jeanchaneto/lp-studios",
@@ -21,7 +21,7 @@ const Portfolio = () => {
     {
       title: "Artman Entertainment",
       description:
-        "Next.js single page website for a high profile music studio",
+        "Next.js single page website for a high profile music studio with custom complex animations ",
       image: "/images/projects/artman-entertainment.jpg",
       siteUrl: "https://artman-entertainment.com/",
       repo: "https://github.com/jeanchaneto/artman-ent",
@@ -30,6 +30,7 @@ const Portfolio = () => {
       challenges:
         "Advanced Framer Motion animations, custom UI components and multi-languages support",
     },
+    
   ];
 
   return (
@@ -68,7 +69,7 @@ const Portfolio = () => {
          
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
+          className="grid grid-cols-1 gap-6 min-[700px]:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
             {projects.map((project, i) => (
               <ProjectCard key={i} {...project} />
             ))}

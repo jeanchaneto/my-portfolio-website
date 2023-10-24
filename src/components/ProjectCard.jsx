@@ -16,20 +16,13 @@ const ProjectCard = ({ ...props }) => {
     setModalContent({ ...props }), openModal();
   };
   const controls = useAnimation();
-  const handleMouseEnter = () => {
-    controls.start("hover");
-  };
-
-  const handleMouseLeave = () => {
-    controls.start("initial");
-  };
 
   return (
     <motion.div
       variants={cardsVariants}
       whileHover={{
         scale: 1.05,
-        y: -24,
+        borderColor: "rgba(255, 255, 255, 40)",
         transition: {
           duration: 0.3,
           type: "spring",
@@ -37,15 +30,8 @@ const ProjectCard = ({ ...props }) => {
           damping: 20,
         },
       }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="  rounded-xl shadow backdrop-blur-xl box-border min-w-[300px] "
+      className="  rounded-xl shadow backdrop-blur-xl border border-white/20 relative "
     >
-      <motion.div
-        variants={borderVariants}
-        animate={controls}
-        className=" absolute inset-0 border pointer-events-none opacity-20 rounded-xl box-border "
-      ></motion.div>
       <div className="p-6 ">
         <motion.div
           variants={{
@@ -74,7 +60,8 @@ const ProjectCard = ({ ...props }) => {
           />
         </motion.div>
       </div>
-      <div className="px-6 pb-6">
+      <div className="px-6 pb-6 flex  flex-col justify-between">
+        <div className="flex-grow">
         <motion.h3
           onClick={handleOpenModal}
           className="mb-3 text-xl font-bold tracking-tight font-sora text-gray-200 cursor-pointer "
@@ -83,15 +70,15 @@ const ProjectCard = ({ ...props }) => {
         >
           {props.title}
         </motion.h3>
-
+</div>
         <p className="mb-6 text-gray-400 pointer-events-none">
           {props.description}
         </p>
-        <div className="flex gap-6 text-gray-300">
+        <div className="flex flex-col sm:flex-row gap-6 text-gray-300 mt-auto">
           <motion.a
             href={props.siteUrl}
             target="_blank"
-            className="flex gap-2 items-center rounded-xl px-4 py-3 bg-sky-950"
+            className="flex gap-2 items-center justify-center rounded-xl px-4 py-3 bg-sky-950"
             whileTap={{ scale: 0.8 }}
             whileHover={{ backgroundColor: "#0c4a6e" }}
           >
@@ -105,7 +92,7 @@ const ProjectCard = ({ ...props }) => {
           <motion.a
             href={props.repo}
             target="_blank"
-            className="flex gap-2  items-center rounded-xl px-3 py-2 border-2 border-white/10  "
+            className="flex gap-2 items-center justify-center rounded-xl px-3 py-2 border-2 border-white/10  "
             whileTap={{ scale: 0.8 }}
             whileHover={{
               borderColor: "rgba(255, 255, 255, 0.5)",
