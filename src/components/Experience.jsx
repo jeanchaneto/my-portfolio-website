@@ -5,7 +5,7 @@ import { useScroll, useSpring, motion } from 'framer-motion';
 
 const experiences = [
     {
-      title: "CEO / Web Developper / Music Producer at",
+      title: "Founder / Web Developper / Music Producer at",
       company: "LAP Studios",
       companyLink: "https://lap-studios.com",
       timePeriod: "January 2021 - Present",
