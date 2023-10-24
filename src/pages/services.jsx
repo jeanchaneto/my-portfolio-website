@@ -15,7 +15,6 @@ const services = [
     icons: [
       "/images/next-color.svg",
       "/images/react-color.svg",
-      "/images/next-auth.png",
     ],
   },
   {
@@ -30,14 +29,14 @@ const services = [
     ],
   },
   {
-    name: "Full Stack Development with React & Firebase",
+    name: "Full Stack Development with Next.js, React & Firebase",
     description:
       "Offering full-stack solutions by combining the intuitive and powerful front-end development through React with the scalable backend capabilities of Firebase, crafting applications that are both powerful and efficient.",
     icons: [
+      "/images/next-color.svg",
       "/images/react-color.svg",
       "/images/firebase-color.svg",
-      "/images/firestore-color.svg",
-      "/images/cloud-storage-color.svg",
+      "/images/next-auth.png",
     ],
   },
   {
