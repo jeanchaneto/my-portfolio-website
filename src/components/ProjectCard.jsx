@@ -1,27 +1,19 @@
 import { useModal } from "@/store/ModalContext";
 import { cardsVariants } from "@/utils/motionVariants";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-
-const borderVariants = {
-  initial: { opacity: 0.2 },
-  hover: {
-    opacity: 0.7,
-  },
-};
 
 const ProjectCard = ({ ...props }) => {
   const { openModal, setModalContent } = useModal();
   const handleOpenModal = () => {
     setModalContent({ ...props }), openModal();
   };
-  const controls = useAnimation();
 
   return (
     <motion.div
       variants={cardsVariants}
       whileHover={{
-        scale: 1.05,
+        // scale: 1.05,
         borderColor: "rgba(255, 255, 255, 40)",
         transition: {
           duration: 0.3,
@@ -30,9 +22,9 @@ const ProjectCard = ({ ...props }) => {
           damping: 20,
         },
       }}
-      className="  rounded-xl shadow backdrop-blur-xl border border-white/20 relative "
+      className=" rounded-xl shadow backdrop-blur-xl border border-white/20 relative "
     >
-      <div className="p-6 ">
+      <div className="p-6 hover:scale-105">
         <motion.div
           variants={{
             initial: { scale: 1 },
@@ -62,15 +54,15 @@ const ProjectCard = ({ ...props }) => {
       </div>
       <div className="px-6 pb-6 flex  flex-col justify-between">
         <div className="flex-grow">
-        <motion.h3
-          onClick={handleOpenModal}
-          className="mb-3 text-xl font-bold tracking-tight font-sora text-gray-200 cursor-pointer "
-          whileTap={{ scale: 0.8 }}
-          whileHover={{ color: "rgb(14, 165, 233)", duration: 0.3 }}
-        >
-          {props.title}
-        </motion.h3>
-</div>
+          <motion.h3
+            onClick={handleOpenModal}
+            className="mb-3 text-xl font-bold tracking-tight font-sora text-gray-200 cursor-pointer "
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ color: "rgb(14, 165, 233)", duration: 0.3 }}
+          >
+            {props.title}
+          </motion.h3>
+        </div>
         <p className="mb-6 text-gray-400 pointer-events-none">
           {props.description}
         </p>

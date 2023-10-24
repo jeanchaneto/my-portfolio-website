@@ -3,8 +3,14 @@ import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useEffect } from "react";
 
 const Portfolio = () => {
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []); 
+
   const projects = [
     {
       title: "Lap Studios",
