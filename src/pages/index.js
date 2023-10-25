@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
-  }, []); 
+  }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
 
@@ -100,6 +100,7 @@ export default function Home() {
             >
               <motion.div whileTap={{ scale: 0.8 }}>
                 <Link
+                  scroll={false}
                   href="/contact"
                   className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700
                 transition-all duration-300  
@@ -110,6 +111,7 @@ export default function Home() {
               </motion.div>
               <motion.div whileTap={{ scale: 0.8 }}>
                 <Link
+                  scroll={false}
                   href="/services"
                   className="text-sm font-semibold rounded-xl bg-transparent hover:bg-sky-950/60 
                 transition-all duration-300  

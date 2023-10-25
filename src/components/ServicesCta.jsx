@@ -76,6 +76,7 @@ const ServicesCta = () => {
             className="mt-10 flex items-center justify-center gap-x-6"
           >
             <Link
+              scroll={false}
               href="/contact"
               className="rounded-xl bg-sky-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 z-20
             transition-all duration-300  relative focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"

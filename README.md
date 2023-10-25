@@ -1,6 +1,6 @@
 # My personal Portfolio Website
 
-![alt text](./public/images/readme-preview.jpg )
+![](./public/images/readme-preview.jpg )
 
 Entirely designed and created by myself. 
 
