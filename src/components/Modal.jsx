@@ -7,9 +7,9 @@ const backdropVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { when: "beforeChildren", duration: 0.1 },
+    transition: { duration: 0.1 },
   },
-  exit: { opacity: 0, transition: { when: "afterChildren", duration: 0.1 } },
+  exit: { opacity: 0 },
 };
 
 const contentVariants = {

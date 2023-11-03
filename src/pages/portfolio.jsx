@@ -19,7 +19,7 @@ const Portfolio = () => {
       image: "/images/projects/lap-studios.jpg",
       siteUrl: "https://lap-studios.com/",
       repo: "https://github.com/jeanchaneto/lp-studios",
-      tech: "React, Next.js, Firebase, Email.js, Wavesurfer.js, Stripe Payments, Framer Motion, TailwindCSS, MDX",
+      tech: "React, Next.js, Firebase, Email.js, Wavesurfer.js, Stripe Payments, Framer Motion, TailwindCSS, MDX, Google Analytics 4",
       work: "Project solely created by myself, from design to deployment through content creation and backend implementation.",
       challenges:
         "Advanced React implementation of an audio player with waveform visualisation. Blog using MDX. Advanced Framer Motion animations.",
@@ -35,6 +35,18 @@ const Portfolio = () => {
       work: "Web site design and implementation from single logo provided by client. Deployment",
       challenges:
         "Advanced Framer Motion animations, custom UI components and multi-languages support",
+    },
+    {
+      title: "Delay & Reverb Calculator",
+      description:
+        "Next.js single page application for musci producers. Calculates delay and times from a given song tempo",
+      image: "/images/projects/delay-reverb-calculator.jpg",
+      siteUrl: "https://delayreverbcalculator.com/",
+      repo: "https://github.com/jeanchaneto/delay-reverb-calculator",
+      tech: "React, Next.js, Typescript, Framer Motion, TailwindCSS, NextUI, Google Analytics 4",
+      work: "Entire site from design to content through calculator logic",
+      challenges:
+        "Implementing an interactive calculator",
     },
     
   ];
