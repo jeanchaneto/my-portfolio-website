@@ -39,7 +39,7 @@ const Portfolio = () => {
     {
       title: "Delay & Reverb Calculator",
       description:
-        "Next.js single page application for musci producers. Calculates delay and times from a given song tempo",
+        "Next.js single page application for music producers. Calculates delay and times from a given song tempo",
       image: "/images/projects/delay-reverb-calculator.jpg",
       siteUrl: "https://delayreverbcalculator.com/",
       repo: "https://github.com/jeanchaneto/delay-reverb-calculator",
