@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Head from "next/head";
+import Avatar from "@/components/Avatar";
 
 export default function Home() {
   const [textSlideActive, setTextSlideActive] = useState(false);
@@ -47,9 +48,10 @@ export default function Home() {
             ref={ref}
             className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto  pt-12 pb-12 min-[964px]:pt-0 min-[964px]:pb-0 flex-1  "
           >
-            <div className=" pointer-events-none">
-              <FadeIn view="0" from="12" duration="0.5">
-                <h2 className="text-base mt-6 leading-7 text-gray-300 font-thin tracking-widest  ">
+            <div className=" pointer-events-none ">
+              
+              <FadeIn view="0" from="12" duration="0.5" className="flex gap-2 items-center" ><Avatar/>
+                <h2 className="text-base  leading-7 text-gray-300 font-thin tracking-widest  ">
                   HI, I'M{" "}
                   <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text font-normal ">
                     JEAN
