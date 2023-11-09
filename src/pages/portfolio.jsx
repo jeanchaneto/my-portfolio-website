@@ -25,6 +25,18 @@ const Portfolio = () => {
         "Advanced React implementation of an audio player with waveform visualisation. Blog using MDX. Advanced Framer Motion animations.",
     },
     {
+      title: "PostAPic",
+      description:
+        "A Full Stack Social Media App where user can share, like save photos",
+      image: "/images/projects/postapic.jpg",
+      siteUrl: "https://social-media-app-lyart-nu.vercel.app/",
+      repo: "https://github.com/jeanchaneto/social-media-app",
+      tech: "React, Firebase, TailwindCSS, React Router, ShadcnUI.",
+      work: "Entire app",
+      challenges:
+        "Implementing CRUD operations with Firebase",
+    },
+    {
       title: "Artman Entertainment",
       description:
         "Next.js single page website for a high profile music studio with custom complex animations ",
