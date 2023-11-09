@@ -95,7 +95,7 @@ export default function Modal() {
                       alt=""
                       fill
                       sizes="100vw"
-                      className="rounded-xl  border border-white/10 w-full object-cover "
+                      className="rounded-xl opacity-0  border border-white/10 w-full object-cover "
                       onLoadingComplete={(img) =>
                         img.classList.add("animate-image-load")
                       }
