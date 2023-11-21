@@ -121,7 +121,7 @@ const About = () => {
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   duration: 0.3,
                 }}
-                  href="https://www.dropbox.com/scl/fi/cu5ru2xc887v92k8bue85/CV-Jean-Chane-to-EN-FR.zip?rlkey=84chh36wfrsxzgyc8glhp4au6&dl=1"
+                  href="https://www.dropbox.com/scl/fi/140u0xvf5abxpijocc5e7/CV-Jean-Chane-to-EN-FR.zip?rlkey=0e92opsuoiz81lb5pyckh2te6&dl=1"
                   className="text-sm font-semibold leading-6 text-gray-100 z-20 flex gap-2 items-center border border-white/20 rounded-xl w-fit py-2.5 px-3 
                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 "
                 >
