@@ -27,18 +27,18 @@ export default function Home() {
   return (
     <main className="bg-gray-950 min-h-screen bg-page-gradient">
       <Head>
-        <title>Jean Chane-to | React & Web Applications Developer</title>
+        <title>Jean Chane-to |Full Stack Developer</title>
         <meta
           name="description"
-          content="Specializing in the development of seamless, interactive, and responsive web applications using React. Available for collaboration and freelance projects."
+          content="Specializing in the development of seamless, interactive, and responsive full stack web applications using React and Next.js."
         />
         <meta
           property="og:title"
-          content="Jean Chane-to | React & Web Applications Developer"
+          content="Jean Chane-to | Full Stack Developer"
         />
         <meta
           property="og:description"
-          content="Specializing in the development of seamless, interactive, and responsive web applications using React. Available for collaboration and freelance projects."
+          content="Specializing in the development of seamless, interactive, and responsive full stack web applications. Available for collaboration and freelance projects."
         />
       </Head>
       <div className="flex items-center   py-24 lg:py-48 ">
@@ -49,8 +49,13 @@ export default function Home() {
             className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto  pt-12 pb-12 min-[964px]:pt-0 min-[964px]:pb-0 flex-1  "
           >
             <div className=" pointer-events-none ">
-              
-              <FadeIn view="0" from="12" duration="0.5" className="flex gap-2 items-center" ><Avatar/>
+              <FadeIn
+                view="0"
+                from="12"
+                duration="0.5"
+                className="flex gap-2 items-center"
+              >
+                <Avatar />
                 <h2 className="text-base  leading-7 text-gray-300 font-thin tracking-widest  ">
                   HI, I'M{" "}
                   <span className=" bg-gradient-to-r from-sky-400 to-cyan-300 inline-block text-transparent bg-clip-text font-normal ">

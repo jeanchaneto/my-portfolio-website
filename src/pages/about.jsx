@@ -11,18 +11,17 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-import profilePhoto from "../../public/images/profile-photo.jpeg"
+import profilePhoto from "../../public/images/profile-photo.jpeg";
 
 const About = () => {
-
   useEffect(() => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
-  }, []); 
+  }, []);
 
   return (
-    <main className="relative min-h-screen" >
-     <Head>
+    <main className="relative min-h-screen">
+      <Head>
         <title>Jean Chane-to | About: Professional Journey & Skills</title>
         <meta
           name="description"
@@ -41,13 +40,15 @@ const About = () => {
       <div className=" pt-6 sm:pt-12 bg-page-gradient ">
         <div className=" pt-24 lg:pt-32 pb-64 ">
           <section className="mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-16">
-           <Image  
-           src={profilePhoto}
-           priority
-           alt="Jean Chane-to"
-           className="object-cover object-top rounded-3xl max-w-[400px] md:max-w-[324px] max-h-[600px] shrink  w-full brightness-75 border border-white/10 pointer-events-none opacity-0 shadow mb-10"
-           onLoadingComplete={(img) => img.classList.add("animate-image-load")}
-           />
+            <Image
+              src={profilePhoto}
+              priority
+              alt="Jean Chane-to"
+              className="object-cover object-top rounded-3xl max-w-[400px] md:max-w-[324px] max-h-[600px] shrink  w-full brightness-75 border border-white/10 pointer-events-none opacity-0 shadow mb-10"
+              onLoadingComplete={(img) =>
+                img.classList.add("animate-image-load")
+              }
+            />
             <div className="mx-auto max-w-2xl lg:mx-0  shrink">
               <AnimatedText
                 el="h1"
@@ -66,10 +67,10 @@ const About = () => {
                   className="mt-6 text-lg leading-8 text-gray-300 "
                 >
                   <p>
-                    My journey into web development was not a linear path, but a
-                    fascinating exploration of connecting dots between different
-                    spheres of my life: from rigorous scientific analysis to
-                    producing professional electronic music.
+                    My journey into software development was not a linear path,
+                    but an exciting exploration of connecting dots between
+                    different spheres of my life: from rigorous scientific
+                    analysis to producing professional electronic music.
                   </p>
                 </motion.div>
                 <motion.div
@@ -77,11 +78,9 @@ const About = () => {
                   className="mt-3 text-lg leading-8 text-gray-300"
                 >
                   <p>
-                    Transitioning from a career in health & safety to
-                    a React.js developer sparked by a genuine desire to build
-                    meaningful digital spaces, notably exemplified in running my
-                    own music e-commerce platform that blends my coding skills
-                    and my entrepreneurial spirit with my musical artistry.
+                    Transitioning from a career in health & safety to a Full
+                    Stack developer sparked by a genuine desire to build
+                    meaningful digital solutions to real-world problems.
                   </p>
                 </motion.div>
                 <motion.div
@@ -89,12 +88,13 @@ const About = () => {
                   className="mt-3 mb-10 text-lg leading-8 text-gray-300"
                 >
                   <p>
-                    My journey reflects a steadfast commitment to learning and
-                    adaptability across varied fields.
+                    I'm passionate about harnessing modern technologies to build
+                    beautifully designed applications that place users and their
+                    experience at the very core.
                   </p>
                 </motion.div>
               </motion.div>
-              <motion.div
+              {/* <motion.div
                 whileTap={{ scale: 0.95 }}
                 variants={{
                   hidden: { opacity: 0, y: 24 },
@@ -114,13 +114,13 @@ const About = () => {
                 viewport={{ once: true }}
               >
                 <motion.a
-                type="submit"
-                whileTap={{ scale: 0.8 }}
-                whileHover={{
-                  borderColor: "rgba(255, 255, 255, 0.5)",
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  duration: 0.3,
-                }}
+                  type="submit"
+                  whileTap={{ scale: 0.8 }}
+                  whileHover={{
+                    borderColor: "rgba(255, 255, 255, 0.5)",
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    duration: 0.3,
+                  }}
                   href="https://www.dropbox.com/scl/fi/7y3271dq80olink7fe56c/CV-Jean-Chane-to-EN-FR.zip?rlkey=dfwnmonesbpz7pqk66ovzy8gg&dl=1"
                   className="text-sm font-semibold leading-6 text-gray-100 z-20 flex gap-2 items-center border border-white/20 rounded-xl w-fit py-2.5 px-3 
                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 "
@@ -135,20 +135,20 @@ const About = () => {
                     className="w-4 h-4"
                   >
                     <motion.path
-                    initial={{pathLength: 0}}
-                    animate={{pathLength: 1}}
-                    transition={{
-                      duration: 1,
-                      ease: "easeInOut",
-                     delay:1
-                    }}
+                      initial={{ pathLength: 0 }}
+                      animate={{ pathLength: 1 }}
+                      transition={{
+                        duration: 1,
+                        ease: "easeInOut",
+                        delay: 1,
+                      }}
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m-6 3.75l3 3m0 0l3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75"
                     />
                   </motion.svg>
                 </motion.a>
-              </motion.div>
+              </motion.div> */}
             </div>
           </section>
         </div>
@@ -165,7 +165,6 @@ const About = () => {
       <Languages />
       <Divider />
       <OtherInterests />
-    
     </main>
   );
 };

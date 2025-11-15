@@ -9,9 +9,21 @@ const Portfolio = () => {
   useEffect(() => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
-  }, []); 
+  }, []);
 
   const projects = [
+    {
+      title: "Legionella Logbook",
+      description:
+        "A complete SaaS platform with web and mobile applications designed to modernise the water safety industry",
+      image: "/images/projects/main-hero-dark.png",
+      siteUrl: "https://legionellalogbook.com/",
+      repo: "https://github.com/jeanchaneto/",
+      tech: "Next.js, React native + more",
+      work: "Single-handedly designed and developed the entire platform from ideation, design to deployment (front-end, back-end, mobile app).",
+      challenges:
+        "Simultaneously handling product development while establishing marketing strategies to promote and grow the platform.",
+    },
     {
       title: "Lap Studios",
       description:
@@ -33,8 +45,7 @@ const Portfolio = () => {
       repo: "https://github.com/jeanchaneto/social-media-app",
       tech: "React, Firebase, TailwindCSS, React Router, ShadcnUI.",
       work: "Entire app",
-      challenges:
-        "Implementing CRUD operations with Firebase",
+      challenges: "Implementing CRUD operations with Firebase",
     },
     {
       title: "Artman Entertainment",
@@ -57,16 +68,16 @@ const Portfolio = () => {
       repo: "https://github.com/jeanchaneto/delay-reverb-calculator",
       tech: "React, Next.js, Typescript, Framer Motion, TailwindCSS, NextUI, Google Analytics 4",
       work: "Entire site from design to content through calculator logic",
-      challenges:
-        "Implementing an interactive calculator",
+      challenges: "Implementing an interactive calculator",
     },
-    
   ];
 
   return (
-    <main className=" relative isolate min-h-screen min-w-screen bg-page-gradient" >
+    <main className=" relative isolate min-h-screen min-w-screen bg-page-gradient">
       <Head>
-        <title>Jean Chane-to | Portfolio: React & Web Development Projects</title>
+        <title>
+          Jean Chane-to | Portfolio: React & Web Development Projects
+        </title>
         <meta
           name="description"
           content="Dive into my portfolio to see dynamic React projects that drive user engagement. Each solution showcases my commitment to quality and innovation."
@@ -83,23 +94,29 @@ const Portfolio = () => {
       <div className="pt-6 sm:pt-12 pb-48 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className=" py-24 lg:py-32 mx-auto max-w-2xl text-center pointer-events-auto">
-            <AnimatedText el="h1" className="text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl">
+            <AnimatedText
+              el="h1"
+              className="text-3xl font-bold font-sora tracking-tight text-gray-100 sm:text-4xl"
+            >
               Portfolio
             </AnimatedText>
             <FadeIn duration="1.5">
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Dive into my portfolio: a collection of projects blending code and
-              creativity to build practical digital solutions.
-            </p></FadeIn>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Dive into my portfolio: a collection of projects blending code
+                and creativity to build practical digital solutions.
+              </p>
+            </FadeIn>
           </div>
-          <motion.div 
-          variants={{visible: {
-            transition: { staggerChildren: 0.2, delayChildren: 1 },
-          }}}
-         
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 gap-6 min-[700px]:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
+          <motion.div
+            variants={{
+              visible: {
+                transition: { staggerChildren: 0.2, delayChildren: 1 },
+              },
+            }}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 gap-6 min-[700px]:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl"
+          >
             {projects.map((project, i) => (
               <ProjectCard key={i} {...project} />
             ))}
