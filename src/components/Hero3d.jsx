@@ -22,21 +22,25 @@ export default function Hero3d() {
   };
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return (
-    <Canvas camera={{ position: [0, 0, 10] }}>
+    <Canvas
+      camera={{ position: [0, 0, 10] }}
+      dpr={[1, 2]}
+      performance={{ min: 0.5 }}
+    >
       <Suspense fallback={null}>
         <motion.mesh rotation-y={mouse.x} rotation-x={mouse.y}>
           <Float speed={4} rotationIntensity={1} floatIntensity={2}>
             <Atom />
           </Float>
-          <EffectComposer>
-            <Bloom luminanceThreshold={0.5} radius={0.5} />
-          </EffectComposer>
         </motion.mesh>
+        <EffectComposer>
+          <Bloom luminanceThreshold={0.5} radius={0.5} />
+        </EffectComposer>
       </Suspense>
     </Canvas>
   );
