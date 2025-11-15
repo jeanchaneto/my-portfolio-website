@@ -82,7 +82,7 @@ export default function Home() {
               className="mt-6 text-lg leading-8 text-gray-300 tracking-wide"
             >
               Transforming visionary ideas into vibrant, interactive digital
-              experiences with React.js expertise. Let's build something great
+              experiences with React expertise. Let's build something great
               together!
             </AnimatedText>
             {/* CTA Buttons */}
