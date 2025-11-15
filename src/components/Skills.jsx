@@ -20,18 +20,16 @@ const skills = [
   },
   { logo: "/images/typescript.png", title: "Typescript" },
   { logo: "/images/tailwind.svg", title: "Tailwind CSS" },
-  { logo: "/images/sass.svg", title: "Sass" },
+
   { logo: "/images/framer-motion.svg", title: "Framer Motion" },
   { logo: "/images/firebase-color.svg", title: "Firebase" },
   { logo: "/images/seo.svg", title: "Best practices" },
   { logo: "/images/ux-ui.svg", title: "Best practices" },
   { logo: "/images/open-ai.svg", title: "AI Prompt Engineering" },
   { logo: "/images/figma.svg", title: "Figma" },
-  { logo: "/images/wordpress.png", title: "Wordpress" },
-  { logo: "/images/woo-color.svg", title: "Woo Commerce" },
-  { logo: "/images/elementor-color.svg", title: "Elementor" },
-  { logo: "/images/ga.svg", title: "Google Analytics" },
-  { logo: "/images/google-ads.png", title: "Google Ads" },
+  { logo: "/images/supabase-logo-icon.svg", title: "Supabase" },
+  { logo: "/images/mui-logo.svg", title: "Material UI" },
+  { logo: "/images/shadcn-logo.svg", title: "Shadcn UI" },
 ];
 
 const Skills = () => {

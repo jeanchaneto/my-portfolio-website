@@ -12,10 +12,7 @@ const services = [
     name: "SEO-Optimised React Applications with Next.js",
     description:
       "Develop SEO-friendly, performant, and responsive React web applications using Next.js, ensuring your website is not only smoothly operational but also optimised for search engines, enhancing your online visibility and user engagement.",
-    icons: [
-      "/images/next-color.svg",
-      "/images/react-color.svg",
-    ],
+    icons: ["/images/next-color.svg", "/images/react-color.svg"],
   },
   {
     name: "Dynamic React Web Applications.",
@@ -29,7 +26,7 @@ const services = [
     ],
   },
   {
-    name: "Full Stack Development with Next.js, React & Firebase",
+    name: "Full Stack Development with Next.js, Supabase & Firebase",
     description:
       "Offering full-stack solutions by combining the intuitive and powerful front-end development through React with the scalable backend capabilities of Firebase, crafting applications that are both powerful and efficient.",
     icons: [
@@ -93,7 +90,7 @@ export default function Services() {
   useEffect(() => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
-  }, []); 
+  }, []);
 
   return (
     <main className=" py-24 sm:py-32 relative isolate">
@@ -141,7 +138,6 @@ export default function Services() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "0px 0px -200px" }}
-              
               key={i}
               className="relative pl-9 border border-white/5 rounded-xl p-6 "
             >
