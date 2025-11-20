@@ -1,8 +1,8 @@
 # My personal Portfolio Website
 
-![](./public/images/readme-preview.jpg )
+![](./public/images/readme-preview.jpg)
 
-Entirely designed and created by myself. 
+Entirely designed and created by myself.
 
 Using Next.js, Tailwind CSS, Framer Motion,Three.js, React Three Fiber.
 
@@ -10,4 +10,4 @@ Using Next.js, Tailwind CSS, Framer Motion,Three.js, React Three Fiber.
 
 ## Copyright
 
-© 2023 Jean Chane-to. All Rights Reserved.
+© 2025 Jean Chane-to. All Rights Reserved.
